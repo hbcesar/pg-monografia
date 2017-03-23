@@ -1,0 +1,14 @@
+<security-constraint>
+    	<display-name>PROTEGIDAS PARA ADMINISTRADORES</display-name>
+    	<web-resource-collection>
+   		<web-resource-name>FUNCIONALIDADE DE ADMINISTRADORES</web-resource-name>
+   		<url-pattern>/sae/core/*</url-pattern>
+   	</web-resource-collection>
+    	<auth-constraint>
+   		<description>ADMINISTRADORES SOMENTE</description>
+   		<role-name>Admin</role-name>
+   	</auth-constraint>
+   	<user-data-constraint>
+   		<transport-guarantee>INTEGRAL</transport-guarantee>
+   	</user-data-constraint>	
+</security-constraint>

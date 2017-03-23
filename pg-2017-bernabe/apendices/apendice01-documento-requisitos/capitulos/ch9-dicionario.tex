@@ -1,0 +1,308 @@
+\chapter{Dicionário de Projeto}
+\label{sec-dicionario}
+\setcounter{table}{0}
+
+Esta seção apresenta as definições das classes (e seus atributos), servindo como um glossário do projeto. As definições são organizadas por subsistema. Vale destacar que eventuais operações que estas classes vierem a ter não são listadas e descritas nesta fase do projeto.
+
+
+\section{Classes}
+
+%%%%%       CLASSE EGRESSO        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Egresso} \label{Egresso}
+\begin{table}[h!]
+	\footnotesize
+	\begin{tabular}{|p{2.6cm}|c|c|p{7.8cm}|}   \hline \rowcolor[rgb]{0.8,0.8,0.8}
+		
+		%\multicolumn{4}{|c|}{ \textbf{Egresso}} \\ \hline \rowcolor[rgb]{0.95,0.95,0.95}
+ 		
+ 		\textbf{Propriedade} & \textbf{Tipo} & \textbf{Obrigatório?} & \centerline{\textbf{Descrição}} \\\hline  
+ 		                            
+		nome & Texto & x & Nome completo do egresso. \\\hline  	
+		
+		data-nascimento & Data & x & Data de nascimento do egresso. \\\hline	
+ 		
+		sexo & Caractere & x & Sexo do egresso. \\\hline 
+		
+		email & Texto & x & Email do egresso. \\\hline
+		
+		senha & Texto & x & Senha do egresso. \\\hline
+		                             
+		identidade & Texto & x & Número de RG do egresso. \\\hline
+		
+		cpf & Texto & x & Número de CPF do egresso. \\\hline
+		
+		naturalidade & Texto & & Naturalidade do egresso. \\\hline
+		
+		nacionalidade & Texto & & Nacionalidade do egresso. \\\hline
+		
+	\end{tabular}	
+\end{table}
+
+
+%%%%%       CLASSE EGRESSO-HISTORICO        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Histórico do Egresso} \label{Histórico-do-Egresso}
+\begin{table}[h!]
+	\footnotesize
+	\begin{tabular}{|p{2.6cm}|c|c|p{7.8cm}|}   \hline \rowcolor[rgb]{0.8,0.8,0.8}
+	
+		%\multicolumn{4}{|c|}{ \textbf{Histórico do Egresso}} \\ \hline \rowcolor[rgb]{0.95,0.95,0.95}
+		
+ 		\textbf{Propriedade} & \textbf{Tipo} & \textbf{Obrigatório?} & \centerline{\textbf{Descrição}} \\\hline  	
+	
+ 		data-envio & Data & x & Data de envio dos dados pelo egresso. \\\hline
+		                      
+		faixa-salarial & Enumerado & x & Faixa onde se encontra a renda do egresso. \\\hline
+		
+		area-atuacao & Enumerado & x & Área onde o egresso atua profissionalmente. \\\hline
+		
+		escolaridade & Enumerado & x & Nível de escolaridade do Egresso. \\\hline
+		
+		atua-na-area & Booleano & x & Se o egresso atua na área em que se formou. \\\hline		
+		
+		reside-ES & Booleano & x & Se o egresso reside no estado do Espirito Santo. \\\hline	
+			
+	
+	\end{tabular}	
+\end{table}
+
+
+%%%%%       CLASSE ESCOLARIDADE        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Escolaridade} \label{Escolaridade}
+\begin{table}[h!]
+	\footnotesize
+	\begin{tabular}{|p{2.6cm}|c|c|p{7.8cm}|}   \hline \rowcolor[rgb]{0.8,0.8,0.8}
+	
+		%\multicolumn{4}{|c|}{ \textbf{Escolaridade}} \\ \hline \rowcolor[rgb]{0.95,0.95,0.95}
+		
+ 		\textbf{Propriedade} & \textbf{Tipo} & \textbf{Obrigatório?} & \centerline{\textbf{Descrição}} \\\hline  	
+	
+ 		titulo & Enum & x & Titulo da graduação adiquirida. \\\hline
+		
+		estado & Texto & x & Nome do estado onde foi realizado. \\\hline   
+ 		                      
+		país & Texto & x & Nome do país onde foi realizado. \\\hline
+		
+		ano & Data & x & Ano de conclusão. \\\hline
+		
+		instituição & Texto & x & Nome da instituição onde foi realizado. \\\hline	
+		
+			
+		
+	\end{tabular}	
+\end{table}
+
+\newpage
+
+%%%%%       CLASSE CURSO        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Curso} \label{Curso}
+\begin{table}[h!]
+	\footnotesize
+	\begin{tabular}{|p{2.6cm}|c|c|p{7.8cm}|}   \hline \rowcolor[rgb]{0.8,0.8,0.8}
+	
+		%\multicolumn{4}{|c|}{ \textbf{Curso}} \\ \hline \rowcolor[rgb]{0.95,0.95,0.95}
+		
+ 		\textbf{Propriedade} & \textbf{Tipo} & \textbf{Obrigatório?} & \centerline{\textbf{Descrição}} \\\hline 
+ 		                            
+		nome & texto & x & Nome do curso. \\\hline 
+		
+		código & texto & x & Código do curso. \\\hline 
+		                             
+		
+	\end{tabular}	
+\end{table}
+
+
+
+%%%%%       CLASSE ASSUNTO DE INTERESSE          %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Assunto de Interesse} \label{Assunto-de-Interesse}
+\begin{table}[h!]
+	\footnotesize
+	\begin{tabular}{|p{2.6cm}|c|c|p{7.8cm}|}   \hline \rowcolor[rgb]{0.8,0.8,0.8}
+	
+		%\multicolumn{4}{|c|}{ \textbf{Assunto de Interesse }} \\ \hline \rowcolor[rgb]{0.95,0.95,0.95}
+		
+ 		\textbf{Propriedade} & \textbf{Tipo} & \textbf{Obrigatório?} & \centerline{\textbf{Descrição}} \\\hline
+ 		                            
+		nome & texto & x & Nome do assunto de interesse. \\\hline
+		
+		
+		
+	\end{tabular}	
+\end{table}
+
+
+%%%%%       CLASSE DEPOIMENTO          %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Depoimento} \label{Depoimento}
+\begin{table}[h!]
+	\footnotesize
+	\begin{tabular}{|p{2.6cm}|c|c|p{7.8cm}|}   \hline \rowcolor[rgb]{0.8,0.8,0.8}
+	
+		%\multicolumn{4}{|c|}{ \textbf{Depoimento}} \\ \hline \rowcolor[rgb]{0.95,0.95,0.95}
+		
+		\textbf{Propriedade} & \textbf{Tipo} & \textbf{Obrigatório?} & \centerline{\textbf{Descrição}} \\\hline  	
+ 		                           
+		conteudo & Texto & x & Conteúdo postado pelo egresso no depoimento. \\\hline
+		  
+  		data-envio & Data & x & Data de envio do depoimento. \\\hline 
+  		
+		anonimo & Booleano & x & Se o depoimento é anônimo. \\\hline  
+		
+		status & Enum & x & Status do depoimento. \\\hline 		
+  		
+	\end{tabular}	
+\end{table}
+
+
+%%%%%       CLASSE Sugestao          %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Sugestao} \label{Sugestao}
+\begin{table}[h!]
+	\footnotesize
+	\begin{tabular}{|p{2.6cm}|c|c|p{7.8cm}|}   \hline \rowcolor[rgb]{0.8,0.8,0.8}
+	
+		%\multicolumn{4}{|c|}{ \textbf{Sugestao}} \\ \hline \rowcolor[rgb]{0.95,0.95,0.95}
+		
+ 		\textbf{Propriedade} & \textbf{Tipo} & \textbf{Obrigatório?} & \centerline{\textbf{Descrição}} \\\hline
+ 		                            
+		conteudo & texto & x & Conteúdo postado pelo egresso  na sugestão. \\\hline
+		
+		resposta & texto & {} & Resposta do coordenador para a sugestão do egresso. \\\hline
+		  
+  		data-envio & Data & x & Data de envio da sugestão. \\\hline 
+  	
+  		
+	\end{tabular}	
+\end{table}
+
+
+%%%%%       CLASSE SEMINÁRIO          %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Seminário} \label{Seminário}
+\begin{table}[h!]
+	\footnotesize
+	\begin{tabular}{|p{2.6cm}|c|c|p{7.8cm}|}   \hline \rowcolor[rgb]{0.8,0.8,0.8}
+	
+		%\multicolumn{4}{|c|}{ \textbf{Seminário}} \\ \hline \rowcolor[rgb]{0.95,0.95,0.95}
+		
+ 		\textbf{Propriedade} & \textbf{Tipo} & \textbf{Obrigatório?} & \centerline{\textbf{Descrição}} \\ \hline
+ 		
+		nome do palestrante & Texto & {} & Respónsavel por realizar o seminário. \\\hline
+		  
+  		data & Data/Hora & {} & Dia da realização do seminário. \\\hline 
+  		
+  		titulo & Texto & x & Título do seminário. \\\hline  
+  		
+  		local & Texto & {} & Local onde se realizará o seminário. \\\hline 
+  		
+  		confirmado & booleano & {} & se o seminário já foi confirmado. \\\hline 
+  		
+	\end{tabular}	
+\end{table}
+
+\newpage
+
+%%%%%       CLASSE ADMINISTRADOR       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Administrador} \label{Administrador}
+\begin{table}[h!]
+	\footnotesize
+	\begin{tabular}{|p{2.6cm}|c|c|p{7.8cm}|}   \hline \rowcolor[rgb]{0.8,0.8,0.8}
+	
+		%\multicolumn{4}{|c|}{ \textbf{Administrador}} \\ \hline \rowcolor[rgb]{0.95,0.95,0.95}
+		
+ 		\textbf{Propriedade} & \textbf{Tipo} & \textbf{Obrigatório?} & \centerline{\textbf{Descrição}} \\\hline  	
+ 		                            
+		nome & texto & x & Nome completo do administrador. \\\hline 
+		
+		email & texto & x & Email do administrador. \\\hline 
+		                             
+		cpf & texto & x & Número do CPF do administrador. \\\hline 
+		
+		matricula & texto & x & Número da matricula do administrador na UFES. \\\hline 
+		
+		senha & texto & x & Senha para entrar no sistema. \\\hline 
+		
+	\end{tabular}	
+\end{table}
+
+
+%%%%%       CLASSE CURSO-REALIZADO       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Curso Realizado} \label{Curso-Realizado}
+\begin{table}[h!]
+	\footnotesize
+	\begin{tabular}{|p{2.6cm}|c|c|p{7.8cm}|}   \hline \rowcolor[rgb]{0.8,0.8,0.8}
+	
+		%\multicolumn{4}{|c|}{ \textbf{Curso Realizado}} \\ \hline \rowcolor[rgb]{0.95,0.95,0.95}
+		
+ 		\textbf{Propriedade} & \textbf{Tipo} & \textbf{Obrigatório?} & \centerline{\textbf{Descrição}} \\\hline 
+ 		                            
+		matricula & texto & x & Número da matrícula do egresso no curso realizado. \\\hline 
+		
+		ano de início & Data & x & Data de início do curso pelo egresso. \\\hline 
+		                             
+		ano de fim & Data & x & Data de conclusão do curso pelo egresso. \\\hline 
+	
+		
+	\end{tabular}	
+\end{table}
+
+
+\newpage
+
+\section{Tipos de Dados Específicos de Domínio}
+
+\subsection{Area-Atuacao} \label{Area-Atuacao}
+	
+	\begin{itemize}[noitemsep]
+		\item Áreas em que os egressos podem estar atuando. Tipo enumerado que pode assumir os seguintes valores:
+		\begin{itemize}[noitemsep]
+  			\item empreendedor
+  			\item funcionário no setor público
+  			\item funcionário no setor privado
+  			\item professor
+  			\item pesquisador
+		\end{itemize}
+	\end{itemize}
+
+
+
+\subsection{Faixa-Salarial} \label{Faixa-Salarial}
+
+	\begin{itemize}[noitemsep]
+	  \item  Faixa salarial do egresso. Tipo enumerado que pode assumir os seguintes valores:
+	  	\begin{itemize}[noitemsep]
+	  		\item até 3 salários mínimos
+	  		\item de 3 a 5 salários mínimos
+	  		\item de 5 a 10 salários mínimos
+	  		\item de 10 a 15 salários mínimos
+	  		\item de 15 a 20 salários mínimos
+	  		\item acima de 20 salários mínimos.
+		\end{itemize}
+	\end{itemize}
+
+
+
+\subsection{Título de Escolaridade} \label{Escolaridade}
+
+	\begin{itemize}[noitemsep]
+  	\item Título do curso realizado pelo egresso. Tipo enumerado que pode assumir os seguintes valores:
+  		\begin{itemize}[noitemsep]
+  			\item Superior
+  			\item Especialização
+  			\item Mestrado
+  			\item Doutorado
+ 	 		\item Pós-Doutorado
+		\end{itemize}
+	\end{itemize}
+
+
+
+
+\subsection{Área de formação} \label{area-formacao}
+
+	\begin{itemize}[noitemsep]
+  	\item Relação da área em que o egresso se formação na Ufes com a que ele esta atuando. Tipo enumerado que pode assumir os seguintes valores:
+  		\begin{itemize}[noitemsep]
+  			\item Atua na Área
+  			\item Atua em Área Correlatao
+  			\item Atua em Área não Correlata
+		\end{itemize}
+	\end{itemize}
+

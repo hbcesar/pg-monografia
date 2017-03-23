@@ -1,0 +1,83 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.5 }
+
+\bibitem[ALUR, MALKS e CRUPI 2003]{alurDAO}
+\abntrefinfo{ALUR, MALKS e CRUPI}{ALUR; MALKS; CRUPI}{2003}
+{ALUR, D.; MALKS, D.; CRUPI, J. \emph{{Core J2EE Patterns: Best Practices and
+  Design Strategies}}. 2. ed.. ed. [S.l.]: Prentice Hall, 2003.
+ISBN 0131422464.}
+
+\bibitem[Caelum 2016]{caelumDesenvolvimento}
+\abntrefinfo{Caelum}{CAELUM}{2016}
+{CAELUM. \emph{{Java para Desenvolvimento Web}}. 2016.
+Dispon{\'\i}vel em: \url{https://www.caelum.com.br/apostila-java-web/}.}
+
+\bibitem[DevMedia 2015]{devmediacdi}
+\abntrefinfo{DevMedia}{DEVMEDIA}{2015}
+{DEVMEDIA. \emph{{CDI – Contextos e Dependências – Parte 2 - Java Magazine
+  85}}. 2015.
+Dispon{\'\i}vel em:
+  \url{http://www.devmedia.com.br/cdi-contextos-e-dependencias-parte-2-java-magazine-85/18492}.}
+
+\bibitem[Falbo 2012]{falboEngReq}
+\abntrefinfo{Falbo}{FALBO}{2012}
+{FALBO, R.~A. \emph{{Engenharia de Requisitos}}. [s.n.], 2012. 179~p.
+  Dispon{\'\i}vel em:
+  \url{http://www.inf.ufes.br/~falbo/files/Notas\_Aula\_Engenharia\_Requisitos.pdf}.}
+
+\bibitem[Falbo 2014]{falboEngSoft}
+\abntrefinfo{Falbo}{FALBO}{2014}
+{FALBO, R.~A. \emph{{Engenharia de Software}}. [s.n.], 2014. 141~p.
+  Dispon{\'\i}vel em:
+  \url{http://www.inf.ufes.br/~falbo/files/Notas\_Aula\_Engenharia\_Software.pdf}.}
+
+\bibitem[Faria 2013]{thiagoJava}
+\abntrefinfo{Faria}{FARIA}{2013}
+{FARIA, T. \emph{{Java EE 7 com JSF, PrimeFaces e CDI}}. [S.l.: s.n.], 2013.}
+
+\bibitem[Junior 2016]{PasteurEJB}
+\abntrefinfo{Junior}{JUNIOR}{2016}
+{JUNIOR, P.~O. de M. \emph{{Enterprise Java Beans}}. 2016.
+Dispon{\'\i}vel em: \url{http://www.tesestec.com.br/pasteurjr/ejb.pdf}.}
+
+\bibitem[Lima 2015]{lima-pg15}
+\abntrefinfo{Lima}{LIMA}{2015}
+{LIMA, L. V.~F. \emph{{SAP - Sistema de Apoio ao Professor}}.
+[S.l.], 2015.}
+
+\bibitem[Martins 2016]{martins-mestrado15}
+\abntrefinfo{Martins}{MARTINS}{2016}
+{MARTINS, B. F.~S. \emph{{Uma abordagem dirigida a modelos para o projeto de
+  Sistemas de Informação Web com base no método FrameWeb}}.
+[S.l.], 2016.}
+
+\bibitem[Oracle 2014]{oracleJAAS}
+\abntrefinfo{Oracle}{ORACLE}{2014}
+{ORACLE. \emph{{Java Platform, Enterprise Edition: The Java EE Tutorial}}.
+  2014.
+Dispon{\'\i}vel em:
+  \url{https://docs.oracle.com/javaee/7/tutorial/security-intro.htm\#BNBWJ}.}
+
+\bibitem[PRESSMAN 2005]{presmannSoft}
+\abntrefinfo{PRESSMAN}{PRESSMAN}{2005}
+{PRESSMAN, R.~S. \emph{{Software Engineering: A Practitioner’s Approach}}.
+  6ª edi\c{c}\~{a}o. ed. [S.l.]: McGraw Hill, 2005.
+ISBN 007301933X.}
+
+\bibitem[Sommerville 2007]{sommerville}
+\abntrefinfo{Sommerville}{SOMMERVILLE}{2007}
+{SOMMERVILLE, I. \emph{{Engenharia de Software}}. 8ª edi\c{c}\~{a}o. ed.
+  [S.l.]: Addison Wesley, 2007.}
+
+\bibitem[SOUZA 2007]{vitorFrameWeb}
+\abntrefinfo{SOUZA}{SOUZA}{2007}
+{SOUZA, V. E.~S. \emph{{FrameWeb: um Método baseado em Frameworks para o
+  Projeto de Sistemas de Informação Web}}. 2007.
+Dispon{\'\i}vel em:
+  \url{http://nemo.inf.ufes.br/wp-content/papercite-data/pdf/frameweb\_\_um\_metodo\_baseado\_em\_frameworks\_para\_o\_projeto\_de\_sistemas\_de\_informacao\_web\_2007.pdf}.}
+
+\end{thebibliography}

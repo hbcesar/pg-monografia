@@ -1,0 +1,83 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: pg-bernabe.aux
+A level-1 auxiliary file: capitulos/ch1-introducao.aux
+A level-1 auxiliary file: capitulos/ch2-referencial.aux
+A level-1 auxiliary file: capitulos/ch3-unagi.aux
+A level-1 auxiliary file: capitulos/ch4-revisao.aux
+A level-1 auxiliary file: capitulos/ch5-conclusoes.aux
+The style file: abntex2-alf.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Database file #1: abntex2-options.bib
+Database file #2: bibliografia.bib
+Warning--entry type for "caelumDesenvolvimento" isn't style-file defined
+--line 14 of file bibliografia.bib
+Warning--entry type for "devmediacdi" isn't style-file defined
+--line 21 of file bibliografia.bib
+Warning--string name "ago" is undefined
+--line 24 of file bibliografia.bib
+Warning--entry type for "PasteurEJB" isn't style-file defined
+--line 51 of file bibliografia.bib
+Warning--entry type for "oracleJAAS" isn't style-file defined
+--line 72 of file bibliografia.bib
+Warning--entry type for "vitorFrameWeb" isn't style-file defined
+--line 96 of file bibliografia.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
++---------------------------------------------------------+
+| Estilo bibliográfico abntex2-alf.bst versão v-1.9.5           |
+| Em caso de dúvidas ou problemas com este estilo procure |
+| http://www.abntex.net.br/                               |
++---------------------------------------------------------+
+You've used 14 entries,
+            6714 wiz_defined-function locations,
+            1275 strings with 11414 characters,
+and the built_in function-call counts, 19317 in all, are:
+= -- 2419
+> -- 234
+< -- 541
++ -- 663
+- -- 75
+* -- 1091
+:= -- 2445
+add.period$ -- 53
+call.type$ -- 14
+change.case$ -- 92
+chr.to.int$ -- 23
+cite$ -- 13
+duplicate$ -- 2026
+empty$ -- 808
+format.name$ -- 346
+if$ -- 3808
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 237
+newline$ -- 69
+num.names$ -- 65
+pop$ -- 334
+preamble$ -- 1
+purify$ -- 44
+quote$ -- 0
+skip$ -- 2110
+stack$ -- 1
+substring$ -- 813
+swap$ -- 699
+text.length$ -- 7
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 87
+width$ -- 0
+write$ -- 199
+(There were 6 warnings)

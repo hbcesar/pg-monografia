@@ -1,0 +1,113 @@
+\begin{landscape}
+
+
+	\chapter{Requisitos de Usuário}
+	\label{sec-requisitos}
+
+	\noindent {\large Tomando por base o contexto do sistema, foram identificados os seguintes requisitos de usuário e regras de negócio:}
+	
+\newcounter{rfcount}
+\renewcommand*\therfcount{RF-\arabic{rfcount}}
+\newcommand*\RF{\refstepcounter{rfcount}\therfcount}
+\setcounter{rfcount}{0}
+
+ \begin{longtable}{|c|p{16.5cm}|c|p{2.3cm}|}
+ 			
+			\caption{Requisitos Funcionais} \\ \hline \rowcolor[rgb]{0.8,0.8,0.8}
+ 					
+ 			Identificador &  Descrição  &  Prioridade   &  	Depende   \\ \hline	
+ 				
+			\RF\label{rf-cadastro-Administrador} & O sistema deve permitir o cadastro de administradores, com as seguintes informações: nome, email, CPF e matricula. & Alta & {}\\ \hline  
+			
+			\RF\label{rf-cadastro-Egresso} & O sistema deve permitir o cadastro de egressos, abrangendo egressos dos cursos de graduação e de pós-graduação do DI/Ufes. & Alta & \ref{rf-cadastro-Administrador}, \ref{rn-aluno-formado-DI}\\ \hline
+			
+			\RF\label{rf-gerenciamento-curso}  &  O sistema deve permitir o gerenciamento de cursos, incluindo as informações de nome, codigo e quem é o coordenador do curso. & Alta & \ref{rf-cadastro-Administrador} \\ \hline 
+			
+			\RF\label{rf-gerenciamento-assuntos-interesse} &  O sistema deve permitir o gerenciamento de assuntos de interesse. & Alta & \ref{rf-cadastro-Administrador} \\\hline 
+					
+			\RF\label{rf-gerenciamento-seminario}  & O sistema deve permitir o gerenciamento de seminários, armazenando informações como palestrante, o assunto, a data, horário e conteúdo. & Alta & \ref{rf-cadastro-Administrador}, \ref{rf-cadastro-Egresso}, \ref{rf-gerenciamento-assuntos-interesse}\\ \hline 
+			
+			\RF\label{rf-email-cadastro-egresso} & O sistema deve enviar email automaticamente aos egressos assim que forem pré-cadastrados, para que possam realizar a definição de senha e finalizar o cadastro. & Alta & 	\ref{rf-cadastro-Administrador},  \ref{rf-cadastro-Egresso} \\ \hline
+			
+			
+			\RF\label{rf-novo-email-cadastro}  & O sistema deve permitir que o egresso, caso este perca o email de cadastro, entre no site e informe o seu CPF/Matricula, sendo reconhecido receberá um novo email. & Alta & \ref{rf-cadastro-Administrador},  \ref{rf-cadastro-Egresso} \\ \hline  
+			
+			\RF\label{rf-coordenador-responder-comentario}  &  O coordenador de um curso deve poder responder comentários. & Média & \ref{rf-cadastro-Administrador}, \ref{rf-cadastro-Egresso}, \ref{rf-gerenciamento-curso}, \ref{rf-gerenciamento-comentario} \\ \hline
+					
+			\RF\label{rf-coordenador-avaliar-depoimento}  &  O coordenador de um curso deve poder avaliar depoimentos, autorizando ou não a divulgação no site. & Média & \ref{rf-cadastro-Administrador}, \ref{rf-cadastro-Egresso}, \ref{rf-gerenciamento-curso}, \ref{rf-gerenciamento-depoimento} \\ \hline
+					
+			
+			
+			
+			\RF\label{rf-gerenciamento-depoimento} & O sistema deve permitir que egressos enviem depoimentos sobre os cursos realizados no DI, armazenando informações como autor, conteúdo, curso, data de envio e se será anônimo. & Alta & \ref{rf-cadastro-Administrador}, \ref{rf-cadastro-Egresso}, \ref{rf-gerenciamento-curso} \\ \hline 
+					
+			\RF\label{rf-gerenciamento-comentario}  & O sistema deve permitir que os egressos enviem sugestões sobre os cursos que realizaram no DI, armazenando informações como o autor, o conteúdo, o curso e a data de envio. & 	Alta &  	\ref{rf-cadastro-Administrador}, \ref{rf-cadastro-Egresso}, \ref{rf-gerenciamento-curso} \\ \hline 
+					
+			\RF\label{rf-email-atualizacao-dados}  & O sistema deve enviar um email automaticamente aos egressos a cada 2 anos, a fim de solicitar aos egressos a atualização de seus dados. & 	Média & \ref{rf-cadastro-Administrador}, \ref{rf-cadastro-Egresso} \\ \hline 
+					
+			\RF\label{rf-gerar-relatorio}  & O sistema deve gerar relatórios estatísticos conforme a seção 3.1, permitindo sua consulta por qualquer usuário. & Alta & \ref{rf-cadastro-Administrador}, \ref{rf-cadastro-Egresso}, \ref{rf-gerenciamento-curso} \\ \hline 
+					
+			\RF\label{rf-egresso-atualizar-dados} & O egresso deve poder atualizar seus dados. & Alta &  \ref{rf-cadastro-Administrador}, \ref{rf-cadastro-Egresso} \\\hline 
+			
+			\RF\label{rf-egresso-elencar-assuntos-interesse}  & O egresso deve poder elencar seus assuntos de interesse. & Média & \ref{rf-cadastro-Administrador}, \ref{rf-cadastro-Egresso} \\ \hline 
+					
+			\RF\label{rf-egresso-palestrante}  & O egresso deve poder se voluntariar como palestrante e sugerir o assunto. & Média & \ref{rf-cadastro-Administrador}, \ref{rf-cadastro-Egresso}, \ref{rf-gerenciamento-seminario} \\ \hline  
+			
+			\RF\label{rf-consulta-depoimento}  & O sistema deve permitir a consulta de depoimentos por qualquer usuário. & Alta &  \ref{rf-cadastro-Egresso}, \ref{rf-coordenador-avaliar-depoimento}, \ref{rf-gerenciamento-depoimento}\\ \hline  
+ 
+ 
+\end{longtable}
+
+
+
+
+
+
+
+\newcounter{rncount}
+\renewcommand*\therncount{RN-\arabic{rncount}}
+\newcommand*\RN{\refstepcounter{rncount}\therncount}
+\setcounter{rncount}{0}
+
+\begin{longtable}{|c|p{16.5cm}|c|p{2.3cm}|}
+			
+			\caption{Regras de Negócio} \\ \hline \rowcolor[rgb]{0.8,0.8,0.8}
+ 			
+ 			Identificador & 	Descrição  &  Prioridade    & Depende  \\ \hline	
+					
+			\RN\label{rn-aluno-formado-DI}  & Só poderão se cadastrar no sistema alunos que se formaram em pelo menos um curso oferecido pelo DI, a saber : Ciência da Computação, Engenharia da Computação, Mestrado em Informática e Doutorado em Ciência da Computação & Alta & 	\\ \hline 
+					
+			\RN\label{rn-depoimento-curso}  & Egressos só poderão postar depoimento, comentar e sugerir sobre curso que tenha realizado.  & Alta &  \\ \hline 
+				 
+\end{longtable}
+	
+
+
+\newcounter{rnfcount}
+\renewcommand*\thernfcount{RNF-\arabic{rnfcount}}
+\newcommand*\RNF{\refstepcounter{rnfcount}\thernfcount}
+\setcounter{rnfcount}{0}
+
+
+\begin{longtable}{|c|p{12.5cm}|p{3.1cm}|c|c|}
+	
+			\caption{Requisitos Não Funcionais}\\ \hline \rowcolor[rgb]{0.8,0.8,0.8}
+ 					
+ 			Identificador &	Descrição  & Categoria  & Escopo  & Prioridade   \\ \hline		
+					
+			\RNF\label{rnf-Portabilidade}  & A ferramenta deve estar disponível como uma aplicação Web, acessível a partir dos principais navegadores disponíveis no mercado. & Portabilidade & 	Sistema  &	Alta \\	\hline 
+					
+			\RNF\label{rnf-facilidade-aprendizado}  & A ferramenta dever ser de aprendizado fácil, não sendo necessário nenhum treinamento especial para seu uso.  & Facilidade de Aprendizado  & Sistema &	Média   \\ \hline 
+					
+			\RNF\label{rnf-facilidade-operacao}  & A ferramenta deve ser de fácil operação, não sendo necessário uso contínuo para uma boa operação do sistema.  &	Facilidade de Operação  & Sistema &	Alta  \\ 	\hline 
+					
+			\RNF\label{rnf-seguranca-acesso}  & O sistema deve controlar o acesso as funcionalidades.  &	Segurança de acesso  &  Sistema 	 &	Alta  \\ \hline 
+					
+			\RNF\label{rnf-eficiencia-tempo}  & O tempo para o preenchimento do cadastro pelo egresso deve ser inferior a cinco minutos.  &	Eficiência em relação ao tempo  & Funcionalidade	 &	Alta  \\ 	\hline 
+					
+			\RNF\label{rnf-interoperabilidade}  & O sistema deve estar integrado a um sistema de correio eletrônico de modo que seja possível o envio de email automaticamente. &	Interoperabilidade & Funcionalidade & Alta  \\ \hline 
+										
+			\RNF\label{rnf-reusabilidade}  & O desenvolvimento do sistema deve explorar o potencial de reutilização de componentes, tanto no que se refere ao desenvolvimento com reúso quanto ao desenvolvimento para reúso.  & Reusabilidade  &	Sistema & Média  \\\hline 
+				
+\end{longtable}	
+\end{landscape}
