@@ -209,9 +209,10 @@
 \newcommand{\gore}{\textit{GORE}}
 \newcommand{\zanshin}{\textit{Zanshin}}
 \newcommand{\sirius}{Sirius\texttrademark\xspace}
-
-
-
+\newcommand{\eclipse}{Eclipse\texttrademark\xspace}
+\newcommand{\xml}{XML}
+\newcommand{\emf}{EMF}
+\newcommand{\framework}{\textit{Framework}}
 
 %%% Configurações finais de aparência. %%%
 
@@ -388,12 +389,13 @@ AGRADECIMENTOS
 \setlength{\absparsep}{18pt}
 \begin{resumo}
 
-Com o avanço da tecnologia, sistemas de software são executados em ambientes cada vez mais dinâmicos, sendo assim obrigados a lidar com requisitos cada vez mais complexos. Nesse universo tecnológico, onde sistemas precisam reagir a diversos tipos de condições, destaca-se o uso de sistemas adaptativos, que modificam seu comportamento e performance em tempo de execução para satisfazer seus requisitos mesmo em caso de falha, podendo se replanejar e reconfigurar a medida que novas exigências são encontradas e precisam ser atendidas. 
-\zanshin é uma abordagem baseada em Engenharia de Requisitos Orientada a Objetivos (Goal-Oriented Requirements Engineering ou simplesmente GORE) para o desenvolvimento de sistemas adaptativos. Baseado no fato de que todo sistema possui, ainda que implícito, um ciclo de retroalimentação, o framework utiliza dessa afirmativa para monitorar e avaliar o comportamento do sistema alvo, e através desse loop enviar instruções de adaptação para o mesmo. Para isso, são definidas duas novas classes de Requisitos:
+Com o avanço da tecnologia, sistemas de software são executados em ambientes cada vez mais dinâmicos, sendo assim obrigados a lidar com requisitos cada vez mais complexos. Nesse universo tecnológico, onde sistemas precisam reagir a diversos tipos de condições destaca-se o uso de sistemas que modificam seu comportamento e performance em tempo de execução para satisfazer requisitos mesmo em caso de falha, podendo se replanejar e reconfigurar a medida que novas exigências são encontradas e precisam ser atendidas.
+\zanshin é uma abordagem baseada em Engenharia de Requisitos Orientada a Objetivos (Goal-Oriented Requirements Engineering ou simplesmente GORE) criada para apoiar o desenvolvimento de sistemas adaptativos. Baseado no fato de que todo sistema possui, ainda que implícito, um ciclo de retroalimentação, o framework utiliza dessa premissa para monitorar e avaliar o comportamento do sistema alvo, enviando assim instruções de adaptação para o mesmo. Para auxiliar o processo de modelagem dos sistemas adaptativos são definidas duas novas classes de Requisitos:
 - Requisitos de Percepção (\textit{Awareness Requirement} ou \awreq), que especificam os indicadores de convergência que o sistema deve atingir para que determinado objetivo seja cumprido;
 - Requisitos de Evolução (\textit{Evolution Requirements} ou \evoreq), que definem as medidas a serem seguidas pelo processo de adaptação, ou seja, as instruções que serão enviadas ao sistema alvo mediante falha de um objetivo;
-Para apoiar o processo de modelagem dos requisitos dentro desta abordagem, é apresentada a ferramenta Unagi, um editor gráfico para criação de modelos GORE compatíveis com Zanshin. Baseada na tecnologia Sirius, a ferramenta implementa um editor gráfico para modelos de sistemas adaptativos e oferece um sistema de integração com o \zanshin, permitindo assim que modelos criados sejam validados na plataforma de apoio a sistemas adaptativos.
-Nesse trabalho, além da criação da ferramenta, é discutida uma nova proposta ao metamodelo do \zanshin.
+Este trabalho discute uma nova proposta para o metamodelo operacional do \zanshin, que foi reformulado buscando compreender as restrições de \gore de uma forma mais precisa do que na adotada anteriormente.
+Além disso, para apoiar o processo de modelagem dos requisitos dentro desta abordagem, é apresentada a ferramenta CASE Unagi, que implementa um editor gráfico para modelos de sistemas adaptativos e oferece um sistema de integração com o \zanshin, permitindo assim que modelos criados sejam importados diretamente para a plataforma de apoio a sistemas adaptativos.
+
 
 
 \textbf{Palavras-chaves}:  Engenharia de Requisitos, GORE, Zanshin, Unagi...
@@ -432,6 +434,11 @@ Nesse trabalho, além da criação da ferramenta, é discutida uma nova proposta
   \item[URL] Uniform Resource Locator
     
   \item[XML] eXtensible Markup Language
+  
+  \item[GORE] Goal Oriented Requirements Engineering
+  
+  \item[EMF] Eclipse Modeling Framework
+  
   
 \end{siglas}
 
