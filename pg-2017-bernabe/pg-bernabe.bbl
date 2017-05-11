@@ -5,79 +5,35 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.5 }
 
-\bibitem[ALUR, MALKS e CRUPI 2003]{alurDAO}
-\abntrefinfo{ALUR, MALKS e CRUPI}{ALUR; MALKS; CRUPI}{2003}
-{ALUR, D.; MALKS, D.; CRUPI, J. \emph{{Core J2EE Patterns: Best Practices and
-  Design Strategies}}. 2. ed.. ed. [S.l.]: Prentice Hall, 2003.
-ISBN 0131422464.}
+\bibitem[Andersson et al. 2009]{andersson2009modeling}
+\abntrefinfo{Andersson et al.}{ANDERSSON et al.}{2009}
+{ANDERSSON, J. et al. Modeling dimensions of self-adaptive software systems.
+  In:  \emph{Software engineering for self-adaptive systems}. [S.l.]: Springer,
+  2009. p. 27--47.}
 
-\bibitem[Caelum 2016]{caelumDesenvolvimento}
-\abntrefinfo{Caelum}{CAELUM}{2016}
-{CAELUM. \emph{{Java para Desenvolvimento Web}}. 2016.
-Dispon{\'\i}vel em: \url{https://www.caelum.com.br/apostila-java-web/}.}
+\bibitem[Brun et al. 2009]{brun2009engineering}
+\abntrefinfo{Brun et al.}{BRUN et al.}{2009}
+{BRUN, Y. et al. Engineering self-adaptive systems through feedback loops. In:
+  \emph{Software engineering for self-adaptive systems}. [S.l.]: Springer,
+  2009. p. 48--70.}
 
-\bibitem[DevMedia 2015]{devmediacdi}
-\abntrefinfo{DevMedia}{DEVMEDIA}{2015}
-{DEVMEDIA. \emph{{CDI – Contextos e Dependências – Parte 2 - Java Magazine
-  85}}. 2015.
-Dispon{\'\i}vel em:
-  \url{http://www.devmedia.com.br/cdi-contextos-e-dependencias-parte-2-java-magazine-85/18492}.}
+\bibitem[Kephart e Chess 2003]{kephart2003vision}
+\abntrefinfo{Kephart e Chess}{KEPHART; CHESS}{2003}
+{KEPHART, J.~O.; CHESS, D.~M. The vision of autonomic computing.
+\emph{Computer}, IEEE, v.~36, n.~1, p. 41--50, 2003.}
 
-\bibitem[Falbo 2012]{falboEngReq}
-\abntrefinfo{Falbo}{FALBO}{2012}
-{FALBO, R.~A. \emph{{Engenharia de Requisitos}}. [s.n.], 2012. 179~p.
-  Dispon{\'\i}vel em:
-  \url{http://www.inf.ufes.br/~falbo/files/Notas\_Aula\_Engenharia\_Requisitos.pdf}.}
+\bibitem[Souza 2012]{tesevitor}
+\abntrefinfo{Souza}{SOUZA}{2012}
+{SOUZA, V.~E. S.
+\emph{Requirements-based software system adaptation}.
+Tese (Doutorado) --- University of Trento, 2012.}
 
-\bibitem[Falbo 2014]{falboEngSoft}
-\abntrefinfo{Falbo}{FALBO}{2014}
-{FALBO, R.~A. \emph{{Engenharia de Software}}. [s.n.], 2014. 141~p.
-  Dispon{\'\i}vel em:
-  \url{http://www.inf.ufes.br/~falbo/files/Notas\_Aula\_Engenharia\_Software.pdf}.}
-
-\bibitem[Faria 2013]{thiagoJava}
-\abntrefinfo{Faria}{FARIA}{2013}
-{FARIA, T. \emph{{Java EE 7 com JSF, PrimeFaces e CDI}}. [S.l.: s.n.], 2013.}
-
-\bibitem[Junior 2016]{PasteurEJB}
-\abntrefinfo{Junior}{JUNIOR}{2016}
-{JUNIOR, P.~O. de M. \emph{{Enterprise Java Beans}}. 2016.
-Dispon{\'\i}vel em: \url{http://www.tesestec.com.br/pasteurjr/ejb.pdf}.}
-
-\bibitem[Lima 2015]{lima-pg15}
-\abntrefinfo{Lima}{LIMA}{2015}
-{LIMA, L. V.~F. \emph{{SAP - Sistema de Apoio ao Professor}}.
-[S.l.], 2015.}
-
-\bibitem[Martins 2016]{martins-mestrado15}
-\abntrefinfo{Martins}{MARTINS}{2016}
-{MARTINS, B. F.~S. \emph{{Uma abordagem dirigida a modelos para o projeto de
-  Sistemas de Informação Web com base no método FrameWeb}}.
-[S.l.], 2016.}
-
-\bibitem[Oracle 2014]{oracleJAAS}
-\abntrefinfo{Oracle}{ORACLE}{2014}
-{ORACLE. \emph{{Java Platform, Enterprise Edition: The Java EE Tutorial}}.
-  2014.
-Dispon{\'\i}vel em:
-  \url{https://docs.oracle.com/javaee/7/tutorial/security-intro.htm\#BNBWJ}.}
-
-\bibitem[PRESSMAN 2005]{presmannSoft}
-\abntrefinfo{PRESSMAN}{PRESSMAN}{2005}
-{PRESSMAN, R.~S. \emph{{Software Engineering: A Practitioner’s Approach}}.
-  6ª edi\c{c}\~{a}o. ed. [S.l.]: McGraw Hill, 2005.
-ISBN 007301933X.}
-
-\bibitem[Sommerville 2007]{sommerville}
-\abntrefinfo{Sommerville}{SOMMERVILLE}{2007}
-{SOMMERVILLE, I. \emph{{Engenharia de Software}}. 8ª edi\c{c}\~{a}o. ed.
-  [S.l.]: Addison Wesley, 2007.}
-
-\bibitem[SOUZA 2007]{vitorFrameWeb}
-\abntrefinfo{SOUZA}{SOUZA}{2007}
-{SOUZA, V. E.~S. \emph{{FrameWeb: um Método baseado em Frameworks para o
-  Projeto de Sistemas de Informação Web}}. 2007.
-Dispon{\'\i}vel em:
-  \url{http://nemo.inf.ufes.br/wp-content/papercite-data/pdf/frameweb\_\_um\_metodo\_baseado\_em\_frameworks\_para\_o\_projeto\_de\_sistemas\_de\_informacao\_web\_2007.pdf}.}
+\bibitem[Souza, Lapouchnian e Mylopoulos 2012]{souza2012requirement}
+\abntrefinfo{Souza, Lapouchnian e Mylopoulos}{SOUZA; LAPOUCHNIAN;
+  MYLOPOULOS}{2012}
+{SOUZA, V. E.~S.; LAPOUCHNIAN, A.; MYLOPOULOS, J. (requirement) evolution
+  requirements for adaptive systems. In:  IEEE PRESS. \emph{Proceedings of the
+  7th International Symposium on Software Engineering for Adaptive and
+  Self-Managing Systems}. [S.l.], 2012. p. 155--164.}
 
 \end{thebibliography}
