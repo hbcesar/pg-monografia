@@ -13,19 +13,35 @@
 \chapter{Referencial Teórico}
 \label{sec-referencial}
 
-Este capítulo apresenta os principais conceitos teóricos que fundamentaram o desenvolvimento do sistema SAE e está organizado em 3 seções. A seção~\ref{sec-referencial-engenharia-software} aborda a Engenharia de Software, destacando os principais conceitos e processos utilizados. A seção~\ref{sec-referencial-frameweb} apresenta o método FrameWeb.A seção~\ref{sec-referencial-desenvolvimento-web} apresenta os principais conceitos de desenvolvimento Web.
+Este capítulo apresenta os principais conceitos teóricos que fundamentaram a evolução do metamodelo de requisitos do \zanshin e do desenvolvimento da ferramenta \unagi. A seção~\ref{sec-referencial-engenharia-requisitos} aborda a Engenharia de Requisitos Orientada a Objetivos , destacando os principais conceitos dessa área que foram utilizados ao longo deste trabalho. A seção~\ref{sec-referencial-zanshin} apresenta o sistema \zanshin e os detalhes do metamodelo original do \texit{framework}. A seção~\ref{sec-referencial-unagi} apresenta as principais ferramentas que foram utilizadas durante o desenvolvimento do \unagi, como as funcionalidades de Desenvolvimento Orientado a Modelos (\texit{Model Driven Development} ou MDD) do \eclipse, o plugin \sirius, dentre outros.
 
 
-
-
+%TODO: Na introdução incluir o nome GORE em ingles por extenso na primeira vez que gore é citado;
 % ======================================================================================================
-% SEÇÃO Engenharia de Software
+% SEÇÃO Engenharia de Requisitos Orientada a Objetivos
 % ======================================================================================================
 
-\section{Engenharia de Software}
-\label{sec-referencial-engenharia-software}
+\section{Engenharia de Requisitos Orientada a Objetivos}
+\label{sec-referencial-engenharia-requisitos}
 
-A \textbf{Engenharia de Software} é a área da Ciência da Computação voltada à especificação, ao desenvolvimento e à manutenção de sistemas de software, com aplicação de tecnologias e práticas de gerência de projetos e outras disciplinas, visando à organização, produtividade e qualidade no processo de software. A Engenharia de Software trata de aspectos relacionados ao estabelecimento de processos, métodos, técnicas, ferramentas e ambientes de suporte ao desenvolvimento de software~\cite{falboEngSoft}.
+A \textbf{Engenharia de Requisitos Orientada a Objetivos} é uma parte subárea de Engenharia de Requisitos, componente da área de Engenharia de Software. 
+
+%TODO: Falar brevemente sobre engenharia de software, engenharia de requisitos e então engenharia de objetivos.
+
+Objetivos são parte importante do processo Engenharia de Requisitos, seu propósito é indicar as principais necessidades que levaram a criação de um determinado sistema, demonstrando os casos em que as funcionalidades do mesmo satisfarão as necessidades elicitadas, além de dizer como o sistema deve ser construído para satisfazê-las ~\cite{ross1977structured}. Em uma descrição geral e resumida do processo de identificação de objetivos, pode-se dizer que o potencial software é analisado nos ambientes organizacional, operacional e técnico, onde são assim identificados os problemas do contexto e as oportunidades de solução desses problemas com o desenvolvimento do sistema. Então, os objetivos são criados com foco na resolução dos problemas e das oportunidades identificadas. Tendo em mãos os objetivos do sistema devidamente refinados e elaborados, os requisitos do sistema são então elaborados para que esses objetivos sejam devidamente atendidos. Além de apoiar no processo de modelagem de requisitos, objetivos são usados para apoiar outros propósitos como gerenciamento de conflitos e verificação ~\cite{van2001goal}. De acordo com ~\cite{van2001goal}, ~\cite{jackson1995software} e ~\cite{zave1997four}, objetivos podem ser reformulados de em diferentes níveis de abstração, dependendo do tipo de necessidade que o sistema alvo deve atender, abrangendo desde interesses referentes a estratégias de negócios até conceitos técnicos de atividades, podendo assim refererir-se a requisitos funcionais e não-funcionais.
+
+A necessidade de uso de objetivos no processo de modelagem de sistemas de softwares vem se tornando cada vez mais clara, a medida que analistas percebem que a Engenharia de Objetivos é importante pois:
+\begin{itemize}
+	\item Objetivos provêm critérios claros de completude dos requisitos do sistema, permitindo também que requisitos desnecessários sejam descartados.
+	\item Facilita o processo de entendimento dos requisitos por parte dos \textit{stakeholders}.
+	\item Melhora a legibilidade de documentos de especificação de requisitos, pois permite que engenheiros possam enxergar com mais clareza as alternativas de desenvolvimento requisitos do sistema. Além de facilitar o processo de gerenciamento de conflitos.
+	
+\end{itemize}
+
+
+
+
+, voltada à especificação, ao desenvolvimento e à manutenção de sistemas de software, com aplicação de tecnologias e práticas de gerência de projetos e outras disciplinas, visando à organização, produtividade e qualidade no processo de software. A Engenharia de Software trata de aspectos relacionados ao estabelecimento de processos, métodos, técnicas, ferramentas e ambientes de suporte ao desenvolvimento de software~\cite{falboEngSoft}.
 
 Modelos de processo que enfatizam a definição, identificação e aplicação detalhada de atividades e tarefas de processo têm sido aplicados na comunidade de Engenharia de Software durante os últimos trinta anos. Quando esses \textit{modelos prescritivos de processo} são aplicados, o objetivo é melhorar a qualidade do sistema~\cite{presmannSoft}. 
 De fato, a qualidade dos produtos de software depende fortemente da qualidade dos processos usados para desenvolvê-los e mantê-los~\cite{falboEngSoft}.
@@ -125,17 +141,17 @@ O FrameWeb define extensões leves (\textit{lightweight extensions}) ao meta-mod
 	\begin{itemize}
 		\item A partir do modelo de classes construído na fase de análise de requisitos, adequar o modelo à plataforma de implementação escolhida, indicando os tipos de dados de cada atributo, promovendo a classes atributos que devam ser promovidos, definindo a navegabilidade das associações etc.;
 		\item Adicionar os mapeamentos de persistência.	
-	
+		
 	\end{itemize}
 	
 	\item \textbf{Modelo de Aplicação:} é um diagrama de classes da UML que representa as classes de serviço, que são responsáveis pela codificação dos casos de uso, e suas dependências. Os passos para a construção do Modelo de Aplicação são:	
 	\begin{itemize}
 		\item Analisar os casos de uso modelados durante a Especificação de Requisitos, definir a granularidade das classes de serviço e criá-las. Utilizar, preferencialmente, nomes que as relacionem com os casos de uso ou cenários que representam;
-	
+		
 		\item Adicionar às classes/interfaces os métodos que implementam a lógica de negócio, com atenção ao nome escolhido (preferencialmente relacionar o método ao cenário que implementa), aos parâmetros de entrada e ao retorno (observar a descrição do caso de uso);
-	
+		
 		\item Por meio de uma leitura da descrição dos casos de uso, identificar quais DAOs (\textit{Data Access Object})~\cite{alurDAO} são necessários para cada classe de aplicação e modelar as associações;
-	
+		
 		\item Voltar ao modelo de navegação (se já foi construído), identificar quais classes controladoras dependem de quais classes de serviço e modelar as associações.
 	\end{itemize}
 	
@@ -292,9 +308,9 @@ Aplicações Java EE consistem em componentes que podem conter ambos os recursos
 \textit{Java Authentication and Authorization Service} (JAAS) é um conjunto de APIs que permitem serviços para autenticar e aplicar controles de acesso sobre os usuários. JAAS é parte do núcleo da Java SE API e é uma tecnologia de base para mecanismos de segurança Java EE. Os conceitos principais desta API são:
 
 \begin{itemize}
-\item Autenticação: os meios pelos quais entidades comunicantes, como cliente e servidor, provam um ao outro que estão agindo em nome de identidades específicas que são autorizados para o acesso. Isso garante que os usuários são quem eles dizem que são~\cite{oracleJAAS}.
-
-\item Autorização ou controle de acesso: os meios pelos quais as interações com os recursos são limitados a grupos de usuários ou programas com o objetivo de impor a integridade, confidencialidade, disponibilidade ou restrições. Isso garante que os usuários têm permissão para executar operações ou dados de acesso~\cite{oracleJAAS}.
+	\item Autenticação: os meios pelos quais entidades comunicantes, como cliente e servidor, provam um ao outro que estão agindo em nome de identidades específicas que são autorizados para o acesso. Isso garante que os usuários são quem eles dizem que são~\cite{oracleJAAS}.
+	
+	\item Autorização ou controle de acesso: os meios pelos quais as interações com os recursos são limitados a grupos de usuários ou programas com o objetivo de impor a integridade, confidencialidade, disponibilidade ou restrições. Isso garante que os usuários têm permissão para executar operações ou dados de acesso~\cite{oracleJAAS}.
 \end{itemize}
 
 Um \textit{Role} (Papel) é um nome abstrato para a permissão de acesso a um determinado conjunto de recursos em um aplicação. Em uma aplicação que utiliza JAAS, um usuário só terá acesso à um recurso protegido se ele possuir um \textit{role} que permita este acesso, assim um \textit{role} pode ser comparado a uma chave que pode abrir uma fechadura. 
@@ -350,7 +366,7 @@ CDI (\textit{Contexts and Dependency Injection}) é a especificação da Java EE
 
 \begin{itemize}
 	\item Contextos: este serviço permite ligar o ciclo de vida e interações de componentes \textit{stateful} a contextos de ciclo de vida bem definidos, mas extensível.
-
+	
 	\item Injeção de dependência: este serviço permite que você injetar componentes em uam aplicação de uma maneira \textit{typesafe} e escolher no momento da implantação, qual implementação de uma interface específica injetar.
 \end{itemize}
 
