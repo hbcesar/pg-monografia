@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.4)  10 MAY 2017 22:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.4)  12 MAY 2017 19:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1765,119 +1765,126 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 
 
 
-]
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 55.
- [13]) [14]
+] [13]) [14]
+[15]
 \openout2 = `capitulos/ch2-referencial.aux'.
 
+ (./capitulos/ch2-referencial.tex
 
-(./capitulos/ch2-referencial.tex
-
-LaTeX Warning: Citation `falboEngSoft' on page 15 undefined on input line 28.
-
-
-LaTeX Warning: Citation `presmannSoft' on page 15 undefined on input line 30.
+LaTeX Warning: Reference `sec-referencial-zanshin' on page 16 undefined on inpu
+t line 16.
 
 
-LaTeX Warning: Citation `falboEngSoft' on page 15 undefined on input line 31.
+LaTeX Warning: Reference `sec-referencial-unagi' on page 16 undefined on input 
+line 16.
 
 
-LaTeX Warning: Citation `falboEngSoft' on page 15 undefined on input line 33.
+LaTeX Warning: Citation `ross1977structured' on page 16 undefined on input line
+ 29.
 
 
-LaTeX Warning: Citation `falboEngReq' on page 15 undefined on input line 33.
+LaTeX Warning: Citation `van2001goal' on page 16 undefined on input line 29.
 
-[15
+
+LaTeX Warning: Citation `van2001goal' on page 16 undefined on input line 29.
+
+
+LaTeX Warning: Citation `jackson1995software' on page 16 undefined on input lin
+e 29.
+
+
+LaTeX Warning: Citation `zave1997four' on page 16 undefined on input line 29.
+
+[16
 
 
 
 ]
 
-LaTeX Warning: Citation `falboEngReq' on page 16 undefined on input line 52.
+LaTeX Warning: Citation `van2001goal' on page 17 undefined on input line 40.
 
 
-LaTeX Warning: Citation `falboEngReq' on page 16 undefined on input line 54.
+LaTeX Warning: Citation `falboEngReq' on page 17 undefined on input line 54.
 
 
-LaTeX Warning: Citation `sommerville' on page 16 undefined on input line 60.
-
-
-LaTeX Warning: Citation `sommerville' on page 16 undefined on input line 62.
-
-
-LaTeX Warning: Citation `falboEngReq' on page 16 undefined on input line 64.
-
-[16]
-
-LaTeX Warning: Citation `falboEngReq' on page 17 undefined on input line 68.
-
-
-LaTeX Warning: Citation `falboEngReq' on page 17 undefined on input line 80.
-
-
-LaTeX Warning: Citation `falboEngSoft' on page 17 undefined on input line 82.
-
-
-LaTeX Warning: Citation `vitorFrameWeb' on page 17 undefined on input line 95.
+LaTeX Warning: Citation `falboEngReq' on page 17 undefined on input line 56.
 
 [17]
 
-LaTeX Warning: Citation `presmannSoft' on page 18 undefined on input line 102.
+LaTeX Warning: Citation `sommerville' on page 18 undefined on input line 62.
 
 
-LaTeX Warning: Citation `martins-mestrado15' on page 18 undefined on input line
- 107.
+LaTeX Warning: Citation `sommerville' on page 18 undefined on input line 64.
 
 
-<figuras/referencial/fig-referencial-processo-software.png, id=315, 362.85562pt
+LaTeX Warning: Citation `falboEngReq' on page 18 undefined on input line 66.
+
+
+LaTeX Warning: Citation `falboEngReq' on page 18 undefined on input line 70.
+
+
+LaTeX Warning: Citation `falboEngReq' on page 18 undefined on input line 82.
+
+[18]
+
+LaTeX Warning: Citation `falboEngSoft' on page 19 undefined on input line 84.
+
+
+LaTeX Warning: Citation `vitorFrameWeb' on page 19 undefined on input line 97.
+
+
+LaTeX Warning: Citation `presmannSoft' on page 19 undefined on input line 104.
+
+
+LaTeX Warning: Citation `martins-mestrado15' on page 19 undefined on input line
+ 109.
+
+[19]
+<figuras/referencial/fig-referencial-processo-software.png, id=329, 362.85562pt
  x 82.05656pt>
 File: figuras/referencial/fig-referencial-processo-software.png Graphic file (t
 ype png)
  <use figuras/referencial/fig-referencial-processo-software.png>
 Package pdftex.def Info: figuras/referencial/fig-referencial-processo-software.
-png used on input line 113.
+png used on input line 115.
 (pdftex.def)             Requested size: 455.0pt x 102.89722pt.
 
 
-LaTeX Warning: Citation `vitorFrameWeb' on page 18 undefined on input line 114.
+LaTeX Warning: Citation `vitorFrameWeb' on page 20 undefined on input line 116.
 
 
 
-LaTeX Warning: Citation `vitorFrameWeb' on page 18 undefined on input line 114.
+LaTeX Warning: Citation `vitorFrameWeb' on page 20 undefined on input line 116.
 
 
+[20 <./figuras/referencial/fig-referencial-processo-software.png>]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[18]
-
-LaTeX Warning: Citation `alurDAO' on page 19 undefined on input line 137.
-
-[19 <./figuras/referencial/fig-referencial-processo-software.png>]
-
-LaTeX Warning: Citation `caelumDesenvolvimento' on page 20 undefined on input l
-ine 174.
-
-[20]
-
-LaTeX Warning: Citation `thiagoJava' on page 21 undefined on input line 176.
-
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 197.
-
-LaTeX Warning: Citation `caelumDesenvolvimento' on page 21 undefined on input l
-ine 199.
+LaTeX Warning: Citation `alurDAO' on page 21 undefined on input line 139.
 
 [21]
 
-LaTeX Warning: Citation `thiagoJava' on page 22 undefined on input line 203.
+LaTeX Warning: Citation `caelumDesenvolvimento' on page 22 undefined on input l
+ine 176.
 
 
-LaTeX Warning: Citation `PasteurEJB' on page 22 undefined on input line 216.
+LaTeX Warning: Citation `thiagoJava' on page 22 undefined on input line 178.
 
 [22]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 226.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 199.
+
+
+LaTeX Warning: Citation `caelumDesenvolvimento' on page 23 undefined on input l
+ine 201.
+
+
+LaTeX Warning: Citation `thiagoJava' on page 23 undefined on input line 205.
+
+
+LaTeX Warning: Citation `PasteurEJB' on page 23 undefined on input line 218.
+
+[23]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 228.
 
  (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1888,89 +1895,90 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             See the microtype manual for details.
 
 
-LaTeX Warning: Citation `PasteurEJB' on page 23 undefined on input line 230.
+LaTeX Warning: Citation `PasteurEJB' on page 24 undefined on input line 232.
 
 
-LaTeX Warning: Citation `thiagoJava' on page 23 undefined on input line 241.
-
-
-LaTeX Warning: Citation `thiagoJava' on page 23 undefined on input line 243.
-
-[23]
-
-LaTeX Warning: Citation `thiagoJava' on page 24 undefined on input line 251.
-
-
-LaTeX Warning: Citation `thiagoJava' on page 24 undefined on input line 263.
-
-
-LaTeX Warning: Citation `thiagoJava' on page 24 undefined on input line 265.
-
-
-LaTeX Warning: Citation `thiagoJava' on page 24 undefined on input line 267.
+LaTeX Warning: Citation `thiagoJava' on page 24 undefined on input line 243.
 
 [24]
 
-LaTeX Warning: Citation `oracleJAAS' on page 25 undefined on input line 275.
+LaTeX Warning: Citation `thiagoJava' on page 25 undefined on input line 245.
 
 
-LaTeX Warning: Citation `alurDAO' on page 25 undefined on input line 277.
+LaTeX Warning: Citation `thiagoJava' on page 25 undefined on input line 253.
 
 
-LaTeX Warning: Citation `oracleJAAS' on page 25 undefined on input line 290.
+LaTeX Warning: Citation `thiagoJava' on page 25 undefined on input line 265.
+
+
+LaTeX Warning: Citation `thiagoJava' on page 25 undefined on input line 267.
 
 [25]
 
-LaTeX Warning: Citation `oracleJAAS' on page 26 undefined on input line 295.
+LaTeX Warning: Citation `thiagoJava' on page 26 undefined on input line 269.
 
 
-LaTeX Warning: Citation `oracleJAAS' on page 26 undefined on input line 297.
+LaTeX Warning: Citation `oracleJAAS' on page 26 undefined on input line 277.
 
 
-LaTeX Warning: Citation `oracleJAAS' on page 26 undefined on input line 304.
+LaTeX Warning: Citation `alurDAO' on page 26 undefined on input line 279.
+
+[26]
+
+LaTeX Warning: Citation `oracleJAAS' on page 27 undefined on input line 292.
 
 
-LaTeX Warning: Citation `oracleJAAS' on page 26 undefined on input line 306.
+LaTeX Warning: Citation `oracleJAAS' on page 27 undefined on input line 297.
 
 
-<figuras/referencial/fig-referencial-jaas-method-form.png, id=368, 859.21pt x 5
+LaTeX Warning: Citation `oracleJAAS' on page 27 undefined on input line 299.
+
+
+LaTeX Warning: Citation `oracleJAAS' on page 27 undefined on input line 306.
+
+[27]
+
+LaTeX Warning: Citation `oracleJAAS' on page 28 undefined on input line 308.
+
+
+<figuras/referencial/fig-referencial-jaas-method-form.png, id=380, 859.21pt x 5
 37.00626pt>
 File: figuras/referencial/fig-referencial-jaas-method-form.png Graphic file (ty
 pe png)
  <use figuras/referencial/fig-referencial-jaas-method-form.png>
 Package pdftex.def Info: figuras/referencial/fig-referencial-jaas-method-form.p
-ng used on input line 314.
+ng used on input line 316.
 (pdftex.def)             Requested size: 455.0pt x 284.37433pt.
 
 
-LaTeX Warning: Citation `oracleJAAS' on page 26 undefined on input line 315.
+LaTeX Warning: Citation `oracleJAAS' on page 28 undefined on input line 317.
 
 
-LaTeX Warning: Citation `oracleJAAS' on page 26 undefined on input line 315.
+LaTeX Warning: Citation `oracleJAAS' on page 28 undefined on input line 317.
 
-[26] [27 <./figuras/referencial/fig-referencial-jaas-method-form.png>]
+[28 <./figuras/referencial/fig-referencial-jaas-method-form.png>]
 
-LaTeX Warning: Citation `thiagoJava' on page 28 undefined on input line 347.
-
-
-LaTeX Warning: Citation `thiagoJava' on page 28 undefined on input line 349.
+LaTeX Warning: Citation `thiagoJava' on page 29 undefined on input line 349.
 
 
-LaTeX Warning: Citation `oracleJAAS' on page 28 undefined on input line 349.
+LaTeX Warning: Citation `thiagoJava' on page 29 undefined on input line 351.
 
-[28]
 
-LaTeX Warning: Citation `devmediacdi' on page 29 undefined on input line 370.
+LaTeX Warning: Citation `oracleJAAS' on page 29 undefined on input line 351.
 
-) [29]
+[29]
+
+LaTeX Warning: Citation `devmediacdi' on page 30 undefined on input line 372.
+
+) [30]
 \openout2 = `capitulos/ch3-unagi.aux'.
 
- (./capitulos/ch3-unagi.tex [30
+ (./capitulos/ch3-unagi.tex [31
 
 
 
-] [31]
-<figuras/requisitos/atoresHeranca.png, id=403, 365.11406pt x 368.87813pt>
+] [32]
+<figuras/requisitos/atoresHeranca.png, id=411, 365.11406pt x 368.87813pt>
 File: figuras/requisitos/atoresHeranca.png Graphic file (type png)
 
 <use figuras/requisitos/atoresHeranca.png>
@@ -1981,19 +1989,19 @@ e 97.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[32]
+[33]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 107.
- <figuras/requisitos/casodeuso-core.jpg, id=409, 1059.96pt x 449.68pt>
+ <figuras/requisitos/casodeuso-core.jpg, id=417, 1059.96pt x 449.68pt>
 File: figuras/requisitos/casodeuso-core.jpg Graphic file (type jpg)
 
 <use figuras/requisitos/casodeuso-core.jpg>
 Package pdftex.def Info: figuras/requisitos/casodeuso-core.jpg used on input li
 ne 111.
 (pdftex.def)             Requested size: 432.24861pt x 183.37506pt.
- [33 <./figuras/requisitos/atoresHeranca.png> <./figuras/requisitos/casodeuso-c
+ [34 <./figuras/requisitos/atoresHeranca.png> <./figuras/requisitos/casodeuso-c
 ore.jpg>]
-<figuras/requisitos/casodeuso-public.jpg, id=417, 1019.81pt x 562.1pt>
+<figuras/requisitos/casodeuso-public.jpg, id=425, 1019.81pt x 562.1pt>
 File: figuras/requisitos/casodeuso-public.jpg Graphic file (type jpg)
 
 <use figuras/requisitos/casodeuso-public.jpg>
@@ -2004,31 +2012,31 @@ line 145.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[34] [35 <./figuras/requisitos/casodeuso-public.jpg>]
-<figuras/requisitos/diagrama-classe-core.jpg, id=430, 1094.0875pt x 576.1525pt>
+[35] [36 <./figuras/requisitos/casodeuso-public.jpg>]
+<figuras/requisitos/diagrama-classe-core.jpg, id=439, 1094.0875pt x 576.1525pt>
 File: figuras/requisitos/diagrama-classe-core.jpg Graphic file (type jpg)
 <use figuras/requisitos/diagrama-classe-core.jpg>
 Package pdftex.def Info: figuras/requisitos/diagrama-classe-core.jpg used on in
 put line 190.
 (pdftex.def)             Requested size: 455.0pt x 239.60872pt.
- [36 <./figuras/requisitos/diagrama-classe-core.jpg>]
-<figuras/requisitos/diagrama-classe-public.jpg, id=437, 948.54375pt x 427.5975p
+ [37 <./figuras/requisitos/diagrama-classe-core.jpg>]
+<figuras/requisitos/diagrama-classe-public.jpg, id=446, 948.54375pt x 427.5975p
 t>
 File: figuras/requisitos/diagrama-classe-public.jpg Graphic file (type jpg)
  <use figuras/requisitos/diagrama-classe-public.jpg>
 Package pdftex.def Info: figuras/requisitos/diagrama-classe-public.jpg used on 
 input line 206.
 (pdftex.def)             Requested size: 455.0pt x 205.10745pt.
-) [37 <./figuras/requisitos/diagrama-classe-public.jpg>]
+) [38 <./figuras/requisitos/diagrama-classe-public.jpg>]
 \openout2 = `capitulos/ch4-revisao.aux'.
 
  (./capitulos/ch4-revisao.tex
 
-LaTeX Warning: Reference `sec-requisitos' on page 38 undefined on input line 26
+LaTeX Warning: Reference `sec-requisitos' on page 39 undefined on input line 26
 .
 
 
-<figuras/projeto/fig-projeto-diagrama-pacotes.jpg, id=448, 1005.7575pt x 374.39
+<figuras/projeto/fig-projeto-diagrama-pacotes.jpg, id=456, 1005.7575pt x 374.39
 874pt>
 File: figuras/projeto/fig-projeto-diagrama-pacotes.jpg Graphic file (type jpg)
  <use figuras/projeto/fig-projeto-diagrama-pacotes.jpg>
@@ -2036,7 +2044,7 @@ Package pdftex.def Info: figuras/projeto/fig-projeto-diagrama-pacotes.jpg used
 on input line 30.
 (pdftex.def)             Requested size: 364.00139pt x 135.49754pt.
 
-<figuras/projeto/fig-projeto-arquitetura-sistema.png, id=451, 624.08156pt x 405
+<figuras/projeto/fig-projeto-arquitetura-sistema.png, id=459, 624.08156pt x 405
 .01312pt>
 File: figuras/projeto/fig-projeto-arquitetura-sistema.png Graphic file (type pn
 g)
@@ -2046,20 +2054,20 @@ ed on input line 44.
 (pdftex.def)             Requested size: 364.00139pt x 236.23029pt.
 
 
-LaTeX Warning: Citation `lima-pg15' on page 38 undefined on input line 45.
+LaTeX Warning: Citation `lima-pg15' on page 39 undefined on input line 45.
 
 
-LaTeX Warning: Citation `lima-pg15' on page 38 undefined on input line 45.
+LaTeX Warning: Citation `lima-pg15' on page 39 undefined on input line 45.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[38
+[39
 
 
 
  <./figuras/projeto/fig-projeto-diagrama-pacotes.jpg>]
-<figuras/projeto/fig-projeto-arquitetura-pacotes.png, id=457, 374.39874pt x 190
+<figuras/projeto/fig-projeto-arquitetura-pacotes.png, id=465, 374.39874pt x 190
 .7125pt>
 File: figuras/projeto/fig-projeto-arquitetura-pacotes.png Graphic file (type pn
 g)
@@ -2068,7 +2076,7 @@ Package pdftex.def Info: figuras/projeto/fig-projeto-arquitetura-pacotes.png us
 ed on input line 53.
 (pdftex.def)             Requested size: 204.74861pt x 104.29562pt.
 
-<figuras/projeto/fig-projeto-arquitetura-paginas-web.png, id=459, 310.15875pt x
+<figuras/projeto/fig-projeto-arquitetura-paginas-web.png, id=467, 310.15875pt x
  595.22375pt>
 File: figuras/projeto/fig-projeto-arquitetura-paginas-web.png Graphic file (typ
 e png)
@@ -2077,7 +2085,7 @@ Package pdftex.def Info: figuras/projeto/fig-projeto-arquitetura-paginas-web.pn
 g used on input line 72.
 (pdftex.def)             Requested size: 159.25278pt x 305.6218pt.
 
-[39 <./figuras/projeto/fig-projeto-arquitetura-sistema.png> <./figuras/projeto/
+[40 <./figuras/projeto/fig-projeto-arquitetura-sistema.png> <./figuras/projeto/
 fig-projeto-arquitetura-pacotes.png>]
 Overfull \hbox (7.05219pt too wide) in paragraph at lines 80--81
 \T1/lmr/m/n/12 (-20) são as pá-gi-nas ini-ci-ais do sis-tema. As pá-gi-nas \T1/
@@ -2085,15 +2093,15 @@ lmtt/m/n/12 error-interno.xhtml \T1/lmr/m/n/12 (-20) e \T1/lmtt/m/n/12 error-in
 terno.html
  []
 
-[40 <./figuras/projeto/fig-projeto-arquitetura-paginas-web.png>]
+[41 <./figuras/projeto/fig-projeto-arquitetura-paginas-web.png>]
 
-LaTeX Warning: Reference `sec-requisitos' on page 41 undefined on input line 95
+LaTeX Warning: Reference `sec-requisitos' on page 42 undefined on input line 95
 .
 
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <17.28> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 119.
-[41] [42]
-<figuras/projeto/fig-projeto-core-modelo-dominio.png, id=487, 889.82437pt x 578
+[42] [43]
+<figuras/projeto/fig-projeto-core-modelo-dominio.png, id=495, 889.82437pt x 578
 .91281pt>
 File: figuras/projeto/fig-projeto-core-modelo-dominio.png Graphic file (type pn
 g)
@@ -2105,8 +2113,8 @@ ed on input line 171.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[43]
-<figuras/projeto/fig-projeto-public-modelo-dominio.png, id=493, 982.42032pt x 7
+[44]
+<figuras/projeto/fig-projeto-public-modelo-dominio.png, id=501, 982.42032pt x 7
 44.53156pt>
 File: figuras/projeto/fig-projeto-public-modelo-dominio.png Graphic file (type 
 png)
@@ -2118,8 +2126,8 @@ used on input line 186.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[44 <./figuras/projeto/fig-projeto-core-modelo-dominio.png>]
-<figuras/projeto/fig-projeto-nemo-utils-modelo-navegacao.png, id=500, 1019.3081
+[45 <./figuras/projeto/fig-projeto-core-modelo-dominio.png>]
+<figuras/projeto/fig-projeto-nemo-utils-modelo-navegacao.png, id=508, 1019.3081
 2pt x 471.26062pt>
 File: figuras/projeto/fig-projeto-nemo-utils-modelo-navegacao.png Graphic file 
 (type png)
@@ -2130,16 +2138,16 @@ o.png used on input line 213.
 (pdftex.def)             Requested size: 409.49722pt x 189.32785pt.
 
 
-LaTeX Warning: Citation `lima-pg15' on page 45 undefined on input line 214.
+LaTeX Warning: Citation `lima-pg15' on page 46 undefined on input line 214.
 
 
-LaTeX Warning: Citation `lima-pg15' on page 45 undefined on input line 214.
+LaTeX Warning: Citation `lima-pg15' on page 46 undefined on input line 214.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-<figuras/projeto/fig-projeto-modelo-navegacao-consultarDepoimento.png, id=502, 
+<figuras/projeto/fig-projeto-modelo-navegacao-consultarDepoimento.png, id=510, 
 1132.98282pt x 304.88907pt>
 File: figuras/projeto/fig-projeto-modelo-navegacao-consultarDepoimento.png Grap
 hic file (type png)
@@ -2152,13 +2160,13 @@ Depoimento.png used on input line 225.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[45 <./figuras/projeto/fig-projeto-public-modelo-dominio.png>]
+[46 <./figuras/projeto/fig-projeto-public-modelo-dominio.png>]
 
-LaTeX Warning: Citation `vitorFrameWeb' on page 46 undefined on input line 240.
+LaTeX Warning: Citation `vitorFrameWeb' on page 47 undefined on input line 240.
 
 
 
-<figuras/projeto/fig-projeto-nemo-utils-modelo-aplicacao.png, id=509, 278.54062
+<figuras/projeto/fig-projeto-nemo-utils-modelo-aplicacao.png, id=517, 278.54062
 pt x 253.69781pt>
 File: figuras/projeto/fig-projeto-nemo-utils-modelo-aplicacao.png Graphic file 
 (type png)
@@ -2169,14 +2177,14 @@ o.png used on input line 248.
 (pdftex.def)             Requested size: 136.50139pt x 124.32849pt.
 
 
-LaTeX Warning: Citation `lima-pg15' on page 46 undefined on input line 249.
+LaTeX Warning: Citation `lima-pg15' on page 47 undefined on input line 249.
 
 
-LaTeX Warning: Citation `lima-pg15' on page 46 undefined on input line 249.
+LaTeX Warning: Citation `lima-pg15' on page 47 undefined on input line 249.
 
-[46 <./figuras/projeto/fig-projeto-nemo-utils-modelo-navegacao.png> <./figuras/
+[47 <./figuras/projeto/fig-projeto-nemo-utils-modelo-navegacao.png> <./figuras/
 projeto/fig-projeto-modelo-navegacao-consultarDepoimento.png>]
-<figuras/projeto/fig-projeto-public-modelo-aplicacao.png, id=518, 982.42032pt x
+<figuras/projeto/fig-projeto-public-modelo-aplicacao.png, id=526, 982.42032pt x
  950.04938pt>
 File: figuras/projeto/fig-projeto-public-modelo-aplicacao.png Graphic file (typ
 e png)
@@ -2185,7 +2193,7 @@ Package pdftex.def Info: figuras/projeto/fig-projeto-public-modelo-aplicacao.pn
 g used on input line 260.
 (pdftex.def)             Requested size: 409.49722pt x 396.00273pt.
 
-<figuras/projeto/fig-projeto-core-modelo-aplicacao.png, id=519, 1050.92625pt x 
+<figuras/projeto/fig-projeto-core-modelo-aplicacao.png, id=527, 1050.92625pt x 
 794.97pt>
 File: figuras/projeto/fig-projeto-core-modelo-aplicacao.png Graphic file (type 
 png)
@@ -2197,9 +2205,9 @@ used on input line 268.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[47 <./figuras/projeto/fig-projeto-nemo-utils-modelo-aplicacao.png> <./figuras/
+[48 <./figuras/projeto/fig-projeto-nemo-utils-modelo-aplicacao.png> <./figuras/
 projeto/fig-projeto-public-modelo-aplicacao.png>]
-<figuras/projeto/fig-projeto-nemo-utils-modelo-persistencia.png, id=527, 487.82
+<figuras/projeto/fig-projeto-nemo-utils-modelo-persistencia.png, id=536, 487.82
 25pt x 277.035pt>
 File: figuras/projeto/fig-projeto-nemo-utils-modelo-persistencia.png Graphic fi
 le (type png)
@@ -2210,16 +2218,16 @@ ncia.png used on input line 285.
 (pdftex.def)             Requested size: 273.00278pt x 155.0413pt.
 
 
-LaTeX Warning: Citation `lima-pg15' on page 48 undefined on input line 286.
+LaTeX Warning: Citation `lima-pg15' on page 49 undefined on input line 286.
 
 
-LaTeX Warning: Citation `lima-pg15' on page 48 undefined on input line 286.
+LaTeX Warning: Citation `lima-pg15' on page 49 undefined on input line 286.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[48 <./figuras/projeto/fig-projeto-core-modelo-aplicacao.png>]
-<figuras/projeto/fig-projeto-public-modelo-persistencia.png, id=536, 864.22874p
+[49 <./figuras/projeto/fig-projeto-core-modelo-aplicacao.png>]
+<figuras/projeto/fig-projeto-public-modelo-persistencia.png, id=544, 864.22874p
 t x 429.10312pt>
 File: figuras/projeto/fig-projeto-public-modelo-persistencia.png Graphic file (
 type png)
@@ -2229,7 +2237,7 @@ Package pdftex.def Info: figuras/projeto/fig-projeto-public-modelo-persistencia
 .png used on input line 298.
 (pdftex.def)             Requested size: 409.49722pt x 203.32193pt.
 
-<figuras/projeto/fig-projeto-core-modelo-persistencia.png, id=537, 928.97063pt 
+<figuras/projeto/fig-projeto-core-modelo-persistencia.png, id=545, 928.97063pt 
 x 429.10312pt>
 File: figuras/projeto/fig-projeto-core-modelo-persistencia.png Graphic file (ty
 pe png)
@@ -2241,9 +2249,9 @@ ng used on input line 306.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[49 <./figuras/projeto/fig-projeto-nemo-utils-modelo-persistencia.png> <./figur
+[50 <./figuras/projeto/fig-projeto-nemo-utils-modelo-persistencia.png> <./figur
 as/projeto/fig-projeto-public-modelo-persistencia.png>]
-<figuras/projeto/fig-projeto-apresentacao-login.png, id=545, 1321.93875pt x 752
+<figuras/projeto/fig-projeto-apresentacao-login.png, id=553, 1321.93875pt x 752
 .8125pt>
 File: figuras/projeto/fig-projeto-apresentacao-login.png Graphic file (type png
 )
@@ -2251,9 +2259,9 @@ File: figuras/projeto/fig-projeto-apresentacao-login.png Graphic file (type png
 Package pdftex.def Info: figuras/projeto/fig-projeto-apresentacao-login.png use
 d on input line 341.
 (pdftex.def)             Requested size: 341.25pt x 194.3367pt.
- [50 <./figuras/projeto/fig-projeto-core-modelo-persistencia.png> <./figuras/pr
+ [51 <./figuras/projeto/fig-projeto-core-modelo-persistencia.png> <./figuras/pr
 ojeto/fig-projeto-apresentacao-login.png>]
-<figuras/projeto/fig-projeto-apresentacao-login-erro.png, id=553, 1320.935pt x 
+<figuras/projeto/fig-projeto-apresentacao-login-erro.png, id=561, 1320.935pt x 
 747.79375pt>
 File: figuras/projeto/fig-projeto-apresentacao-login-erro.png Graphic file (typ
 e png)
@@ -2262,7 +2270,7 @@ Package pdftex.def Info: figuras/projeto/fig-projeto-apresentacao-login-erro.pn
 g used on input line 356.
 (pdftex.def)             Requested size: 341.25pt x 193.17805pt.
 
-<figuras/projeto/fig-projeto-apresentacao-tela-inicial-egresso.png, id=555, 132
+<figuras/projeto/fig-projeto-apresentacao-tela-inicial-egresso.png, id=563, 132
 3.94624pt x 744.7825pt>
 File: figuras/projeto/fig-projeto-apresentacao-tela-inicial-egresso.png Graphic
  file (type png)
@@ -2273,7 +2281,7 @@ egresso.png used on input line 367.
 (pdftex.def)             Requested size: 341.25pt x 191.9683pt.
 
 <figuras/projeto/fig-projeto-apresentacao-tela-reponsiva-administrador.jpg, id=
-557, 1806.75pt x 1284.8pt>
+565, 1806.75pt x 1284.8pt>
 File: figuras/projeto/fig-projeto-apresentacao-tela-reponsiva-administrador.jpg
  Graphic file (type jpg)
 
@@ -2281,9 +2289,9 @@ File: figuras/projeto/fig-projeto-apresentacao-tela-reponsiva-administrador.jpg
 Package pdftex.def Info: figuras/projeto/fig-projeto-apresentacao-tela-reponsiv
 a-administrador.jpg used on input line 378.
 (pdftex.def)             Requested size: 318.49861pt x 226.49014pt.
-[51 <./figuras/projeto/fig-projeto-apresentacao-login-erro.png> <./figuras/proj
+[52 <./figuras/projeto/fig-projeto-apresentacao-login-erro.png> <./figuras/proj
 eto/fig-projeto-apresentacao-tela-inicial-egresso.png>]
-<figuras/projeto/fig-projeto-apresentacao-course-list.png, id=566, 1322.9425pt 
+<figuras/projeto/fig-projeto-apresentacao-course-list.png, id=574, 1322.9425pt 
 x 744.7825pt>
 File: figuras/projeto/fig-projeto-apresentacao-course-list.png Graphic file (ty
 pe png)
@@ -2292,7 +2300,7 @@ Package pdftex.def Info: figuras/projeto/fig-projeto-apresentacao-course-list.p
 ng used on input line 388.
 (pdftex.def)             Requested size: 341.25pt x 192.10468pt.
 
-<figuras/projeto/fig-projeto-apresentacao-course-form.png, id=568, 1327.96124pt
+<figuras/projeto/fig-projeto-apresentacao-course-form.png, id=576, 1327.96124pt
  x 725.71124pt>
 File: figuras/projeto/fig-projeto-apresentacao-course-form.png Graphic file (ty
 pe png)
@@ -2304,9 +2312,9 @@ ng used on input line 398.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[52 <./figuras/projeto/fig-projeto-apresentacao-tela-reponsiva-administrador.jp
+[53 <./figuras/projeto/fig-projeto-apresentacao-tela-reponsiva-administrador.jp
 g> <./figuras/projeto/fig-projeto-apresentacao-course-list.png>]
-<figuras/projeto/fig-projeto-apresentacao-course-excluir.png, id=575, 1325.9537
+<figuras/projeto/fig-projeto-apresentacao-course-excluir.png, id=583, 1325.9537
 5pt x 738.76pt>
 File: figuras/projeto/fig-projeto-apresentacao-course-excluir.png Graphic file 
 (type png)
@@ -2316,7 +2324,7 @@ Package pdftex.def Info: figuras/projeto/fig-projeto-apresentacao-course-exclui
 r.png used on input line 409.
 (pdftex.def)             Requested size: 341.25pt x 190.12291pt.
 
-<figuras/projeto/fig-projeto-apresentacao-resposiva-buttons.jpg, id=577, 1806.7
+<figuras/projeto/fig-projeto-apresentacao-resposiva-buttons.jpg, id=585, 1806.7
 5pt x 1284.8pt>
 File: figuras/projeto/fig-projeto-apresentacao-resposiva-buttons.jpg Graphic fi
 le (type jpg)
@@ -2329,9 +2337,9 @@ tons.jpg used on input line 421.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[53 <./figuras/projeto/fig-projeto-apresentacao-course-form.png> <./figuras/pro
+[54 <./figuras/projeto/fig-projeto-apresentacao-course-form.png> <./figuras/pro
 jeto/fig-projeto-apresentacao-course-excluir.png>]
-<figuras/projeto/fig-projeto-apresentacao-grafico.jpg, id=586, 1806.75pt x 1284
+<figuras/projeto/fig-projeto-apresentacao-grafico.jpg, id=595, 1806.75pt x 1284
 .8pt>
 File: figuras/projeto/fig-projeto-apresentacao-grafico.jpg Graphic file (type j
 pg)
@@ -2340,7 +2348,7 @@ Package pdftex.def Info: figuras/projeto/fig-projeto-apresentacao-grafico.jpg u
 sed on input line 432.
 (pdftex.def)             Requested size: 341.25pt x 242.6638pt.
 
-<figuras/projeto/fig-projeto-apresentacao-tela-grafico-salario.png, id=587, 132
+<figuras/projeto/fig-projeto-apresentacao-tela-grafico-salario.png, id=596, 132
 0.935pt x 746.79pt>
 File: figuras/projeto/fig-projeto-apresentacao-tela-grafico-salario.png Graphic
  file (type png)
@@ -2353,9 +2361,9 @@ salario.png used on input line 440.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[54 <./figuras/projeto/fig-projeto-apresentacao-resposiva-buttons.jpg> <./figur
+[55 <./figuras/projeto/fig-projeto-apresentacao-resposiva-buttons.jpg> <./figur
 as/projeto/fig-projeto-apresentacao-grafico.jpg>]
-<figuras/projeto/fig-projeto-apresentacao-depoimento-analisar.png, id=594, 1326
+<figuras/projeto/fig-projeto-apresentacao-depoimento-analisar.png, id=602, 1326
 .9575pt x 748.7975pt>
 File: figuras/projeto/fig-projeto-apresentacao-depoimento-analisar.png Graphic 
 file (type png)
@@ -2365,7 +2373,7 @@ Package pdftex.def Info: figuras/projeto/fig-projeto-apresentacao-depoimento-an
 alisar.png used on input line 450.
 (pdftex.def)             Requested size: 364.00139pt x 205.40007pt.
 
-<figuras/projeto/fig-projeto-apresentacao-analise-depoimento.png, id=596, 1326.
+<figuras/projeto/fig-projeto-apresentacao-analise-depoimento.png, id=604, 1326.
 9575pt x 747.79375pt>
 File: figuras/projeto/fig-projeto-apresentacao-analise-depoimento.png Graphic f
 ile (type png)
@@ -2378,9 +2386,9 @@ mento.png used on input line 459.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[55 <./figuras/projeto/fig-projeto-apresentacao-tela-grafico-salario.png> <./fi
+[56 <./figuras/projeto/fig-projeto-apresentacao-tela-grafico-salario.png> <./fi
 guras/projeto/fig-projeto-apresentacao-depoimento-analisar.png>]
-<figuras/projeto/fig-projeto-apresentacao-tela-depoimentos.png, id=604, 1322.94
+<figuras/projeto/fig-projeto-apresentacao-tela-depoimentos.png, id=612, 1322.94
 25pt x 747.79375pt>
 File: figuras/projeto/fig-projeto-apresentacao-tela-depoimentos.png Graphic fil
 e (type png)
@@ -2389,17 +2397,17 @@ e (type png)
 Package pdftex.def Info: figuras/projeto/fig-projeto-apresentacao-tela-depoimen
 tos.png used on input line 471.
 (pdftex.def)             Requested size: 364.00139pt x 205.7409pt.
-) [56 <./figuras/projeto/fig-projeto-apresentacao-analise-depoimento.png> <./fi
+) [57 <./figuras/projeto/fig-projeto-apresentacao-analise-depoimento.png> <./fi
 guras/projeto/fig-projeto-apresentacao-tela-depoimentos.png>]
 \openout2 = `capitulos/ch5-conclusoes.aux'.
 
 
-(./capitulos/ch5-conclusoes.tex [57
+(./capitulos/ch5-conclusoes.tex [58
 
 
 
 ]
-<figuras/modeloAplicacaoSugerido.png, id=617, 1040.38687pt x 990.70125pt>
+<figuras/modeloAplicacaoSugerido.png, id=625, 1040.38687pt x 990.70125pt>
 File: figuras/modeloAplicacaoSugerido.png Graphic file (type png)
 
 <use figuras/modeloAplicacaoSugerido.png>
@@ -2410,7 +2418,7 @@ Package pdftex.def Info: figuras/modeloAplicacaoSugerido.png used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [58] [59 <./figuras/modeloAplicacaoSugerido.png>] (./pg-bernabe.bbl
+) [59] [60 <./figuras/modeloAplicacaoSugerido.png>] (./pg-bernabe.bbl
 (./pg-bernabe.brf)
 \tf@brf=\write6
 \openout6 = `pg-bernabe.brf'.
@@ -2421,7 +2429,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 3.
 
 bibitemlist
-) [60
+) [61
 
 
 ]
@@ -2429,7 +2437,7 @@ bibitemlist
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 489.
 
-[61
+[62
 
 
 ]
@@ -2457,7 +2465,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 508.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 508.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 508.
 Package rerunfilecheck Info: File `pg-bernabe.brf' has not changed.
-(rerunfilecheck)             Checksum: 42AD8A729A7C64992EFD357EB30FC696;3208.
+(rerunfilecheck)             Checksum: 46AA90A2D5DBEC947DA96873E03EC8ED;3403.
 
 
 LaTeX Warning: There were undefined references.
@@ -2468,13 +2476,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 508.
  ) 
 Here is how much of TeX's memory you used:
- 29564 strings out of 493089
- 518106 string characters out of 6134843
- 668904 words of memory out of 5000000
- 32031 multiletter control sequences out of 15000+600000
- 112035 words of font info for 174 fonts, out of 8000000 for 9000
+ 29579 strings out of 493089
+ 518177 string characters out of 6134843
+ 669399 words of memory out of 5000000
+ 32043 multiletter control sequences out of 15000+600000
+ 109169 words of font info for 174 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,13n,82p,1392b,946s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,13n,77p,1642b,606s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not ex
 ist, replaced by a fixed one
 
@@ -2506,28 +2514,29 @@ pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
 
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/te
-xlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/2015
-/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2015/texmf-dis
+xlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2015
+/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</usr/local/texlive/2015/texmf-dis
 t/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
 pe1/public/lm/lmbxi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
-c/lm/lmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr12.
-pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2015/texmf-dist/font
-s/type1/public/lm/lmss12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
-blic/lm/lmss17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lm
-ssbo10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmssbx10.p
-fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsso12.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsso17.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2015/texmf-dist
-/fonts/type1/public/lm/lmtt12.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
-e1/public/lm/lmtti10.pfb>
-Output written on pg-bernabe.pdf (62 pages, 3537483 bytes).
+c/lm/lmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr10.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2015/texmf-dist/fonts
+/type1/public/lm/lmri12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
+lic/lm/lmss12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lms
+s17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmssbo10.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsso12.pfb></usr/local/texli
+ve/2015/texmf-dist/fonts/type1/public/lm/lmsso17.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
+1/public/lm/lmtt12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/l
+m/lmtti10.pfb>
+Output written on pg-bernabe.pdf (63 pages, 3520510 bytes).
 PDF statistics:
- 903 PDF objects out of 1000 (max. 8388607)
- 751 compressed objects within 8 object streams
- 183 named destinations out of 1000 (max. 500000)
- 35417 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 914 PDF objects out of 1000 (max. 8388607)
+ 761 compressed objects within 8 object streams
+ 185 named destinations out of 1000 (max. 500000)
+ 34905 words of extra memory for PDF output out of 35830 (max. 10000000)
 
