@@ -25,9 +25,7 @@ Warning--I didn't find a database entry for "ross1977structured"
 Warning--I didn't find a database entry for "van2001goal"
 Warning--I didn't find a database entry for "jackson1995software"
 Warning--I didn't find a database entry for "zave1997four"
-Warning--I didn't find a database entry for "falboEngReq"
 Warning--I didn't find a database entry for "sommerville"
-Warning--I didn't find a database entry for "falboEngSoft"
 Warning--I didn't find a database entry for "presmannSoft"
 Warning--I didn't find a database entry for "martins-mestrado15"
 Warning--I didn't find a database entry for "alurDAO"
@@ -44,45 +42,45 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 8 entries,
+You've used 13 entries,
             6714 wiz_defined-function locations,
-            1274 strings with 11115 characters,
-and the built_in function-call counts, 7545 in all, are:
-= -- 695
-> -- 285
-< -- 15
-+ -- 153
-- -- 84
-* -- 567
-:= -- 1032
-add.period$ -- 28
-call.type$ -- 8
-change.case$ -- 94
-chr.to.int$ -- 17
-cite$ -- 7
-duplicate$ -- 307
-empty$ -- 513
-format.name$ -- 402
-if$ -- 1796
+            1300 strings with 11890 characters,
+and the built_in function-call counts, 14567 in all, are:
+= -- 1480
+> -- 432
+< -- 167
++ -- 356
+- -- 129
+* -- 1011
+:= -- 1886
+add.period$ -- 53
+call.type$ -- 13
+change.case$ -- 144
+chr.to.int$ -- 22
+cite$ -- 12
+duplicate$ -- 961
+empty$ -- 876
+format.name$ -- 611
+if$ -- 3275
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 135
-newline$ -- 41
-num.names$ -- 35
-pop$ -- 186
+missing$ -- 230
+newline$ -- 61
+num.names$ -- 60
+pop$ -- 327
 preamble$ -- 1
-purify$ -- 35
+purify$ -- 54
 quote$ -- 0
-skip$ -- 412
+skip$ -- 1064
 stack$ -- 1
-substring$ -- 327
-swap$ -- 165
-text.length$ -- 12
+substring$ -- 610
+swap$ -- 405
+text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 4
 warning$ -- 0
-while$ -- 62
+while$ -- 100
 width$ -- 0
-write$ -- 126
-(There were 17 warnings)
+write$ -- 206
+(There were 15 warnings)

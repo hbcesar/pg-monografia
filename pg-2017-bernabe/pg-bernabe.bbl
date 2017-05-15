@@ -17,12 +17,37 @@
   \emph{Software engineering for self-adaptive systems}. [S.l.]: Springer,
   2009. p. 48--70.}
 
+\bibitem[Dardenne, Fickas e Lamsweerde 1991]{dardenne1991goal}
+\abntrefinfo{Dardenne, Fickas e Lamsweerde}{DARDENNE; FICKAS; LAMSWEERDE}{1991}
+{DARDENNE, A.; FICKAS, S.; LAMSWEERDE, A. van. Goal-directed concept
+  acquisition in requirements elicitation. In:  IEEE COMPUTER SOCIETY PRESS.
+  \emph{Proceedings of the 6th international workshop on Software specification
+  and design}. [S.l.], 1991. p. 14--21.}
+
 \bibitem[Dardenne, Lamsweerde e Fickas 1993]{dardenne1993goal}
 \abntrefinfo{Dardenne, Lamsweerde e Fickas}{DARDENNE; LAMSWEERDE; FICKAS}{1993}
 {DARDENNE, A.; LAMSWEERDE, A. V.; FICKAS, S. Goal-directed requirements
   acquisition.
 \emph{Science of computer programming}, Elsevier, v.~20, n.~1-2, p. 3--50,
   1993.}
+
+\bibitem[Falbo 2014]{falboEngSoft}
+\abntrefinfo{Falbo}{FALBO}{2014}
+{FALBO, R.~A. \emph{{Engenharia de Software}}. [s.n.], 2014. 141~p.
+  Dispon{\'\i}vel em:
+  \url{http://www.inf.ufes.br/~falbo/files/ES/Notas\_Aula\_Engenharia\_Software.pdf}.}
+
+\bibitem[Falbo 2017]{falboEngReq}
+\abntrefinfo{Falbo}{FALBO}{2017}
+{FALBO, R.~A. \emph{{Engenharia de Software}}. [s.n.], 2017. 71~p.
+  Dispon{\'\i}vel em:
+  \url{http://www.inf.ufes.br/~falbo/files/ER/Notas\_Aula\_Engenharia\_Requisitos.pdf}.}
+
+\bibitem[Jureta, Mylopoulos e Faulkner 2008]{jureta2008revisiting}
+\abntrefinfo{Jureta, Mylopoulos e Faulkner}{JURETA; MYLOPOULOS; FAULKNER}{2008}
+{JURETA, I.; MYLOPOULOS, J.; FAULKNER, S. Revisiting the core ontology and
+  problem in requirements engineering. In:  IEEE. \emph{International
+  Requirements Engineering, 2008. RE'08. 16th IEEE}. [S.l.], 2008. p. 71--80.}
 
 \bibitem[Kephart e Chess 2003]{kephart2003vision}
 \abntrefinfo{Kephart e Chess}{KEPHART; CHESS}{2003}
@@ -35,6 +60,11 @@
   requirements engineering.
 \emph{IEEE transactions on Software engineering}, IEEE, v.~24, n.~11, p.
   908--926, 1998.}
+
+\bibitem[Pfleeger 2004]{pfleeger2004engenharia}
+\abntrefinfo{Pfleeger}{PFLEEGER}{2004}
+{PFLEEGER, S.~L. \emph{Engenharia de software: teoria e pr{\'a}tica}. [S.l.]:
+  Prentice Hall, 2004.}
 
 \bibitem[Souza 2012]{tesevitor}
 \abntrefinfo{Souza}{SOUZA}{2012}
