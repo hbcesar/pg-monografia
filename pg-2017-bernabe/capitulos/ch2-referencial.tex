@@ -35,13 +35,14 @@ A necessidade de uso de objetivos no processo de modelagem de sistemas de softwa
 \end{itemize}
 
 % Hardgoal, Softgoal, Quality Constraint e Domain Assumption
-Diferentemente dos requisitos, objetivos podem precisar da cooperação entre diferentes tipos de refinamentos para que sejam atendidos de forma suficiente ~\cite{dardenne1993goal}. Em outras palavras, um objetivo diretamente relacionado ao sistema a ser criado torna-se um requisito, enquanto um objetivo sob responsabilidade de um agente do ambiente em que o software será executado torna-se uma Pressuposição de Domínio (ou \textit{Domain Assumptions}) e, nesse caso, são satisfeitos devido a uma regra de negócio ~\cite{van2001goal, van1998managing}. Objetivos funcionais podem ser classificados como objetivos rígidos (\textit{Hard Goals}) e objetivos fracos (\textit{Soft Goals}), estes não possuem critérios claros de satisfação, entretanto são úteis quando deseja-se comparar os melhores refinamentos ao objetivo estudado, enquanto aqueles são objetivos cujo critério de satisfação pode ser atendido de forma técnica ~\cite{dardenne1993goal}. Para que \textit{Soft Goals} tenham um parâmetro claro de satisfabilidade, são adicionados a eles as \textit{Quality Constraints}, critérios que operacionalizam os \textit{\textbf{Soft Goals}}. Por exemplo, um \textit{Soft Goal} ``Baixo Custo'' pode ser refinado na \textit{Quality Constraint} ``Custo deve ser menor que mil reais''. Por fim, ~\cite{jureta2008revisiting} define outro tipo de refinamento para especificar a atendibilidade de um objetivo: as tarefas ou \textit{Taks}, que são os passos a serem tomados para que um determinado objetivo seja cumprido. 
+Diferentemente dos requisitos, objetivos podem precisar da cooperação entre diferentes tipos de refinamentos para que sejam atendidos de forma suficiente ~\cite{dardenne1993goal}. Em outras palavras, um objetivo diretamente relacionado ao sistema a ser criado torna-se um requisito, enquanto um objetivo sob responsabilidade de um agente do ambiente em que o software será executado torna-se uma Pressuposição de Domínio (ou \textit{Domain Assumptions}) e, nesse caso, são satisfeitos devido a uma regra de negócio ~\cite{van2001goal, van1998managing}. Objetivos funcionais podem ser classificados como objetivos rígidos (\textit{Hard Goals}) e objetivos fracos (\textit{Soft Goals}), estes não possuem critérios claros de satisfação, entretanto são úteis quando deseja-se comparar os melhores refinamentos ao objetivo estudado, enquanto aqueles são objetivos cujo critério de satisfação pode ser atendido de forma técnica ~\cite{dardenne1993goal}. Para que \textit{Soft Goals} tenham um parâmetro claro de satisfabilidade, são adicionados a eles as \textit{Quality Constraints}, critérios que operacionalizam os \textit{\textbf{Soft Goals}}. Por exemplo, um \textit{Soft Goal} ``Baixo Custo'' pode ser refinado na \textit{Quality Constraint} ``Custo deve ser menor que mil reais''. Por fim, ~\cite{jureta2008revisiting} define outro tipo de refinamento para especificar a atendibilidade de um objetivo: as tarefas ou \textit{Taks}, que são os passos a serem tomados para que um determinado objetivo seja cumprido. Em outras palavras, tarefas são definidas por funcionalidades do sistemas que, se executadas com sucesso, são consideradas satisfeitas ~\cite{souza2012requirement}.
 
 % Refinamentos
 Objetivos relacionam-se um com o outro através de refinamentos. Segundo ~\cite{dardenne1991goal, dardenne1993goal}, objetivos podem ser refinados usando grafos E/OU (\textit{AND/OR}). O critério de satisfabilidade de objetivos refinados em ``E'' ou ``OU'' segue os conceitos da lógica booleana: refinamentos do tipo ``E'' implicam que para que um objetivo seja considerado satisfeito, todos os sub-objetivos refinados a partir dele devem ser satisfeitos, enquanto refinamentos do tipo ``OU'' relacionam o objetivo principal com um conjunto de alternativas, ou seja, basta que um de seus refinamentos seja atendido para que ele também seja considerado alcançado.
 
 % TODO: exemplificar GORE usando o Meeting Scheduler.
-
+\subsection{Exemplo de Modelagem de Objetivos}
+\label{sec-referencial-engenharia-objetivos-exemplo}
 
 % ======================================================================================================
 % SUBSEÇÃO Modelos de Objetivos em Tempo de Execução
@@ -50,10 +51,17 @@ Objetivos relacionam-se um com o outro através de refinamentos. Segundo ~\cite{
 \subsection{Modelos de Objetivos em Tempo de Execução}
 \label{sec-referencial-engenharia-objetivos-runtime}
 
-% TODO: Falar de gore runtime seguindo o artigo impresso, e entao introduzir awreqs seguindo a teste do vitor.
+% Sistemas adaptativos
+Muitas vezes os requisitos de um \textit{software} precisam ser modificados durante o ciclo de execução do mesmo. Além disso, durante o processo de especificação as partes interessadas no sistema podem apresentar requisitos condicionais, ou seja, que assumem diferentes configurações dependendo de determinada situação ~\cite{souza2012requirement}. Em outras palavras, há a necessidade e interesse em sistemas que possam se automonitorar e, caso necessário, se adaptarem para que seus objetivos continuem sendo satisfeitos ~\cite{dalpiaz2013runtime}. Assim, esses requisitos são considerados ``requisitos especiais'' já que sua operacionalização está relacionada a mudança de outros requisitos ~\cite{souza2012requirement}. Ademais, o comportamento do sistema é caracterizado por eventos que ocorrem em tempo de execução e que estão diretamente ligados a instâncias de objetivos ~\cite{dalpiaz2013runtime}.
+%é importante observar que essa abordagem é considerada orientada a objetivos já que os requisitos mencionados são derivados do refinamento de objetivos elicitados para o sistema
 
+%Evoreqs
+No contexto de sistemas adaptativos, introduz-se o termo Requisitos de Evolução (\textit{Evolution Requirements} ou \evoreqs) para definir requisitos que modificam o espaço de comportamento do sistema, permitindo que novas alternativas de requisitos sejam usadas, baseando-se em um conjunto pré-definido de etapas de evolução para os requisitos monitorados ~\cite{souza2012requirement}. 
 
+%Awreqs
+Além do conceito de \evoreqs, é importante também definir os Requisitos de Percepção (\textit{Awareness Requirements} ou \awreqs), requisitos que referem-se ao estado de outros requisitos em tempo de execução, representando situações onde as partes interessadas desejam que o sistema se adapte ~\cite{souza2012requirement}. Além disso, \awreqs indicam o quão critico um requisito pode ser ao descrever o grau de tolerância a falhas do mesmo ~\cite{souza2012requirement}.
 
+%TODO: tentar passar uma cola melhor nesse texto, e inserir outras fontes. Explicar melhor os requisitos de adaptacao e principalmente os awreqs.
 
 % ======================================================================================================
 % SEÇÃO Zanshin
