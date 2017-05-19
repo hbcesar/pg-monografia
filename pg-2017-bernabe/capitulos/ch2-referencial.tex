@@ -68,30 +68,40 @@ Modelos de sistemas adaptativos incluem requisitos autoconscientes, ou seja, req
 Requisitos autoconscientes são divididos em dois tipos principais: Requisitos de Percepção (\textit{Awareness Requirements} ou \awreqs) ~\cite{souza2013awareness} e Requisitos de Evolução (\textit{Evolution Requirements} ou \evoreqs) ~\cite{souza2012requirement}. \awreqs são requisitos que referem-se ao estado de outros requisitos em tempo de execução, representando situações onde as partes interessadas desejam que o sistema se adapte ~\cite{souza2012requirement}. Podem se referir a qualquer tipo de elemento, sejam objetivos, \sofgoals, tarefas e pressuposições de domínio. Além disso, indicam o quão critico um requisito pode ser ao descrever o grau de tolerância a falhas do mesmo ~\cite{souza2012requirement}. Antes da execução de um sistema, os requisitos estão em estado ``não decidido'' (\textit{undecided}), e então pode assumir os estados ``Sucesso'' (\textit{Succeeded}), ``Falha'' (\textit{Failed}), e no caso de objetivos e tarefas, ``Cancelado'' (\textit{Canceled}) ~\cite{souza2013awareness}. É facilmente notável que o processo de elicitação de requisitos de percepção só acontece depois que o modelo de objetivos é levantado, e assim como o processo de construção de objetivos, \awreqs devem ser sistematicamente criados.
 
 %Evoreqs
-\evoreqs são requisitos que modificam o espaço de comportamento do sistema, permitindo que novas alternativas de requisitos sejam usadas, baseando-se em um conjunto pré-definido de etapas de evolução para os requisitos monitorados ~\cite{souza2012requirement}. Isto é, \evoreqs são requisitos que especificam uma série de operações primárias em relação a outros  requisitos diante de determinadas situações, dizendo ao sistema como adaptar-se \cite{souza2012requirement}.
+\evoreqs são requisitos que modificam o espaço de comportamento do sistema, permitindo que novas alternativas de requisitos sejam usadas, baseando-se em um conjunto pré-definido de etapas de evolução para os requisitos monitorados ~\cite{souza2012requirement}. Isto é, \evoreqs são requisitos que especificam uma série de operações primárias em relação a outros  requisitos diante de determinadas situações, dizendo ao sistema como adaptar-se \cite{souza2012requirement}. Por exemplo, adicionar ou remover um objetivo, modificar o estado de um objetivo (em nível de instância), desfazer as ações de uma execução que resultou em falha, entre outras ~\cite{souza2013requirements}.
 
 Em suma, \awreqs especificam quando um determinado objetivo precisa de mudanças para continuar a ser atendido, enquanto \evoreqs especificam como executar tais mudanças. A seguir, o modelo de exemplo apresentado na seção \ref{sec-referencial-engenharia-objetivos} é novamente apresentado, porém com novos requisitos de adaptação que são devidamente discutidos na próxima sessão.
 
 % ======================================================================================================
 % SUBSEÇÃO Exemplo de Caso de Uso
 % ======================================================================================================
-% TODO: exemplificar GORE usando o Meeting Scheduler.
 \subsection{Exemplo de Modelagem de Caso de Uso}
 \label{sec-referencial-engenharia-objetivos-exemplo}
 
-Na Figura \ref{figura-acad-completo} é apresentado o modelo completo do sistema de despacho de ambulâncias (\textit{Ambulance Computer Aided Dispatch System} ou \textit{ACAD}), nele observa-se o objetivo principal "Gerar Instruções de Despacho Otimizadas", representado por uma elipse, que é imediatamente refinado em outros objetivos e em uma pressuposição de domínio, representada por um quadrado, o tipo de refinamento é ``E''. Assim, verifica-se que o primeiro nível de refinamento do objetivo principal é composto de:
+Na Figura \ref{figura-acad-completo} é apresentado o modelo completo do sistema de despacho de ambulâncias (\textit{Adaptive Computer-aided	Ambulance Dispatch} ou \textit{A-CAD}), nele observa-se o objetivo principal "Gerar Instruções de Despacho Otimizadas", representado por uma oval, que é imediatamente refinado em outros objetivos e em uma pressuposição de domínio, representada por retângulos, o refinamento entre o objetivo raiz e seus filhos imediatos é do tipo ``E'', portanto, para que o objetivo principal seja considerado satisfeito, todos as suas decomposições precisam ser satisfeitas. Então, verifica-se que o primeiro nível de refinamento do objetivo principal é composto de:
 
 \begin{itemize}
-	\item Objetivo ``Gerenciar Chamadas''
-	\item Objetivo ``Identificação de Recursos''
-	\item Objetivo ``Mobilização de Recursos''
-	\item Objetivo ``Obtenção de Mapas''
-	\item Pressuposição de Domínio ``Dados sobre recursos está sempre atualizado''
+	\item Objetivo: ``Gerenciar Chamadas''
+	\item Objetivo: ``Identificação de Recursos''
+	\item Objetivo: ``Mobilização de Recursos''
+	\item Objetivo: ``Obtenção de Mapas''
+	\item Pressuposição de Domínio: ``Dados sobre recursos está sempre atualizado''
 \end{itemize}
 
-O processo de refinamento do modelo então segue até que todos os objetivos sejam completamente refinados em tarefas ou pressuposições de domínio. Os requisitos de percepção são representados por um círculo oco. O modelo da \ref{figura-acad-completo} possui ao todo 16 tipos de \awreqs. O \awreq identificado por ``AR5'', indica que a pressuposição de domínio mencionada acima deve ``Nunca falhar''. Entretanto os \evoreqs referentes a cada um não são representados nesse modelo, e devem ser especificados em forma de tabela. Essa escolha visa facilitar a legibilidade do modelo.
+O processo de refinamento do modelo então segue até que todos os objetivos sejam completamente refinados em tarefas ou pressuposições de domínio. \sofgoals são representados por nuvens e refinados em critérios de operacionalização (os \textit{Quality Constraints}) representados por retângulos com cantos arredondados. Para exemplificar: o \sofgoal ``Chegada Rápida''é operacionalizado por ``Ambulâncias chegam em oito minutos'', assim, tem-se um critério claro de satisfação para um objetivo que antes possuía diversos tipos de interpretação, porém agora, sabemos que uma ambulância chega rapidamente se consegue estar no local do acidente em menos de oito minutos a partir da chamada.
 
-Por fim, \sofgoals são representados por nuvens e refinados em critérios de operacionalização (os \textit{Quality Constraints}) representados por quadrados de cantos arredondados. Para exemplificar, tem-se o \sofgoal ``Chegada Rápida'', que é operacionalizado por ``Ambulâncias chegam em oito minutos''. 
+Os requisitos de percepção são representados por um círculo oco. O modelo da \ref{figura-acad-completo} possui ao todo 16 tipos de \awreqs. Por exemplo, o \awreq identificado por ``AR15'', indica que o objetivo ``Registrar Chamados'' deve ``Nunca falhar''. Os \evoreqs referentes a cada um dos \awreqs não são representados nesse modelo, e devem ser especificados em forma de sequencia de operações sobre os elementos do modelo de objetivos (essa escolha visa facilitar a legibilidade do modelo). Além dos \evoreqs, são especificados também os parâmetros de controle (\textit{control parameters}), representados por losangos, que indicam parâmetros do sistema que podem ser reconfigurados para adaptação. As formas de representação estão resumidas na Figura \ref{figura-elementos-gore-eca}.
+
+Sobre os \evoreqs do AR15, podemos definir seus respectivos Requisitos de Evolução. Primeiramente, se o objetivo vir a falhar, define-se a primeira estratégia de adaptação como ``Tentar Novamente em 5 segundos no máximo uma vez'' (\texttt{RetryStrategy(5000);}), caso falhe mais do que uma vez, aplica-se outra estratégia ``Diminuir Condições ao Desabilitar Filho'' (\texttt{RelaxDisableChild(T_DetectCaller);}), que desativa o requisito ``Detectar Localização da Ligação'', também aplicado no máximo uma vez. Essas decisões são sumarizadas na tabela \ref{tabela-evoreqs-ar15}.
+
+\begin{table}[]
+	\centering
+	\caption{Tabela de especificação das estratégias de adaptação de AR15.}
+	\label{tabela-evoreqs-ar15}
+	\begin{tabular}{lll}
+		AR15 & NeverFail(G\_RegCall) & \begin{tabular}[c]{@{}l@{}}1. Retry(5000)\\ 2. RelaxDisableChild(T DetectCaller)\end{tabular}
+	\end{tabular}
+\end{table}
 
 \begin{figure}[h]
 	\centering
@@ -100,15 +110,34 @@ Por fim, \sofgoals são representados por nuvens e refinados em critérios de op
 	\label{figura-acad-completo}
 \end{figure}
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{figuras/modelos/Elementos-GORE.png}
+	\caption{Representação gráfica de elementos de \gore}
+	\label{figura-elementos-gore-eca}
+\end{figure}
+
+
 % ======================================================================================================
 % SEÇÃO Zanshin
 % ======================================================================================================
 
 \section{Zanshin}
-\label{sec-referencial-engenharia-software-atividade-desenvolvimento-projeto}
+\label{sec-referencial-zanshin}
 
-%TODO: falar do zanshin, porém ainda sem apresentar o metamodelo, discutir arquitetura e feedback loop.
+Apresentado por ~\cite{tesevitor} e baseado em várias das premissas discutidas até aqui, \zanshin é um \textit{framework} que utiliza de ciclos de retro-alimentação para monitorar requisitos e enviar estratégias de adaptação com base em informações de modelos de requisitos orientados a objetivos enriquecidos com elementos como os \awreqs e os \evoreqs. 
 
+% ======================================================================================================
+% SUBSEÇÃO Zanshin: Monitoramento
+% ======================================================================================================
+\subsection{Monitoramento}
+\label{sec-referencial-zanshin-monitoramento}
+
+Em tempo de execução, os elementos do modelo de objetivos são representados por classes e instanciados cada vez que o usuário (ou sistema) busca atingir um objetivo, e então o sistema passa a enviar mensagens a essas instâncias quando detectar falhas. Percebe-se assim, que objetivos e pressuposições de domínio não são tratadas como invariantes que devem sempre ser atingidas, já que o sistema pode falhar ao tentar atingir seus objetivos iniciais, e assim o sistema de adaptação lidará com essas falhas e tomará medidas para que os objetivos voltem a ser satisfeitos ~\cite{souza2013requirements}.
+
+Assim como o monitoramento de objetivos através do \textit{Feddback Loop}, o \zanshin também monitora Parâmetros (\textit{Parameters}) que podem ser definidos em dois tipos. Pontos de Variação (ou \textit{Variation Points}), que representam refinamentos do tipo ``OU'' (\textit{OR}). Por exemplo, o VP4 do modelo de objetivos do sistema A-CAD (Figura \ref{figura-acad-completo}) que refere-se ao objetivo ``Atualizar posição de ambulâncias em uso'' especifica que atualizações de posição das ambulâncias podem ser obtidas automaticamente ou via rádio. Variáveis de Controle (ou \textit{Control Variables}) são abstrações referentes a pontos de variação repetitivos ou usados em grande escala, como por exemplo a variável MST (``Tempo de Busca Mínimo'' ou \textit{Minimum Search Time}), que refere-se a tarefa ``Procurar por (incidentes) duplicados''.
+
+%TODO: acho que aqui pode começar a explicar os modulos de monitoramento e adaptação, e aproveitara pra ja mostrar o metamodelo de classes original do zanshin, sem citar o meu novo lindo.
 
 % ======================================================================================================
 % SUBSEÇÃO DESENVOLVIMENTO ORIENTADO A MODELOS
