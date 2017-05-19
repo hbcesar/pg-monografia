@@ -1,3 +1,5 @@
+\backcite {tesevitor}{{7}{(document)}{Doc-Start}}
+\backcite {tesevitor}{{7}{(document)}{Doc-Start}}
 \backcite {lima-pg15}{{7}{(document)}{Doc-Start}}
 \backcite {lima-pg15}{{7}{(document)}{Doc-Start}}
 \backcite {lima-pg15}{{7}{(document)}{Doc-Start}}
@@ -15,8 +17,6 @@
 \backcite {ross1977structured}{{16}{2.1}{section.2.1}}
 \backcite {van2001goal}{{17}{2.1}{section.2.1}}
 \backcite {van2001goal}{{17}{2.1}{section.2.1}}
-\backcite {jackson1995software}{{17}{2.1}{section.2.1}}
-\backcite {zave1997four}{{17}{2.1}{section.2.1}}
 \backcite {dardenne1993goal}{{17}{2.1}{section.2.1}}
 \backcite {van2001goal, van1998managing}{{17}{2.1}{section.2.1}}
 \backcite {van2001goal, van1998managing}{{17}{2.1}{section.2.1}}
@@ -25,17 +25,28 @@
 \backcite {souza2012requirement}{{18}{2.1}{section.2.1}}
 \backcite {dardenne1991goal, dardenne1993goal}{{18}{2.1}{section.2.1}}
 \backcite {dardenne1991goal, dardenne1993goal}{{18}{2.1}{section.2.1}}
-\backcite {souza2012requirement}{{18}{2.1.1}{subsection.2.1.1}}
-\backcite {dalpiaz2013runtime}{{18}{2.1.1}{subsection.2.1.1}}
-\backcite {souza2013awareness}{{18}{2.1.1}{subsection.2.1.1}}
-\backcite {souza2013awareness}{{18}{2.1.1}{subsection.2.1.1}}
-\backcite {souza2012requirement}{{18}{2.1.1}{subsection.2.1.1}}
-\backcite {dalpiaz2013runtime}{{18}{2.1.1}{subsection.2.1.1}}
-\backcite {souza2012requirement}{{18}{2.1.1}{subsection.2.1.1}}
+\backcite {souza2013awareness}{{18}{2.1}{section.2.1}}
+\backcite {yu20111}{{18}{2.1}{section.2.1}}
+\backcite {tesevitor}{{18}{1}{figure.caption.10}}
+\backcite {souza2012requirement}{{19}{2.1.1}{subsection.2.1.1}}
+\backcite {dalpiaz2013runtime}{{19}{2.1.1}{subsection.2.1.1}}
+\backcite {souza2013awareness}{{19}{2.1.1}{subsection.2.1.1}}
+\backcite {brun2009engineering}{{19}{2.1.1}{subsection.2.1.1}}
+\backcite {souza2013awareness}{{19}{2.1.1}{subsection.2.1.1}}
+\backcite {souza2013awareness}{{19}{2.1.1}{subsection.2.1.1}}
+\backcite {souza2013awareness}{{19}{2.1.1}{subsection.2.1.1}}
+\backcite {souza2012requirement}{{19}{2.1.1}{subsection.2.1.1}}
+\backcite {dalpiaz2013runtime}{{19}{2.1.1}{subsection.2.1.1}}
+\backcite {souza2013awareness}{{19}{2.1.1}{subsection.2.1.1}}
 \backcite {souza2012requirement}{{19}{2.1.1}{subsection.2.1.1}}
 \backcite {souza2012requirement}{{19}{2.1.1}{subsection.2.1.1}}
-\backcite {lima-pg15}{{29}{7}{figure.caption.17}}
-\backcite {lima-pg15}{{36}{12}{figure.caption.22}}
-\backcite {vitorFrameWeb}{{36}{4.3.3}{subsection.4.3.3}}
-\backcite {lima-pg15}{{37}{14}{figure.caption.24}}
-\backcite {lima-pg15}{{39}{17}{figure.caption.27}}
+\backcite {souza2012requirement}{{20}{2.1.1}{subsection.2.1.1}}
+\backcite {souza2013awareness}{{20}{2.1.1}{subsection.2.1.1}}
+\backcite {souza2012requirement}{{20}{2.1.1}{subsection.2.1.1}}
+\backcite {souza2012requirement}{{20}{2.1.1}{subsection.2.1.1}}
+\backcite {tesevitor}{{21}{2}{figure.caption.11}}
+\backcite {lima-pg15}{{31}{9}{figure.caption.19}}
+\backcite {lima-pg15}{{38}{14}{figure.caption.24}}
+\backcite {vitorFrameWeb}{{38}{4.3.3}{subsection.4.3.3}}
+\backcite {lima-pg15}{{39}{16}{figure.caption.26}}
+\backcite {lima-pg15}{{41}{19}{figure.caption.29}}

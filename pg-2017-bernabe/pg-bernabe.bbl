@@ -1,0 +1,111 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.5 }
+
+\bibitem[Andersson et al. 2009]{andersson2009modeling}
+\abntrefinfo{Andersson et al.}{ANDERSSON et al.}{2009}
+{ANDERSSON, J. et al. Modeling dimensions of self-adaptive software systems.
+  In:  \emph{Software engineering for self-adaptive systems}. [S.l.]: Springer,
+  2009. p. 27--47.}
+
+\bibitem[Brun et al. 2009]{brun2009engineering}
+\abntrefinfo{Brun et al.}{BRUN et al.}{2009}
+{BRUN, Y. et al. Engineering self-adaptive systems through feedback loops. In:
+  \emph{Software engineering for self-adaptive systems}. [S.l.]: Springer,
+  2009. p. 48--70.}
+
+\bibitem[Dalpiaz et al. 2013]{dalpiaz2013runtime}
+\abntrefinfo{Dalpiaz et al.}{DALPIAZ et al.}{2013}
+{DALPIAZ, F. et al. Runtime goal models: Keynote. In:  IEEE. \emph{Research
+  Challenges in Information Science (RCIS), 2013 IEEE Seventh International
+  Conference on}. [S.l.], 2013. p. 1--11.}
+
+\bibitem[Dardenne, Fickas e Lamsweerde 1991]{dardenne1991goal}
+\abntrefinfo{Dardenne, Fickas e Lamsweerde}{DARDENNE; FICKAS; LAMSWEERDE}{1991}
+{DARDENNE, A.; FICKAS, S.; LAMSWEERDE, A. van. Goal-directed concept
+  acquisition in requirements elicitation. In:  IEEE COMPUTER SOCIETY PRESS.
+  \emph{Proceedings of the 6th international workshop on Software specification
+  and design}. [S.l.], 1991. p. 14--21.}
+
+\bibitem[Dardenne, Lamsweerde e Fickas 1993]{dardenne1993goal}
+\abntrefinfo{Dardenne, Lamsweerde e Fickas}{DARDENNE; LAMSWEERDE; FICKAS}{1993}
+{DARDENNE, A.; LAMSWEERDE, A. V.; FICKAS, S. Goal-directed requirements
+  acquisition.
+\emph{Science of computer programming}, Elsevier, v.~20, n.~1-2, p. 3--50,
+  1993.}
+
+\bibitem[Falbo 2014]{falboEngSoft}
+\abntrefinfo{Falbo}{FALBO}{2014}
+{FALBO, R.~A. \emph{{Engenharia de Software}}. [s.n.], 2014. 141~p.
+  Dispon{\'\i}vel em:
+  \url{http://www.inf.ufes.br/~falbo/files/ES/Notas\_Aula\_Engenharia\_Software.pdf}.}
+
+\bibitem[Falbo 2017]{falboEngReq}
+\abntrefinfo{Falbo}{FALBO}{2017}
+{FALBO, R.~A. \emph{{Engenharia de Software}}. [s.n.], 2017. 71~p.
+  Dispon{\'\i}vel em:
+  \url{http://www.inf.ufes.br/~falbo/files/ER/Notas\_Aula\_Engenharia\_Requisitos.pdf}.}
+
+\bibitem[Jureta, Mylopoulos e Faulkner 2008]{jureta2008revisiting}
+\abntrefinfo{Jureta, Mylopoulos e Faulkner}{JURETA; MYLOPOULOS; FAULKNER}{2008}
+{JURETA, I.; MYLOPOULOS, J.; FAULKNER, S. Revisiting the core ontology and
+  problem in requirements engineering. In:  IEEE. \emph{International
+  Requirements Engineering, 2008. RE'08. 16th IEEE}. [S.l.], 2008. p. 71--80.}
+
+\bibitem[Kephart e Chess 2003]{kephart2003vision}
+\abntrefinfo{Kephart e Chess}{KEPHART; CHESS}{2003}
+{KEPHART, J.~O.; CHESS, D.~M. The vision of autonomic computing.
+\emph{Computer}, IEEE, v.~36, n.~1, p. 41--50, 2003.}
+
+\bibitem[Lamsweerde 2001]{van2001goal}
+\abntrefinfo{Lamsweerde}{LAMSWEERDE}{2001}
+{LAMSWEERDE, A. V. Goal-oriented requirements engineering: A guided tour. In:
+  IEEE. \emph{Requirements Engineering, 2001. Proceedings. Fifth IEEE
+  International Symposium on}. [S.l.], 2001. p. 249--262.}
+
+\bibitem[Lamsweerde, Darimont e Letier 1998]{van1998managing}
+\abntrefinfo{Lamsweerde, Darimont e Letier}{LAMSWEERDE; DARIMONT; LETIER}{1998}
+{LAMSWEERDE, A. V.; DARIMONT, R.; LETIER, E. Managing conflicts in goal-driven
+  requirements engineering.
+\emph{IEEE transactions on Software engineering}, IEEE, v.~24, n.~11, p.
+  908--926, 1998.}
+
+\bibitem[Pfleeger 2004]{pfleeger2004engenharia}
+\abntrefinfo{Pfleeger}{PFLEEGER}{2004}
+{PFLEEGER, S.~L. \emph{Engenharia de software: teoria e pr{\'a}tica}. [S.l.]:
+  Prentice Hall, 2004.}
+
+\bibitem[Ross e Schoman 1977]{ross1977structured}
+\abntrefinfo{Ross e Schoman}{ROSS; SCHOMAN}{1977}
+{ROSS, D.~T.; SCHOMAN, K.~E. Structured analysis for requirements definition.
+\emph{IEEE transactions on Software Engineering}, IEEE, n.~1, p. 6--15, 1977.}
+
+\bibitem[Souza 2012]{tesevitor}
+\abntrefinfo{Souza}{SOUZA}{2012}
+{SOUZA, V.~E. S.
+\emph{Requirements-based software system adaptation}.
+Tese (Doutorado) --- University of Trento, 2012.}
+
+\bibitem[Souza, Lapouchnian e Mylopoulos 2012]{souza2012requirement}
+\abntrefinfo{Souza, Lapouchnian e Mylopoulos}{SOUZA; LAPOUCHNIAN;
+  MYLOPOULOS}{2012}
+{SOUZA, V. E.~S.; LAPOUCHNIAN, A.; MYLOPOULOS, J. (requirement) evolution
+  requirements for adaptive systems. In:  IEEE PRESS. \emph{Proceedings of the
+  7th International Symposium on Software Engineering for Adaptive and
+  Self-Managing Systems}. [S.l.], 2012. p. 155--164.}
+
+\bibitem[Souza et al. 2013]{souza2013awareness}
+\abntrefinfo{Souza et al.}{SOUZA et al.}{2013}
+{SOUZA, V. E.~S. et al. Awareness requirements. In:  \emph{Software Engineering
+  for Self-Adaptive Systems II}. [S.l.]: Springer, 2013. p. 133--161.}
+
+\bibitem[Yu et al. 2011]{yu20111}
+\abntrefinfo{Yu et al.}{YU et al.}{2011}
+{YU, E. et al. 1 social modeling for requirements engineering: An introduction.
+\emph{Social Modeling for Requirements Engineering}, MIT Press, p. 3--10,
+  2011.}
+
+\end{thebibliography}
