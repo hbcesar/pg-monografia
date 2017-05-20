@@ -64,6 +64,7 @@ O sistema de monitoramento é construído fundamentado na premissa de que todo s
 
 Modelos de sistemas adaptativos incluem requisitos autoconscientes, ou seja, requisitos definidos em relação ao sucesso, falha ou qualidade de serviço de outros requisitos ~\cite{souza2013awareness}. Assim, esses requisitos são considerados ``requisitos especiais'' já que sua operacionalização está relacionada a mudança de outros requisitos ~\cite{souza2012requirement}. Ademais, o comportamento do sistema é caracterizado por eventos que ocorrem em tempo de execução e que estão diretamente ligados a instâncias de objetivos ~\cite{dalpiaz2013runtime}. Assim, é importante observar que essa abordagem é considerada orientada a objetivos já que os requisitos mencionados são derivados do refinamento de objetivos elicitados para o sistema.
 
+%TODO: acho legal um susubsection pra awreqs e evoreqs (separado), ai explica melhor, no caso de evoreqs, as applicabilities e resolution conditions, assim como as strategies e mostra um codigo de adaptação (verificar se é melhor colocar o codigo aqui ou na secao de exemplo).
 %Awreqs
 Requisitos autoconscientes são divididos em dois tipos principais: Requisitos de Percepção (\textit{Awareness Requirements} ou \awreqs) ~\cite{souza2013awareness} e Requisitos de Evolução (\textit{Evolution Requirements} ou \evoreqs) ~\cite{souza2012requirement}. \awreqs são requisitos que referem-se ao estado de outros requisitos em tempo de execução, representando situações onde as partes interessadas desejam que o sistema se adapte ~\cite{souza2012requirement}. Podem se referir a qualquer tipo de elemento, sejam objetivos, \sofgoals, tarefas e pressuposições de domínio. Além disso, indicam o quão critico um requisito pode ser ao descrever o grau de tolerância a falhas do mesmo ~\cite{souza2012requirement}. Antes da execução de um sistema, os requisitos estão em estado ``não decidido'' (\textit{undecided}), e então pode assumir os estados ``Sucesso'' (\textit{Succeeded}), ``Falha'' (\textit{Failed}), e no caso de objetivos e tarefas, ``Cancelado'' (\textit{Canceled}) ~\cite{souza2013awareness}. É facilmente notável que o processo de elicitação de requisitos de percepção só acontece depois que o modelo de objetivos é levantado, e assim como o processo de construção de objetivos, \awreqs devem ser sistematicamente criados.
 
@@ -78,7 +79,7 @@ Em suma, \awreqs especificam quando um determinado objetivo precisa de mudanças
 \subsection{Exemplo de Modelagem de Caso de Uso}
 \label{sec-referencial-engenharia-objetivos-exemplo}
 
-Na Figura \ref{figura-acad-completo} é apresentado o modelo completo do sistema de despacho de ambulâncias (\textit{Adaptive Computer-aided	Ambulance Dispatch} ou \textit{A-CAD}), nele observa-se o objetivo principal "Gerar Instruções de Despacho Otimizadas", representado por uma oval, que é imediatamente refinado em outros objetivos e em uma pressuposição de domínio, representada por retângulos, o refinamento entre o objetivo raiz e seus filhos imediatos é do tipo ``E'', portanto, para que o objetivo principal seja considerado satisfeito, todos as suas decomposições precisam ser satisfeitas. Então, verifica-se que o primeiro nível de refinamento do objetivo principal é composto de:
+Na Figura \ref{figura-acad-completo} é apresentado o modelo completo do sistema de despacho de ambulâncias (\textit{Adaptive Computer-aided	Ambulance Dispatch} ou \textit{A-CAD}), nele observa-se o objetivo principal "Gerar Instruções de Despacho Otimizadas", representado por uma oval, que é imediatamente refinado em outros objetivos e em uma pressuposição de domínio, representada por retângulos, o refinamento entre o objetivo raiz e seus filhos imediatos é do tipo ``E'', portanto, para que o objetivo principal seja considerado satisfeito, todos as suas decomposições de primeiro grau precisam ser satisfeitas. Então, verifica-se que o primeiro nível de refinamento do objetivo principal é composto de:
 
 \begin{itemize}
 	\item Objetivo: ``Gerenciar Chamadas''
@@ -88,11 +89,27 @@ Na Figura \ref{figura-acad-completo} é apresentado o modelo completo do sistema
 	\item Pressuposição de Domínio: ``Dados sobre recursos está sempre atualizado''
 \end{itemize}
 
-O processo de refinamento do modelo então segue até que todos os objetivos sejam completamente refinados em tarefas ou pressuposições de domínio. \sofgoals são representados por nuvens e refinados em critérios de operacionalização (os \textit{Quality Constraints}) representados por retângulos com cantos arredondados. Para exemplificar: o \sofgoal ``Chegada Rápida''é operacionalizado por ``Ambulâncias chegam em oito minutos'', assim, tem-se um critério claro de satisfação para um objetivo que antes possuía diversos tipos de interpretação, porém agora, sabemos que uma ambulância chega rapidamente se consegue estar no local do acidente em menos de oito minutos a partir da chamada.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{figuras/modelos/ACAD-Completo.png}
+	\caption{Exemplo de modelos de objetivos de um sistema de despacho de ambulâncias ~\cite{tesevitor}}
+	\label{figura-acad-completo}
+\end{figure}
 
-Os requisitos de percepção são representados por um círculo oco. O modelo da \ref{figura-acad-completo} possui ao todo 16 tipos de \awreqs. Por exemplo, o \awreq identificado por ``AR15'', indica que o objetivo ``Registrar Chamados'' deve ``Nunca falhar''. Os \evoreqs referentes a cada um dos \awreqs não são representados nesse modelo, e devem ser especificados em forma de sequencia de operações sobre os elementos do modelo de objetivos (essa escolha visa facilitar a legibilidade do modelo). Além dos \evoreqs, são especificados também os parâmetros de controle (\textit{control parameters}), representados por losangos, que indicam parâmetros do sistema que podem ser reconfigurados para adaptação. As formas de representação estão resumidas na Figura \ref{figura-elementos-gore-eca}.
+O processo de refinamento do modelo então segue até que todos os objetivos sejam completamente refinados em tarefas ou pressuposições de domínio. \sofgoals são representados por nuvens e refinados em critérios de operacionalização (os \textit{Quality Constraints}) representados por retângulos com cantos arredondados. Exemplificando, o \sofgoal ``Chegada Rápida''é operacionalizado por ``Ambulâncias chegam em oito minutos'', assim, tem-se um critério claro de satisfação para um objetivo que antes possuía diversos tipos de interpretação, porém agora, sabemos que uma ambulância chega rapidamente se consegue estar no local do acidente em menos de oito minutos a partir da chamada.
 
-Sobre os \evoreqs do AR15, podemos definir seus respectivos Requisitos de Evolução. Primeiramente, se o objetivo vir a falhar, define-se a primeira estratégia de adaptação como ``Tentar Novamente em 5 segundos no máximo uma vez'' (\texttt{RetryStrategy(5000);}), caso falhe mais do que uma vez, aplica-se outra estratégia ``Diminuir Condições ao Desabilitar Filho'' (\texttt{RelaxDisableChild(T_DetectCaller);}), que desativa o requisito ``Detectar Localização da Ligação'', também aplicado no máximo uma vez. Essas decisões são sumarizadas na tabela \ref{tabela-evoreqs-ar15}.
+Os requisitos de percepção são representados por um círculo oco. Por exemplo, o \awreq identificado por ``AR15'', indica que o objetivo ``Registrar Chamados'' deve ``Nunca falhar''. Os \evoreqs referentes a cada um dos \awreqs não são representados nesse modelo, e devem ser especificados em forma de sequencia de operações sobre os elementos do modelo de objetivos (essa escolha visa aprimorar a legibilidade do modelo). Além dos \awreqs, são especificados também os parâmetros de controle (\textit{control parameters}), representados por losangos, que indicam parâmetros do sistema que podem ser reconfigurados durante a adaptação. Todas as formas de representação estão resumidas na Figura \ref{figura-elementos-gore-eca}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{figuras/modelos/Elementos-GORE.png}
+	\caption{Representação gráfica de elementos de \gore}
+	\label{figura-elementos-gore-eca}
+\end{figure}
+
+Sobre os \evoreqs do ``AR15'', podemos definir seus respectivos Requisitos de Evolução. Primeiramente, se o objetivo vir a falhar, define-se a primeira estratégia de adaptação como ``Tentar Novamente em 5 segundos no máximo uma vez'' (\texttt{RetryStrategy(5000);}), caso falhe mais do que uma vez, aplica-se outra estratégia ``Diminuir Condições ao Desabilitar Filho'' (\texttt{RelaxDisableChild(T_DetectCaller);}), que desativa o requisito ``Detectar Localização da Ligação'', também aplicado no máximo uma vez. Essas decisões são sumarizadas na tabela \ref{tabela-evoreqs-ar15}.
+
+%TODO: acho que aqui seria legal colocar o código que mostra como faz uma determinada evolução e explicá-lo melhor.
 
 \begin{table}[]
 	\centering
@@ -103,20 +120,7 @@ Sobre os \evoreqs do AR15, podemos definir seus respectivos Requisitos de Evolu�
 	\end{tabular}
 \end{table}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\textwidth]{figuras/modelos/ACAD-Completo.png}
-	\caption{Exemplo de modelos de objetivos de um sistema de despacho de ambulâncias ~\cite{tesevitor}}
-	\label{figura-acad-completo}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\textwidth]{figuras/modelos/Elementos-GORE.png}
-	\caption{Representação gráfica de elementos de \gore}
-	\label{figura-elementos-gore-eca}
-\end{figure}
-
+O processo de especificação de como as estratégias de evolução são realizadas pelo sistema é discutido na próxima seção.
 
 % ======================================================================================================
 % SEÇÃO Zanshin
@@ -125,7 +129,22 @@ Sobre os \evoreqs do AR15, podemos definir seus respectivos Requisitos de Evolu�
 \section{Zanshin}
 \label{sec-referencial-zanshin}
 
-Apresentado por ~\cite{tesevitor} e baseado em várias das premissas discutidas até aqui, \zanshin é um \textit{framework} que utiliza de ciclos de retro-alimentação para monitorar requisitos e enviar estratégias de adaptação com base em informações de modelos de requisitos orientados a objetivos enriquecidos com elementos como os \awreqs e os \evoreqs. 
+Apresentado por ~\cite{tesevitor} e baseado em várias das premissas discutidas até aqui, \zanshin é um \textit{framework} que utiliza de ciclos de retro-alimentação para monitorar requisitos e enviar estratégias de adaptação com base em informações de modelos de requisitos orientados a objetivos enriquecidos com elementos como os \awreqs e os \evoreqs. O nome \zanshin vem de um termo usado em artes marciais japonesas e significa estado de completa consciência.
+
+Em tempo de execução, os elementos do modelo de objetivos são representados por classes e instanciados cada vez que o usuário (ou sistema) busca atingir um objetivo, e então o sistema passa a enviar mensagens a essas instâncias quando detectar falhas. Percebe-se assim, que objetivos e pressuposições de domínio não são tratadas como invariantes que devem sempre ser atingidas, já que o sistema pode falhar ao tentar atingir seus objetivos iniciais, e assim o sistema de adaptação lidará com essas falhas e tomará medidas para que os objetivos voltem a ser satisfeitos ~\cite{souza2013requirements}.
+
+Assim como o monitoramento de objetivos através do \textit{Feddback Loop}, o \zanshin também monitora Parâmetros (\textit{Parameters}) que podem ser definidos em dois tipos. Primeiro, os Pontos de Variação (ou \textit{Variation Points}), que representam refinamentos do tipo ``OU'' (\textit{OR}). Por exemplo, o VP4 do modelo de objetivos do sistema A-CAD (Figura \ref{figura-acad-completo}) que refere-se ao objetivo ``Atualizar posição de ambulâncias em uso'' especifica que atualizações de posição das ambulâncias podem ser obtidas automaticamente ou via rádio. Segundo, as Variáveis de Controle (ou \textit{Control Variables}), que são abstrações referentes a pontos de variação repetitivos ou usados em grande escala, como por exemplo a variável MST (``Tempo de Busca Mínimo'' ou \textit{Minimum Search Time}), que refere-se a tarefa ``Procurar por (incidentes) duplicados''.
+
+O metamodelo dos modelos de objetivos usados no \zanshin é representado na Figura \ref{figura-metamodelo-antigo}, e especificado no código do \textit{framework} como um modelo \emf e carregado em memória como objetos \java usando a API do \eclipse para \emf. Nessa caso, o modelo \emf representa os tipos de requisitos em nível de classe ~\cite{souza2013requirements}. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{figuras/metamodelos/metamodelo-zanshin-antigo.png}
+	\caption{Metamodelo que define a sintaxe abstrata para o \zanshin}
+	\label{figura-metamodelo-antigo}
+\end{figure}
+
+De uma maneira geral, o \zanshin é ser divido em quatro componentes. Essa seção discute dois módulos principais: o componente de monitoramento e o componente de adaptação.
 
 % ======================================================================================================
 % SUBSEÇÃO Zanshin: Monitoramento
@@ -133,11 +152,32 @@ Apresentado por ~\cite{tesevitor} e baseado em várias das premissas discutidas 
 \subsection{Monitoramento}
 \label{sec-referencial-zanshin-monitoramento}
 
-Em tempo de execução, os elementos do modelo de objetivos são representados por classes e instanciados cada vez que o usuário (ou sistema) busca atingir um objetivo, e então o sistema passa a enviar mensagens a essas instâncias quando detectar falhas. Percebe-se assim, que objetivos e pressuposições de domínio não são tratadas como invariantes que devem sempre ser atingidas, já que o sistema pode falhar ao tentar atingir seus objetivos iniciais, e assim o sistema de adaptação lidará com essas falhas e tomará medidas para que os objetivos voltem a ser satisfeitos ~\cite{souza2013requirements}.
+O módulo de monitoramento necessita que o sistema alvo implemente funcionalidades de registro (\textit{logs}). Através do registro, o sistema pode detectar mudanças nos estados das instâncias de um \awreq e assim notificar o serviço de adaptação sobre as mudanças ocorridas. 
 
-Assim como o monitoramento de objetivos através do \textit{Feddback Loop}, o \zanshin também monitora Parâmetros (\textit{Parameters}) que podem ser definidos em dois tipos. Pontos de Variação (ou \textit{Variation Points}), que representam refinamentos do tipo ``OU'' (\textit{OR}). Por exemplo, o VP4 do modelo de objetivos do sistema A-CAD (Figura \ref{figura-acad-completo}) que refere-se ao objetivo ``Atualizar posição de ambulâncias em uso'' especifica que atualizações de posição das ambulâncias podem ser obtidas automaticamente ou via rádio. Variáveis de Controle (ou \textit{Control Variables}) são abstrações referentes a pontos de variação repetitivos ou usados em grande escala, como por exemplo a variável MST (``Tempo de Busca Mínimo'' ou \textit{Minimum Search Time}), que refere-se a tarefa ``Procurar por (incidentes) duplicados''.
+%TODO: melhorar esse paragrafo aqui
+Para identificar o modelo de objetivos do sistema alvo, o componente de monitoramento necessita da especificação do modelo do sistema também em \emf. Através dele, o \zanshin criará instancias desses objetivos extendendo as de classes carregadas do metamodelo de \gore referentes ao tipo de cada um deles. Ou seja, o modelo do sistema deve especificar objetos que extendam os disponíveis no metamodelo de \gore (Figura \ref{figura-metamodelo-antigo}). Assim, o sistema criará classes dos requisitos do sistema alvo e usará dos métodos definidos nas metaclasses \texttt{DefinableRequirement} e \texttt{PerformativeRequirement} ~\cite{tesevitor}, sejam eles:
+\begin{itemize}
+	\item \texttt{start()}: esse método é chamado nas classes de critérios de qualidade e pressuposições de domínio imediatamente antes da análise de seu estado de satisfação. Para o caso de tarefas, esse método é chamado assim que um usuário inicia uma tarefa, e então todos os ancestrais a essa também tem esse método invocado.
+	\item \texttt{sucess()}: chamado quando um requisito é satisfeito e propagado para todos os acentrais a esse objetivo para ``avisar'' que o filho chegou ao estado de sucesso.
+	\item \texttt{fail()}: segue a mesma lógica dos item anteriores, propagando a ``falha'' de um requisito aos seus ancestrais.
+	\item \texttt{cancel()}: para o caso de requisitos como objetivos e tarefas, esse método é usado quando um procedimento é cancelado pelo usuário, e usa da mesma lógica de propagação dos métodos anteriores para informar o ocorrido aos pais.
+	\item \textttt{end()}: chamado assim que um requisito retorna dos estados de sucesso, falha ou cancelamento.
+\end{itemize}
 
-%TODO: acho que aqui pode começar a explicar os modulos de monitoramento e adaptação, e aproveitara pra ja mostrar o metamodelo de classes original do zanshin, sem citar o meu novo lindo.
+Através da descrição dos métodos acima mencionados, é possível entender como o processo de monitoramento funciona: basicamente os requisitos monitorados possuem métodos que podem ser chamados em cada caso que assumem, seja de sucesso, falha o ou cancelamento. Assim que chamados, os métodos invocam os mesmos métodos nos elementos pais, permitindo que a atualização de um requisito se propague a todos os elementos que interessem, atualizando assim todo o modelo.
+
+Logo que o componente monitor detecta uma mudança de estado em um requisito, ou seja, assim que qualquer um dos métodos acima é invocado, ele imediatamente envia uma notificação sobre essa mudança ao módulo de adaptação, que então inicia o processo definido para aquele determinado requisito de percepção ~\cite{tesevitor}.
+
+\subsection{Adaptação}
+\label{sec-referencial-zanshin-adaptacao}
+Em termos de implementação, o algoritmo do módulo de adaptação cria uma sessão para cada \awreq que está sendo monitorado e então gera uma fila de eventos que se referem a estratégias de adaptação. Assim, essa linha de eventos pode ser usada para verificar se uma estratégia é ou não aplicável a determinada situação. Primeiramente, deve-se verificar o estado de um objetivo apontado por um \awreq, para isso é checada a condição de resolução daquele. Então, caso uma avaliação considere que o objetivo está em estado de falha, o sistema segue, seguindo uma ordem pré-definida, a lista de estratégias de adaptação disponíveis, procurando alguma que tenha sua condição de aplicabilidade verdadeira. Caso encontre, aplica a estratégia de adaptação definida por aquela condição de aplicabilidade e então retorna ao estado inicial, onde a checagem da satisfabilidade do objetivo é realizada novamente. Caso o sistema retorne a fase de checagem do estado do objetivo e esse ainda não tenha sido satisfeito, o processo começa novamente, porém dessa vez descartando a última estratégia usada. Caso não encontre uma condição para aplicar uma estratégia, o sistema ativa o método ``abortar'' (\texttt{abort()}) ~\cite{souza2013requirements}. 
+
+Ao final, quando uma sessão de adaptação é considerada resolvida, a mesma deve ser terminada e se for necessário que o processo seja aplicado novamente, uma nova sessão é criada. Entretanto, se uma sessão termina sem ter resolvido o problema, o \textit{framework} continuará trabalhando nela do ponto em que parou assim que receber uma nova requisição para adaptação daquele mesmo \awreq. Porém, algumas estratégias também podem forçar que a sessão seja reiniciada quando executada ~\cite{souza2013requirements}. Essa processo é conhecido como Evento de Ação-Condição (\textit{Event Condition Action} ou \textit{ECA}) ~\cite{morin2009models}.
+
+\subsubsection{ECA}
+
+
+%TODO: acho que aqui pode começar a explicar os modulos de monitoramento e adaptação, e aproveitara pra ja mostrar o metamodelo de classes original do zanshin, sem citar o meu novo lindo. Além disso, em algum lugar explicar ainda melhor os evoreqs, falando das conditions e checagem.
 
 % ======================================================================================================
 % SUBSEÇÃO DESENVOLVIMENTO ORIENTADO A MODELOS
