@@ -179,7 +179,7 @@ Ao final, quando uma sessão de adaptação é considerada resolvida, a mesma de
 
 O algoritmo a seguir resume o processo \textit{ECA} para realizar a seleção de estratégias de adaptação:
 
-\begin{lstlisting}
+\begin{lstlisting}[caption={Código do processo ECA},label={listagem-estrategias-AR15}]
 processEvent(ar : AwReq) {
 	session = findOrCreateSession(ar.class);
 	session.addEvent(ar);
@@ -205,9 +205,9 @@ processEvent(ar : AwReq) {
 
 O algoritmo incia obtendo a sessão de adaptação referente a classe do \awreq requisitado (caso não haja uma sessão, uma nova é criada). Obtida a sessão de adaptação, o algoritmo tem então acesso a lista de eventos de aplicabilidade referentes. Então, o algoritmo adiciona o \awreq a sessão e imediatamente verifica o estado da mesma (verificando a condição de resolução), parando caso tenha retornado estado de sucesso. Caso contrário, o processo continua procuando por uma estratégia que seja aplicável, verificando se a condição de aplicabilidade é verdadeira. Caso for verdadeira, interrompe o processo e dá a sessão de adaptação uma nova chance de verificar o estado do \awreq. Caso todas as condições sejam falsas e nenhuma estratégia seja selecionada, seleciona a estratégia padrão (\textit{Abort}) e termina o processo ~\cite{tesevitor}. 
 
-Para exemplificar esse processo, tomemos novamente o \awreq ``AR15'', que garante que o requisito ``Registrar chamada'' deve nunca falhar. Caso seja detectado pelo processo de monitoramento que esse requisito apresenta estado de falha, o módulo monitor imediatamente ativa o módulo de adaptação, que segue o processo ECA para aplicar estratégias ao ``AR15''. Pela listagem \ref{listagem-estrategias-AR15}, ve-se que a condição de resolução desse requisito é do tipo \texttt{SimpleResolutionCondition}, e que a primeira estratégia a ser selecionada é \texttt{RetryStrategy}, ou seja, tentar novamente (em 5s), entretanto, essa estratégia possui a condição de aplicabilidade \texttt{MaxExecutionsPerSessionApplicabilityCondition}, ou seja, pode ser aplicada apenas uma vez naquela sessão. Caso essa condição seja falsa, a próxima estratégia refere-se a desativar um dos filhos desse objetivo (\texttt{RelaxDisableChildStrategy}), no caso a tarefa ``Detectar localização da chamada'', e possui a mesma condição de aplicabilidade. Se nenhuma dessas condições puder ser satisfeitas, então o sistema aborta, caso contrário, seleciona a primeira estratégia aplicável e verifica novamente o estado do objetivo. A condição \texttt{SimpleResolutionCondition} refere-se ao fato de que um objetivo é dito satisfeito apenas se seus filhos estiverem em estado de sucesso (respeitando a regra booleana do refinamento). 
+Para exemplificar esse processo, tomemos novamente o \awreq ``AR15'', que garante que o requisito ``Registrar chamada'' deve nunca falhar. Caso seja detectado pelo processo de monitoramento que esse requisito apresenta estado de falha, o módulo monitor imediatamente ativa o módulo de adaptação, que segue o processo ECA para aplicar estratégias ao ``AR15''. Pela listagem~\ref{listagem-estrategias-AR15}, ve-se que a condição de resolução desse requisito é do tipo \texttt{SimpleResolutionCondition}, e que a primeira estratégia a ser selecionada é \texttt{RetryStrategy}, ou seja, tentar novamente (em 5s), entretanto, essa estratégia possui a condição de aplicabilidade \texttt{MaxExecutionsPerSessionApplicabilityCondition}, ou seja, pode ser aplicada apenas uma vez naquela sessão. Caso essa condição seja falsa, a próxima estratégia refere-se a desativar um dos filhos desse objetivo (\texttt{RelaxDisableChildStrategy}), no caso a tarefa ``Detectar localização da chamada'', e possui a mesma condição de aplicabilidade. Se nenhuma dessas condições puder ser satisfeitas, então o sistema aborta, caso contrário, seleciona a primeira estratégia aplicável e verifica novamente o estado do objetivo. A condição \texttt{SimpleResolutionCondition} refere-se ao fato de que um objetivo é dito satisfeito apenas se seus filhos estiverem em estado de sucesso (respeitando a regra booleana do refinamento). 
 
-\begin{lstlisting}
+\begin{lstlisting}[caption={Estratégias de adaptação de AR15},label={listagem-estrategias-AR15}]
 <awreqs xsi:type="acad:AR15">										
 	<condition xsi:type="eca:SimpleResolutionCondition"/>
 		<strategies xsi:type="eca:RetryStrategy" time="5000">
@@ -234,4 +234,6 @@ Para exemplificar esse processo, tomemos novamente o \awreq ``AR15'', que garant
 Desenvolvimento de software orientado a modelos consiste 
 
 \subsection{Eclipse Modeling Framework}
+%https://books.google.com.br/books?id=sA0zOZuDXhgC&lpg=PT23&ots=2IQIWZWqNm&dq=eclipse&lr&hl=pt-BR&pg=PT45#v=onepage&q=eclipse&f=false
+
 \subsection{Sirius}
