@@ -4,7 +4,6 @@
 \backcite {andersson2009modeling,brun2009engineering}{{11}{1}{chapter.1}}
 \backcite {andersson2009modeling,brun2009engineering}{{11}{1}{chapter.1}}
 \backcite {andersson2009modeling}{{11}{1}{chapter.1}}
-\backcite {andersson2009modeling}{{11}{1}{chapter.1}}
 \backcite {kephart2003vision}{{11}{1}{chapter.1}}
 \backcite {souza2012requirement}{{11}{1}{chapter.1}}
 \backcite {tesevitor}{{11}{1}{chapter.1}}
@@ -12,8 +11,12 @@
 \backcite {falboEngReq}{{15}{2.1}{section.2.1}}
 \backcite {pfleeger2004engenharia}{{15}{2.1}{section.2.1}}
 \backcite {ross1977structured}{{15}{2.1}{section.2.1}}
+\backcite {lapouchnian2005goal}{{16}{2.1}{section.2.1}}
 \backcite {van2001goal}{{16}{2.1}{section.2.1}}
 \backcite {van2001goal}{{16}{2.1}{section.2.1}}
+\backcite {van2001goal}{{16}{2.1}{section.2.1}}
+\backcite {van2001goal}{{16}{2.1}{section.2.1}}
+\backcite {lapouchnian2005goal}{{16}{2.1}{section.2.1}}
 \backcite {dardenne1993goal}{{16}{2.1}{section.2.1}}
 \backcite {van2001goal, van1998managing}{{16}{2.1}{section.2.1}}
 \backcite {van2001goal, van1998managing}{{16}{2.1}{section.2.1}}
@@ -36,7 +39,7 @@
 \backcite {dalpiaz2013runtime}{{18}{2.1.1}{subsection.2.1.1}}
 \backcite {souza2013awareness}{{18}{2.1.1}{subsection.2.1.1}}
 \backcite {souza2012requirement}{{18}{2.1.1}{subsection.2.1.1}}
-\backcite {souza2012requirement}{{19}{2.1.1}{subsection.2.1.1}}
+\backcite {souza2012requirement}{{18}{2.1.1}{subsection.2.1.1}}
 \backcite {souza2012requirement}{{19}{2.1.1}{subsection.2.1.1}}
 \backcite {souza2013awareness}{{19}{2.1.1}{subsection.2.1.1}}
 \backcite {souza2012requirement}{{19}{2.1.1}{subsection.2.1.1}}
@@ -44,37 +47,36 @@
 \backcite {souza2013requirements}{{19}{2.1.1}{subsection.2.1.1}}
 \backcite {tesevitor}{{20}{2}{figure.caption.11}}
 \backcite {tesevitor}{{21}{2.2}{section.2.2}}
+\backcite {souza2013requirements}{{21}{2.2}{section.2.2}}
 \backcite {souza2013requirements}{{22}{2.2}{section.2.2}}
-\backcite {souza2013requirements}{{22}{2.2}{section.2.2}}
-\backcite {tesevitor}{{23}{2.2.1}{subsection.2.2.1}}
-\backcite {tesevitor}{{24}{2.2.1}{subsection.2.2.1}}
-\backcite {souza2013requirements}{{24}{2.2.2}{subsection.2.2.2}}
-\backcite {souza2013requirements}{{24}{2.2.2}{subsection.2.2.2}}
+\backcite {tesevitor}{{23}{2.2.1}{figure.caption.15}}
+\backcite {tesevitor}{{24}{2.2.1}{figure.caption.15}}
+\backcite {souza2013requirements}{{25}{2.2.2}{subsection.2.2.2}}
+\backcite {souza2013requirements}{{25}{2.2.2}{subsection.2.2.2}}
 \backcite {morin2009models}{{25}{2.2.2}{subsection.2.2.2}}
-\backcite {tesevitor}{{25}{2.2.2.1}{lstnumber.2.1.21}}
+\backcite {tesevitor}{{26}{2.2.2.1}{lstnumber.2.1.21}}
 \backcite {tesevitor}{{26}{2.2.2.1}{lstnumber.2.2.9}}
-\backcite {viyovic2014sirius}{{26}{2.3}{section.2.3}}
-\backcite {atkinson2003model}{{26}{2.3}{section.2.3}}
-\backcite {viyovic2014sirius}{{26}{2.3}{section.2.3}}
-\backcite {vujovic2014comparative}{{26}{2.3}{section.2.3}}
-\backcite {atkinson2003model}{{26}{2.3}{section.2.3}}
+\backcite {viyovic2014sirius}{{27}{2.3}{section.2.3}}
+\backcite {atkinson2003model}{{27}{2.3}{section.2.3}}
+\backcite {viyovic2014sirius}{{27}{2.3}{section.2.3}}
+\backcite {vujovic2014comparative}{{27}{2.3}{section.2.3}}
+\backcite {atkinson2003model}{{27}{2.3}{section.2.3}}
 \backcite {atkinson2003model}{{27}{2.3}{section.2.3}}
 \backcite {selic2003pragmatics}{{27}{2.3}{section.2.3}}
 \backcite {selic2003pragmatics}{{27}{2.3}{section.2.3}}
 \backcite {selic2003pragmatics}{{27}{2.3}{section.2.3}}
 \backcite {selic2003pragmatics, viyovic2014sirius}{{27}{2.3}{section.2.3}}
 \backcite {selic2003pragmatics, viyovic2014sirius}{{27}{2.3}{section.2.3}}
-\backcite {steinberg2008emf}{{27}{2.3.1}{subsection.2.3.1}}
-\backcite {steinberg2008emf}{{27}{2.3.1}{subsection.2.3.1}}
-\backcite {steinberg2008emf}{{27}{2.3.1}{subsection.2.3.1}}
-\backcite {steinberg2008emf}{{27}{2.3.1}{subsection.2.3.1}}
-\backcite {kern2008interchange}{{28}{5}{figure.caption.15}}
-\backcite {vujovic2014comparative}{{29}{2.3.1}{figure.caption.18}}
-\backcite {viyovic2014sirius}{{29}{2.3.2}{subsection.2.3.2}}
+\backcite {steinberg2008emf}{{28}{2.3.1}{subsection.2.3.1}}
+\backcite {steinberg2008emf}{{28}{2.3.1}{subsection.2.3.1}}
+\backcite {steinberg2008emf}{{28}{2.3.1}{subsection.2.3.1}}
+\backcite {steinberg2008emf}{{28}{2.3.1}{subsection.2.3.1}}
+\backcite {kern2008interchange}{{28}{6}{figure.caption.17}}
+\backcite {vujovic2014comparative}{{30}{2.3.1}{figure.caption.20}}
+\backcite {viyovic2014sirius}{{30}{2.3.2}{subsection.2.3.2}}
 \backcite {budinsky2004eclipse}{{30}{2.3.2}{subsection.2.3.2}}
 \backcite {viyovic2014sirius}{{30}{2.3.2}{subsection.2.3.2}}
 \backcite {vujovic2014comparative}{{30}{2.3.2}{subsection.2.3.2}}
 \backcite {viyovic2014sirius}{{30}{2.3.2}{subsection.2.3.2}}
 \backcite {viyovic2014sirius}{{30}{2.3.2}{subsection.2.3.2}}
-\backcite {viyovic2014sirius}{{30}{2.3.2}{subsection.2.3.2}}
-\backcite {madiot2015eclipse}{{30}{2.3.2}{figure.caption.19}}
+\backcite {madiot2015eclipse}{{31}{2.3.2}{figure.caption.21}}

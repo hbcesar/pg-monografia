@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.24)  23 MAY 2017 10:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.24)  23 MAY 2017 14:43
 entering extended mode
 **./pg-bernabe.tex
 (pg-bernabe.tex
@@ -1617,11 +1617,8 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 243.
 
 
 Writing index file pg-bernabe.idx 
-(pg-bernabe.aux (capitulos/ch1-introducao.aux) (capitulos/ch2-referencial.aux
-
-LaTeX Warning: Label `listagem-estrategias-AR15' multiply defined.
-
-) (capitulos/ch3-unagi.aux) (capitulos/ch4-revisao.aux)
+(pg-bernabe.aux (capitulos/ch1-introducao.aux) (capitulos/ch2-referencial.aux)
+(capitulos/ch3-unagi.aux) (capitulos/ch4-revisao.aux)
 (capitulos/ch5-conclusoes.aux))
 \openout1 = `pg-bernabe.aux'.
 
@@ -1869,134 +1866,184 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 \openout2 = `capitulos/ch2-referencial.aux'.
 
 
-(capitulos/ch2-referencial.tex [15
+(capitulos/ch2-referencial.tex
+
+LaTeX Warning: Citation `lapouchnian2005goal' on page 15 undefined on input lin
+e 28.
+
+[15
 
 
 
-] [16]
-<figuras/modelos/ACAD-Simples.png, id=266, 886.06032pt x 613.54219pt>
+]
+
+LaTeX Warning: Citation `lapouchnian2005goal' on page 16 undefined on input lin
+e 39.
+
+[16] <figuras/modelos/ACAD-Simples.png, id=274, 886.06032pt x 613.54219pt>
 File: figuras/modelos/ACAD-Simples.png Graphic file (type png)
 
 <use figuras/modelos/ACAD-Simples.png>
-Package pdftex.def Info: figuras/modelos/ACAD-Simples.png used on input line 50
+Package pdftex.def Info: figuras/modelos/ACAD-Simples.png used on input line 53
 .
 (pdftex.def)             Requested size: 455.0pt x 315.06497pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[17] [18 <./figuras/modelos/ACAD-Simples.png>] [19]
-<figuras/modelos/ACAD-Completo.png, id=333, 880.28876pt x 542.025pt>
+[17] [18 <./figuras/modelos/ACAD-Simples.png>]
+<figuras/modelos/ACAD-Completo.png, id=340, 880.28876pt x 542.025pt>
 File: figuras/modelos/ACAD-Completo.png Graphic file (type png)
 
 <use figuras/modelos/ACAD-Completo.png>
 Package pdftex.def Info: figuras/modelos/ACAD-Completo.png used on input line 9
-5.
+0.
 (pdftex.def)             Requested size: 455.0pt x 280.15913pt.
-
-<figuras/modelos/Elementos-GORE.png, id=339, 1130.2225pt x 427.5975pt>
-File: figuras/modelos/Elementos-GORE.png Graphic file (type png)
-
-<use figuras/modelos/Elementos-GORE.png>
-Package pdftex.def Info: figuras/modelos/Elementos-GORE.png used on input line 
-106.
-(pdftex.def)             Requested size: 455.0pt x 172.13863pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 111.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
+[19]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 97.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [20 <./figuras/modelos/ACAD-Completo.png>]
+
+<figuras/modelos/Elementos-GORE.png, id=352, 1130.2225pt x 427.5975pt>
+File: figuras/modelos/Elementos-GORE.png Graphic file (type png)
+
+<use figuras/modelos/Elementos-GORE.png>
+Package pdftex.def Info: figuras/modelos/Elementos-GORE.png used on input line 
+101.
+(pdftex.def)             Requested size: 455.0pt x 172.13863pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 113.
+               Default added (so using `tbp') on input line 108.
 
-[21 <./figuras/modelos/Elementos-GORE.png>]
-<figuras/metamodelos/metamodelo-zanshin-antigo.png, id=360, 707.64375pt x 525.9
+! Misplaced \omit.
+\@cline #1-#2\@nil ->\omit 
+                           \@multicnt #1\advance \@multispan \m@ne \ifnum \@...
+l.114 ...T DetectCaller)\end{tabular}} \cline{1-3}
+                                                  
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.114 ...T DetectCaller)\end{tabular}} \cline{1-3}
+                                                  
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+[20 <./figuras/modelos/ACAD-Completo.png>] [21 <./figuras/modelos/Elementos-GOR
+E.png>]
+<figuras/metamodelos/metamodelo-zanshin-antigo.png, id=373, 707.64375pt x 525.9
 65pt>
 File: figuras/metamodelos/metamodelo-zanshin-antigo.png Graphic file (type png)
 
  <use figuras/metamodelos/metamodelo-zanshin-antigo.png>
 Package pdftex.def Info: figuras/metamodelos/metamodelo-zanshin-antigo.png used
- on input line 141.
+ on input line 137.
 (pdftex.def)             Requested size: 455.0pt x 338.18945pt.
- [22 <./figuras/metamodelos/metamodelo-zanshin-antigo.png>] [23] [24]
+ [22 <./figuras/metamodelos/metamodelo-zanshin-antigo.png>]
+<figuras/exemplos-emf/exemplo-instanciacao-ecore.PNG, id=380, 476.53032pt x 248
+.42813pt>
+File: figuras/exemplos-emf/exemplo-instanciacao-ecore.PNG Graphic file (type pn
+g)
+ <use figuras/exemplos-emf/exemplo-instanciacao-ecore.PNG>
+Package pdftex.def Info: figuras/exemplos-emf/exemplo-instanciacao-ecore.PNG us
+ed on input line 156.
+(pdftex.def)             Requested size: 455.0pt x 237.21461pt.
+ [23 <./figuras/exemplos-emf/exemplo-instanciacao-ecore.PNG>] [24]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 184.
+nput line 187.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 184--184
+Overfull \hbox (6.0pt too wide) in paragraph at lines 187--187
 [][][][][][][] 
  []
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
 ) [25]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 212--212
+Overfull \hbox (6.0pt too wide) in paragraph at lines 215--215
 [][][][][][][] 
  []
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
-) [26]
-<figuras/exemplos-emf/metamodelo-ecore.png, id=475, 445.665pt x 264.23718pt>
+)
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 229.
+
+
+Overfull \hbox (169.44621pt too wide) in paragraph at lines 233--244
+ [][] 
+ []
+
+[26] [27]
+<figuras/exemplos-emf/metamodelo-ecore.png, id=495, 445.665pt x 264.23718pt>
 File: figuras/exemplos-emf/metamodelo-ecore.png Graphic file (type png)
 
 <use figuras/exemplos-emf/metamodelo-ecore.png>
 Package pdftex.def Info: figuras/exemplos-emf/metamodelo-ecore.png used on inpu
-t line 244.
+t line 264.
 (pdftex.def)             Requested size: 432.24861pt x 256.28555pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figuras/exemplos-emf/exemplo-uml.png, id=480, 304.13625pt x 198.7425pt>
+<figuras/exemplos-emf/exemplo-uml.png, id=500, 304.13625pt x 198.7425pt>
 File: figuras/exemplos-emf/exemplo-uml.png Graphic file (type png)
 
 <use figuras/exemplos-emf/exemplo-uml.png>
 Package pdftex.def Info: figuras/exemplos-emf/exemplo-uml.png used on input lin
-e 251.
+e 271.
 (pdftex.def)             Requested size: 295.74722pt x 193.26518pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/exemplos-emf/exemplo-ecore.PNG, id=481, 209.28188pt x 144.54pt>
+<figuras/exemplos-emf/exemplo-ecore.PNG, id=501, 209.28188pt x 144.54pt>
 File: figuras/exemplos-emf/exemplo-ecore.PNG Graphic file (type png)
 
 <use figuras/exemplos-emf/exemplo-ecore.PNG>
 Package pdftex.def Info: figuras/exemplos-emf/exemplo-ecore.PNG used on input l
-ine 258.
+ine 278.
 (pdftex.def)             Requested size: 318.49861pt x 219.96991pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[27] <figuras/exemplos-emf/uml-to-ecore.png, id=489, 586.19pt x 286.06876pt>
+[28 <./figuras/exemplos-emf/metamodelo-ecore.png>] [29 <./figuras/exemplos-emf/
+exemplo-uml.png> <./figuras/exemplos-emf/exemplo-ecore.PNG>]
+<figuras/exemplos-emf/uml-to-ecore.png, id=515, 586.19pt x 286.06876pt>
 File: figuras/exemplos-emf/uml-to-ecore.png Graphic file (type png)
 
 <use figuras/exemplos-emf/uml-to-ecore.png>
 Package pdftex.def Info: figuras/exemplos-emf/uml-to-ecore.png used on input li
-ne 273.
+ne 293.
 (pdftex.def)             Requested size: 455.0pt x 222.04582pt.
- [28 <./figuras/exemplos-emf/metamodelo-ecore.png> <./figuras/exemplos-emf/exem
-plo-uml.png>] [29 <./figuras/exemplos-emf/exemplo-ecore.PNG> <./figuras/exemplo
-s-emf/uml-to-ecore.png>]
-<figuras/exemplos-emf/exemplo-sirius-vsm.png, id=520, 368.87813pt x 366.61969pt
->
+
+<figuras/exemplos-emf/exemplo-sirius-vsm.png, id=531, 478.78876pt x 288.3272pt>
 File: figuras/exemplos-emf/exemplo-sirius-vsm.png Graphic file (type png)
- <use figuras/exemplos-emf/exemplo-sirius-vsm.png>
+<use figuras/exemplos-emf/exemplo-sirius-vsm.png>
 Package pdftex.def Info: figuras/exemplos-emf/exemplo-sirius-vsm.png used on in
-put line 290.
-(pdftex.def)             Requested size: 409.49722pt x 406.99182pt.
- [30 <./figuras/exemplos-emf/exemplo-sirius-vsm.png>]) [31]
+put line 310.
+(pdftex.def)             Requested size: 409.49722pt x 246.60149pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[30 <./figuras/exemplos-emf/uml-to-ecore.png>]) [31 <./figuras/exemplos-emf/exe
+mplo-sirius-vsm.png>]
 \openout2 = `capitulos/ch3-unagi.aux'.
 
  (capitulos/ch3-unagi.tex) [32
@@ -2006,8 +2053,7 @@ put line 290.
 ]
 \openout2 = `capitulos/ch4-revisao.aux'.
 
-
-(capitulos/ch4-revisao.tex) [33
+ (capitulos/ch4-revisao.tex) [33
 
 
 
@@ -2018,8 +2064,7 @@ put line 290.
 
 
 
-]) [35]
-(pg-bernabe.bbl (pg-bernabe.brf)
+]) [35] (pg-bernabe.bbl (pg-bernabe.brf)
 \tf@brf=\write6
 \openout6 = `pg-bernabe.brf'.
 
@@ -2060,27 +2105,25 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 515.
 (capitulos/ch5-conclusoes.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 515.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 515.
+Package rerunfilecheck Info: File `pg-bernabe.brf' has not changed.
+(rerunfilecheck)             Checksum: 35DFBD49B9684BE5006BC5FB52CBEEC2;4884.
 
 
-Package rerunfilecheck Warning: File `pg-bernabe.brf' has changed.
-(rerunfilecheck)                Rerun to get bibliographical references right.
+LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: Checksums for `pg-bernabe.brf':
-(rerunfilecheck)             Before: 0AC4ABED3A247EE982DCF4020BEAC870;4787
-(rerunfilecheck)             After:  1EB20E82E1BBC5E3E6E356FC06C00CB6;4787.
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 515.
  ) 
 Here is how much of TeX's memory you used:
- 30008 strings out of 493333
- 514792 string characters out of 3139191
- 782268 words of memory out of 3000000
- 32567 multiletter control sequences out of 15000+200000
+ 30023 strings out of 493333
+ 515285 string characters out of 3139191
+ 781611 words of memory out of 3000000
+ 32580 multiletter control sequences out of 15000+200000
  98530 words of font info for 168 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,16n,82p,1794b,1492s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,16n,82p,1867b,1492s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -2089,9 +2132,6 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
-
-pdfTeX warning (dest): name{page.40} has been referenced but does not exist, re
-placed by a fixed one
 
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiK
 TeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc
@@ -2108,9 +2148,9 @@ ogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmss12.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/lm/lmss17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy
 10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
-Output written on pg-bernabe.pdf (39 pages, 1402380 bytes).
+Output written on pg-bernabe.pdf (39 pages, 1420453 bytes).
 PDF statistics:
- 805 PDF objects out of 1000 (max. 8388607)
- 161 named destinations out of 1000 (max. 500000)
- 30519 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 815 PDF objects out of 1000 (max. 8388607)
+ 162 named destinations out of 1000 (max. 500000)
+ 30524 words of extra memory for PDF output out of 35830 (max. 10000000)
 
