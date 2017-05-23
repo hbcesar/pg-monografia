@@ -11,11 +11,21 @@
   In:  \emph{Software engineering for self-adaptive systems}. [S.l.]: Springer,
   2009. p. 27--47.}
 
+\bibitem[Atkinson e Kuhne 2003]{atkinson2003model}
+\abntrefinfo{Atkinson e Kuhne}{ATKINSON; KUHNE}{2003}
+{ATKINSON, C.; KUHNE, T. Model-driven development: a metamodeling foundation.
+\emph{IEEE software}, IEEE, v.~20, n.~5, p. 36--41, 2003.}
+
 \bibitem[Brun et al. 2009]{brun2009engineering}
 \abntrefinfo{Brun et al.}{BRUN et al.}{2009}
 {BRUN, Y. et al. Engineering self-adaptive systems through feedback loops. In:
   \emph{Software engineering for self-adaptive systems}. [S.l.]: Springer,
   2009. p. 48--70.}
+
+\bibitem[Budinsky 2004]{budinsky2004eclipse}
+\abntrefinfo{Budinsky}{BUDINSKY}{2004}
+{BUDINSKY, F. \emph{Eclipse modeling framework: a developer's guide}. [S.l.]:
+  Addison-Wesley Professional, 2004.}
 
 \bibitem[Dalpiaz et al. 2013]{dalpiaz2013runtime}
 \abntrefinfo{Dalpiaz et al.}{DALPIAZ et al.}{2013}
@@ -60,6 +70,12 @@
 {KEPHART, J.~O.; CHESS, D.~M. The vision of autonomic computing.
 \emph{Computer}, IEEE, v.~36, n.~1, p. 41--50, 2003.}
 
+\bibitem[Kern 2008]{kern2008interchange}
+\abntrefinfo{Kern}{KERN}{2008}
+{KERN, H. The interchange of (meta) models between metaedit+ and eclipse emf
+  using m3-level-based bridges. In:  \emph{8th OOPSLA Workshop on
+  Domain-Specific Modeling at OOPSLA}. [S.l.: s.n.], 2008. v.~2008.}
+
 \bibitem[Lamsweerde 2001]{van2001goal}
 \abntrefinfo{Lamsweerde}{LAMSWEERDE}{2001}
 {LAMSWEERDE, A. V. Goal-oriented requirements engineering: A guided tour. In:
@@ -73,6 +89,16 @@
 \emph{IEEE transactions on Software engineering}, IEEE, v.~24, n.~11, p.
   908--926, 1998.}
 
+\bibitem[Madiot e Paganelli 2015]{madiot2015eclipse}
+\abntrefinfo{Madiot e Paganelli}{MADIOT; PAGANELLI}{2015}
+{MADIOT, F.; PAGANELLI, M. Eclipse sirius demonstration. In:  \emph{P\&D@
+  MoDELS}. [S.l.: s.n.], 2015. p. 9--11.}
+
+\bibitem[Morin et al. 2009]{morin2009models}
+\abntrefinfo{Morin et al.}{MORIN et al.}{2009}
+{MORIN, B. et al. Models@ run. time to support dynamic adaptation.
+\emph{Computer}, IEEE, v.~42, n.~10, 2009.}
+
 \bibitem[Pfleeger 2004]{pfleeger2004engenharia}
 \abntrefinfo{Pfleeger}{PFLEEGER}{2004}
 {PFLEEGER, S.~L. \emph{Engenharia de software: teoria e pr{\'a}tica}. [S.l.]:
@@ -83,11 +109,22 @@
 {ROSS, D.~T.; SCHOMAN, K.~E. Structured analysis for requirements definition.
 \emph{IEEE transactions on Software Engineering}, IEEE, n.~1, p. 6--15, 1977.}
 
+\bibitem[Selic 2003]{selic2003pragmatics}
+\abntrefinfo{Selic}{SELIC}{2003}
+{SELIC, B. The pragmatics of model-driven development.
+\emph{IEEE software}, IEEE, v.~20, n.~5, p. 19--25, 2003.}
+
 \bibitem[Souza 2012]{tesevitor}
 \abntrefinfo{Souza}{SOUZA}{2012}
 {SOUZA, V.~E. S.
 \emph{Requirements-based software system adaptation}.
 Tese (Doutorado) --- University of Trento, 2012.}
+
+\bibitem[Souza et al. 2013]{souza2013requirements}
+\abntrefinfo{Souza et al.}{SOUZA et al.}{2013}
+{SOUZA, V. E.~S. et al. Requirements-driven software evolution.
+\emph{Computer Science-Research and Development}, Springer, v.~28, n.~4, p.
+  311--329, 2013.}
 
 \bibitem[Souza, Lapouchnian e Mylopoulos 2012]{souza2012requirement}
 \abntrefinfo{Souza, Lapouchnian e Mylopoulos}{SOUZA; LAPOUCHNIAN;
@@ -101,6 +138,28 @@ Tese (Doutorado) --- University of Trento, 2012.}
 \abntrefinfo{Souza et al.}{SOUZA et al.}{2013}
 {SOUZA, V. E.~S. et al. Awareness requirements. In:  \emph{Software Engineering
   for Self-Adaptive Systems II}. [S.l.]: Springer, 2013. p. 133--161.}
+
+\bibitem[Steinberg et al. 2008]{steinberg2008emf}
+\abntrefinfo{Steinberg et al.}{STEINBERG et al.}{2008}
+{STEINBERG, D. et al. \emph{EMF: eclipse modeling framework}. [S.l.]: Pearson
+  Education, 2008.}
+
+\bibitem[Viyovi{\'c}, Maksimovi{\'c} e Perisi{\'c} 2014]{viyovic2014sirius}
+\abntrefinfo{Viyovi{\'c}, Maksimovi{\'c} e Perisi{\'c}}{VIYOVI{\'C};
+  MAKSIMOVI{\'C}; PERISI{\'C}}{2014}
+{VIYOVI{\'C}, V.; MAKSIMOVI{\'C}, M.; PERISI{\'C}, B. Sirius: A rapid
+  development of dsm graphical editor. In:  IEEE. \emph{Intelligent Engineering
+  Systems (INES), 2014 18th International Conference on}. [S.l.], 2014. p.
+  233--238.}
+
+\bibitem[Vujovi{\'c}, Maksimovi{\'c} e Peri{\v{s}}i{\'c}
+  2014]{vujovic2014comparative}
+\abntrefinfo{Vujovi{\'c}, Maksimovi{\'c} e Peri{\v{s}}i{\'c}}{VUJOVI{\'C};
+  MAKSIMOVI{\'C}; PERI{\v{S}}I{\'C}}{2014}
+{VUJOVI{\'C}, V.; MAKSIMOVI{\'C}, M.; PERI{\v{S}}I{\'C}, B. Comparative
+  analysis of dsm graphical editor frameworks: Graphiti vs. sirius. In:
+  \emph{23nd International Electrotechnical and Computer Science Conference
+  ERK, Portoro{\v{z}}, B}. [S.l.: s.n.], 2014. p. 7--10.}
 
 \bibitem[Yu et al. 2011]{yu20111}
 \abntrefinfo{Yu et al.}{YU et al.}{2011}

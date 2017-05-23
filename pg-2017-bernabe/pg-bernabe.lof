@@ -1,6 +1,10 @@
 \select@language {brazil}
-\contentsline {figure}{\numberline {1}{\ignorespaces Exemplo de modelos de objetivos ~\cite {tesevitor}\relax }}{17}{figure.caption.10}
+\contentsline {figure}{\numberline {1}{\ignorespaces Exemplo de modelos de objetivos ~\cite {tesevitor}\relax }}{18}{figure.caption.10}
 \contentsline {figure}{\numberline {2}{\ignorespaces Exemplo de modelos de objetivos de um sistema de despacho de ambul\IeC {\^a}ncias ~\cite {tesevitor}\relax }}{20}{figure.caption.11}
 \contentsline {figure}{\numberline {3}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o gr\IeC {\'a}fica de elementos de \textit {GORE}\xspace \relax }}{21}{figure.caption.12}
 \contentsline {figure}{\numberline {4}{\ignorespaces Metamodelo que define a sintaxe abstrata para o \textit {Zanshin}\xspace \relax }}{22}{figure.caption.14}
-\contentsline {figure}{\numberline {5}{\ignorespaces Classes do diagrama em UML\xspace instanciadas em \textit {Ecore}\xspace \relax }}{28}{figure.caption.15}
+\contentsline {figure}{\numberline {5}{\ignorespaces Metamodelo de \textit {Ecore}\xspace ~\cite {kern2008interchange}\relax }}{28}{figure.caption.15}
+\contentsline {figure}{\numberline {6}{\ignorespaces Classes do diagrama do exemplo em UML\xspace \relax }}{28}{figure.caption.16}
+\contentsline {figure}{\numberline {7}{\ignorespaces Classes do diagrama do exemplo em \textit {Ecore}\xspace \relax }}{29}{figure.caption.17}
+\contentsline {figure}{\numberline {8}{\ignorespaces Convers\IeC {\~a}o do diagrama de exemplo de UML\xspace para \textit {Ecore}\xspace \relax }}{29}{figure.caption.18}
+\contentsline {figure}{\numberline {9}{\ignorespaces Exemplo de \textit {Viewpoint Specification Model}\relax }}{30}{figure.caption.19}
