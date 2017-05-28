@@ -29,14 +29,16 @@
 \contentsline {section}{\numberline {3.3}Proposta}{33}{section.3.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Unagi}}{36}{chapter.4}
+\contentsline {section}{\numberline {4.1}Cria\IeC {\c c}\IeC {\~a}o do Editor Gr\IeC {\'a}fico}{36}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}O Editor Gr\IeC {\'a}fico}{39}{subsection.4.1.1}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Valida\IeC {\c c}\IeC {\~a}o}}{37}{chapter.5}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Valida\IeC {\c c}\IeC {\~a}o}}{42}{chapter.5}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Considera\IeC {\c c}\IeC {\~o}es Finais}}{38}{chapter.6}
-\contentsline {section}{\numberline {6.1}Conclus\IeC {\~o}es}{38}{section.6.1}
-\contentsline {section}{\numberline {6.2}Limita\IeC {\c c}\IeC {\~o}es e Perspectivas Futuras}{39}{section.6.2}
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Considera\IeC {\c c}\IeC {\~o}es Finais}}{43}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclus\IeC {\~o}es}{43}{section.6.1}
+\contentsline {section}{\numberline {6.2}Limita\IeC {\c c}\IeC {\~o}es e Perspectivas Futuras}{44}{section.6.2}
 \vspace {\cftbeforechapterskip }
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{40}{section*.27}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{45}{section*.35}
 \vspace {\cftbeforechapterskip }

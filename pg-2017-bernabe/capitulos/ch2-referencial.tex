@@ -1,8 +1,6 @@
 % ======================================================================================================
 % TCC - César Henrique Bernabé
 % Capítulo 2 - Referencial Teórico
-
-% 
 % ======================================================================================================
 \chapter{Referencial Teórico}
 \label{sec-referencial}
@@ -173,12 +171,18 @@ Através da descrição dos métodos acima mencionados, é possível entender co
 
 Logo que o componente monitor detecta uma mudança de estado em um requisito, ou seja, assim que qualquer um dos métodos acima é invocado, ele imediatamente envia uma notificação sobre essa mudança ao módulo de adaptação, que então inicia o processo definido para aquele determinado requisito de percepção ~\cite{tesevitor}.
 
+% ======================================================================================================
+% SUBSEÇÃO Zanshin: Adaptação
+% ======================================================================================================
 \subsection{Adaptação}
 \label{sec-referencial-zanshin-adaptacao}
 Em termos de implementação, o algoritmo do módulo de adaptação cria uma sessão para cada \awreq que está sendo monitorado e então gera uma fila de eventos que se referem a estratégias adaptativas. Assim, essa linha de eventos pode ser usada para verificar se uma estratégia é ou não aplicável a determinada situação. Primeiramente, deve-se verificar o estado de um objetivo apontado por um \awreq, para isso é checada a condição de resolução daquele. Então, caso uma avaliação considere que o objetivo está em estado de falha, o sistema segue (seguindo uma ordem pré-definida) a lista de estratégias de adaptação disponíveis, procurando alguma que tenha sua condição de aplicabilidade verdadeira. Caso encontre, aplica a estratégia definida por aquela condição de aplicabilidade e então retorna ao estado inicial, onde a checagem da satisfabilidade do objetivo é realizada novamente. Caso o sistema retorne a fase de checagem do estado do objetivo e esse ainda não tenha sido satisfeito, o processo começa novamente, obedecendo restrições como o número de tentativas de aplicação de uma estratégia, definido individualmente. Caso não encontre uma condição para aplicar uma estratégia, o sistema ativa o método ``abortar'' (\texttt{abort()})~\cite{souza2013requirements}. 
 
 Ao final, quando uma sessão de adaptação é considerada resolvida, a mesma deve ser terminada e se for necessário que o processo seja aplicado novamente, uma nova sessão é criada. Entretanto, se uma sessão termina sem ter resolvido o problema, o \textit{framework} continuará trabalhando nela do ponto em que parou assim que receber uma nova requisição para adaptação daquele mesmo \awreq. Porém, algumas estratégias também podem forçar que a sessão seja reiniciada quando executada ~\cite{souza2013requirements}. Essa processo é conhecido como Evento de Ação-Condição (\textit{Event Condition Action} ou \textit{ECA}) ~\cite{morin2009models}.
 
+% ======================================================================================================
+% SUBSEÇÃO Zanshin: ECA
+% ======================================================================================================
 \subsubsection{ECA}
 \label{sec-referencial-zanshin-eca}
 
@@ -246,7 +250,7 @@ Para exemplificar esse processo, tomemos novamente o \awreq ``AR15'', que garant
 %For example, the trivial case is considering the problem solved if the (next) AwReq evaluates to success, but this abstract class can be extended to provide di↵erent kinds of resolution conditions, including, e.g., involving a human-in-the-loop to confirm if the problem has indeed been solved, organizing conditions into AND/OR-refinement trees (like in a goal model), etc.
 
 % ======================================================================================================
-% SUBSEÇÃO DESENVOLVIMENTO ORIENTADO A MODELOS
+% SUBSEÇÃO: Desenvolvimento Orientado a Modelos
 % ======================================================================================================
 \section{Desenvolvimento Orientado a Modelos}
 \label{referencial-mdd}
@@ -254,6 +258,9 @@ Pesquisadores vem tentando ao longo dos anos criar abstrações que ajudem progr
 
 A modelagem usa da percepção visual humana para melhorar o processo de compreensão sobre o domínio de um software, já que modelos nos auxiliam a entender problema complexos e suas possíveis soluções através da abstração. Assim, MDD baseia-se na premissa de que o desenvolvimento de software deve focar principalmente na produção de modelos e não na criação de código ~\cite{selic2003pragmatics}. A primeira vantagem dessa abordagem é que podemos usar conceitos mais ligados ao domínio do problema que software vai resolver do que conceitos técnicos ligados a linguagem de programação, em consequência essa vantagem acarreta em alguns outros benefícios: modelos são mais compreensíveis do que códigos e portanto, tornam-se também mais fáceis de especificar e manter~\cite{selic2003pragmatics}. Além disso, modelos são menos sensíveis a alterações de tecnologias, ou seja, são independentes de plataforma~\cite{selic2003pragmatics}. Esse trabalho foca em MDD como ferramente de produção automática de código através da interpretação de modelos visuais~\cite{selic2003pragmatics, viyovic2014sirius}.
 
+% ======================================================================================================
+% SUBSEÇÃO EMF
+% ======================================================================================================
 \subsection{Eclipse Modeling Framework}
 O \eclipse é um projeto de código aberto com o objetivo de prover uma plataforma de desenvolvimento altamente integrada. O processo de criação de sistemas no \eclipse pode ser divido em alguns projetos, entre eles o Projeto de Modelagem (\textit{Modeling Project}), que foca em tecnologias baseadas no desenvolvimento orientado a modelos~\cite{steinberg2008emf}. Esse ambiente é chamado de \textit{Eclipse Modeling Framework} ou \textit{EMF}, e provê funcionalidades como transformação de modelos, integração de bases de dados e geração de editores gráficos~\cite{steinberg2008emf}. Modelos especificados através de \emf relacionam abstrações de modelagem diretamente a seus conceitos de implementação, sendo a união das tecnologias \uml, \xml e \java, permitindo a conversão automática entre todas essas ferramentas~\cite{steinberg2008emf}. 
 
@@ -299,6 +306,9 @@ Em suma, o \framework de modelagem do \eclipse permite que usuários criem model
 
 %https://books.google.com.br/books?id=sA0zOZuDXhgC&lpg=PT23&ots=2IQIWZWqNm&dq=eclipse&lr&hl=pt-BR&pg=PT45#v=onepage&q=eclipse&f=false
 
+% ======================================================================================================
+% SUBSEÇÃO Sirius
+% ======================================================================================================
 \subsection{Sirius}
 
 O \sirius é um plugin que simplifica o \framework de Modelagem Gráfica (\textit{Graphical Modeling Framework} ou \textit{GMF}) do \eclipse, reduzindo a complexidade de uso do mesmo e permitindo a produção de editores gráficos de modelos personalizados~\cite{viyovic2014sirius}. O \sirius é construído em cima do fato de que o \eclipse provê utilidades para (des)serialização de modelos, checagem de condições e geração de editores baseados em \ecore~\cite{budinsky2004eclipse}. Representações criadas com \sirius podem ser apresentadas em diagramas, tabelas e árvores~\cite{viyovic2014sirius}. Em síntese, \sirius provê ferramentas que permitem a especificação de um modelo de um domínio qualquer em diferentes perspectivas gráficas~\cite{vujovic2014comparative}.

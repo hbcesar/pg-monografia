@@ -1,13 +1,6 @@
 % ==============================================================================
 % TCC - César Henrique Bernabé
-% Capítulo 3 - Zanshin e Unagi
-% Falar sobre os problemas do modelo antigo do zanshin
-% Falar sobre novo metamodelo e explicar como cheguei nele
-% Falar o prq do novo metamodelo ser melhor que o anterior e quais as novidades
-% Falar sobre as vantagens do novo metamodelo no arquivo XML
-% Falar das restricoes inseridas no novo metamodelo
-% Falar dos problemas do novo metamodelo
-% Falar de refinamentos (OR, AND, só pode ser AND ou OR, etc) e que agora quase todos os requisitos possuem refinamentos
+% Capítulo 3 - Zanshin
 % ==============================================================================
 
 \chapter{Zanshin}
@@ -15,11 +8,16 @@
 
 Esta seção trata do processo de reavaliação do metamodelo operacional do sistema \zanshin, anteriormente já apresentado na Figura~\ref{figura-metamodelo-antigo}.
 
+% ======================================================================================================
+% SUBSEÇÃO Motivação
+% ======================================================================================================
 \section{Motivação}
 \label{sec-zanshin-motivacao}
 Durante estudos realizados sobre a implementação do \framework \zanshin, detectaram-se algumas oportunidades de melhoria relacionadas principalmente ao metamodelo de objetivos utilizado pelo sistema. A maioria das oportunidades de melhoria identificadas referem-se a dois motivos: ou o metamodelo não era restrito o suficiente, deixando que algumas situações indesejadas pudessem ser modeladas; ou o metamodelo não refletia mais alguns conceitos de \gore que foram melhores elaborados em discussões recentes sobre o tema. 
 
-
+% ======================================================================================================
+% SUBSEÇÃO Revisão do Metamodelo
+% ======================================================================================================
 \section{Revisão do Metamodelo}
 \label{sec-zanshin-revisao}
 Uma análise de cada elemento do metamodelo antigo é feita a seguir:
@@ -44,6 +42,9 @@ Uma análise de cada elemento do metamodelo antigo é feita a seguir:
 	\item \textbf{DomainAssumption}: não é claro no modelo a forma como \textit{DomainAssumptions} se relacionam com os outros elementos.
 \end{enumerate}
 
+% ======================================================================================================
+% SUBSEÇÃO Proposta
+% ======================================================================================================
 \section{Proposta}
 \label{sec-zanshin-proposta}
 

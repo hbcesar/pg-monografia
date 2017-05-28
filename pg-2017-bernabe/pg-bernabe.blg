@@ -3,9 +3,10 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: pg-bernabe.aux
 A level-1 auxiliary file: capitulos/ch1-introducao.aux
 A level-1 auxiliary file: capitulos/ch2-referencial.aux
-A level-1 auxiliary file: capitulos/ch3-unagi.aux
-A level-1 auxiliary file: capitulos/ch4-revisao.aux
-A level-1 auxiliary file: capitulos/ch5-conclusoes.aux
+A level-1 auxiliary file: capitulos/ch3-zanshin.aux
+A level-1 auxiliary file: capitulos/ch4-unagi.aux
+A level-1 auxiliary file: capitulos/ch5-validacao.aux
+A level-1 auxiliary file: capitulos/ch6-conclusoes.aux
 The style file: abntex2-alf.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -35,45 +36,45 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 29 entries,
+You've used 30 entries,
             6714 wiz_defined-function locations,
-            1362 strings with 14314 characters,
-and the built_in function-call counts, 28409 in all, are:
-= -- 2508
-> -- 956
-< -- 194
-+ -- 553
-- -- 286
-* -- 2048
-:= -- 3707
-add.period$ -- 118
-call.type$ -- 29
-change.case$ -- 327
-chr.to.int$ -- 53
-cite$ -- 28
-duplicate$ -- 1637
-empty$ -- 1949
-format.name$ -- 1373
-if$ -- 6604
+            1368 strings with 14615 characters,
+and the built_in function-call counts, 29197 in all, are:
+= -- 2554
+> -- 998
+< -- 196
++ -- 569
+- -- 298
+* -- 2115
+:= -- 3819
+add.period$ -- 121
+call.type$ -- 30
+change.case$ -- 341
+chr.to.int$ -- 57
+cite$ -- 29
+duplicate$ -- 1671
+empty$ -- 1995
+format.name$ -- 1434
+if$ -- 6784
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 517
-newline$ -- 132
-num.names$ -- 140
-pop$ -- 697
+missing$ -- 534
+newline$ -- 137
+num.names$ -- 145
+pop$ -- 720
 preamble$ -- 1
-purify$ -- 121
+purify$ -- 126
 quote$ -- 0
-skip$ -- 1782
+skip$ -- 1821
 stack$ -- 1
-substring$ -- 1164
-swap$ -- 740
-text.length$ -- 38
+substring$ -- 1182
+swap$ -- 753
+text.length$ -- 39
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 8
 warning$ -- 0
-while$ -- 230
+while$ -- 236
 width$ -- 0
-write$ -- 468
+write$ -- 483
 (There were 2 error messages)
