@@ -1,0 +1,103 @@
+\chapter{Especificação textual do \textit{ACAD}}
+
+\begin{lstlisting}[caption={Especifcação do Sistema ACAD}]
+<?xml version="1.0" encoding="UTF-8"?>
+	<acad:AcadGoalModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:acad="https://raw.githubusercontent.com/hbcesar/zanshin/master/zanshin-simulations/src/it/unitn/disi/zanshin/simulation/cases/acad/acad.ecore" xmlns:eca="https://raw.githubusercontent.com/hbcesar/zanshin/master/it.unitn.disi.zanshin.core/META-INF/eca.ecore">
+		<rootGoal xsi:type="acad:G_GenDispatch">
+			<refinements xsi:type="acad:G_CallTaking">
+				<assumptions xsi:type="acad:D_MaxCalls"/>
+				<refinements xsi:type="acad:G_RegCall">
+					<refinements xsi:type="acad:T_InputInfo"/>
+					<refinements xsi:type="acad:T_DetectLoc"/>
+					<awreqs xsi:type="acad:AR15">										
+						<condition xsi:type="eca:SimpleResolutionCondition"/>
+						<strategies xsi:type="eca:RetryStrategy" time="5000">
+							<condition xsi:type="eca:MaxExecutionsPerSessionApplicabilityCondition" maxExecutions="1"/>
+						</strategies>
+						<strategies xsi:type="eca:RelaxDisableChildStrategy" child="//@rootGoal/@refinements.0/@refinements.0/@refinements.1">
+							<condition xsi:type="eca:MaxExecutionsPerSessionApplicabilityCondition" maxExecutions="1"/>
+						</strategies>
+					</awreqs>
+				</refinements>
+				<refinements xsi:type="acad:T_ConfirmCall"/>
+				<refinements xsi:type="acad:G_AssignIncident">
+					<refinements xsi:type="acad:T_SearchDuplic"/>
+					<refinements xsi:type="acad:T_CreateOrAssign"/>
+				</refinements>
+			</refinements>
+			<assumptions xsi:type="acad:D_DataUpd"/>
+			<refinements xsi:type="acad:G_ResourceId">
+				<refinements xsi:type="acad:T_SpecConfig"/>
+				<refinements xsi:type="acad:T_ConfIncident"/>
+			</refinements>
+			<refinements xsi:type="acad:G_ResourceMob">
+				<refinements xsi:type="acad:T_DetBestAmb"/>
+				<refinements xsi:type="acad:T_InformStat"/>
+				<refinements xsi:type="acad:G_RouteAssist" refinementType="or">
+					<assumptions xsi:type="acad:D_DriverKnows"/>
+					<refinements xsi:type="acad:T_AcadAssists"/>
+					<refinements xsi:type="acad:T_StaffAssists"/>
+				</refinements>
+				<refinements xsi:type="acad:T_Feedback"/>
+			</refinements>
+			<refinements xsi:type="acad:G_ObtainMap" refinementType="or">
+				<assumptions xsi:type="acad:D_GazetUpd"/>
+				<refinements xsi:type="acad:G_ManualMap" refinementType="or">
+					<refinements xsi:type="acad:T_CheckGazet"/>
+					<refinements xsi:type="acad:T_CheckPaper"/>
+				</refinements>
+			</refinements>
+			<refinements xsi:type="acad:G_IncidentUpd">
+				<refinements xsi:type="acad:G_MonitorRes">
+					<refinements xsi:type="acad:G_UpdPosition" refinementType="or">
+						<assumptions xsi:type="acad:D_MDTPos"/>
+						<refinements xsi:type="acad:T_RadioPos"/>
+					</refinements>
+					<assumptions xsi:type="acad:D_MDTUse"/>
+					<refinements xsi:type="acad:T_MonitorStatus"/>
+					<refinements xsi:type="acad:T_DispStatus"/>
+					<refinements xsi:type="acad:T_DispDepArriv"/>
+					<refinements xsi:type="acad:G_DispExcept" refinementType="or">
+						<refinements xsi:type="acad:T_Except"/>
+						<refinements xsi:type="acad:T_ExceptQueue"/>
+					</refinements>
+				</refinements>
+				<refinements xsi:type="acad:T_CloseIncident"/>
+				<refinements xsi:type="acad:T_ReplAmb"/>
+			</refinements>
+
+			<!-- Softgoals. -->
+			<refinements xsi:type="acad:S_FastArriv">
+				<constraints xsi:type="acad:Q_AmbArriv"/>
+			</refinements>
+			<refinements xsi:type="acad:S_FastDispatch">
+				<constraints xsi:type="acad:Q_Dispatch">
+					<awreqs xsi:type="acad:AR11" incrementCoefficient="2">						
+						<condition xsi:type="eca:ReconfigurationResolutionCondition"/>
+						<strategies xsi:type="eca:ReconfigurationStrategy" algorithmId="qualia">
+							<condition xsi:type="eca:ReconfigurationApplicabilityCondition"/>
+						</strategies>
+					</awreqs>
+				</constraints>
+			</refinements>
+			<refinements xsi:type="acad:S_FastAssist">
+				<constraints xsi:type="acad:Q_IncidResolv"/>
+			</refinements>
+			<refinements xsi:type="acad:S_LowCost">
+				<constraints xsi:type="acad:Q_MaxCost"/>
+			</refinements>
+			<refinements xsi:type="acad:S_UserFriendly">
+				<constraints xsi:type="acad:Q_MaxTimeMsg"/>
+			</refinements>
+	</rootGoal>
+
+	<!-- System parameters. -->
+	<configuration>
+		<parameters xsi:type="acad:CV_MST" type="ncv" unit="10" value="60" metric="integer"/>
+	</configuration>
+
+	<!-- Indicator / parameter differential relations. -->
+	<relations indicator="//@rootGoal/@refinements.6/@constraints.0/@awreqs.0" parameter="//@configuration/@parameters.0" lowerBound="0" upperBound="180" operator="ft" />
+</acad:AcadGoalModel>
+
+\end{lstlisting}

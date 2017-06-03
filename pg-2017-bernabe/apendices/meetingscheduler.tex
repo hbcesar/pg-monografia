@@ -1,0 +1,70 @@
+\chapter{Especificação textual do \textit{Meeting Scheduler}}
+
+\begin{lstlisting}[caption={Especifcação do Sistema Meeting Scheduler}]
+<?xml version="1.0" encoding="UTF-8"?>
+<scheduler:SchedulerGoalModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scheduler="https://raw.githubusercontent.com/hbcesar/zanshin/master/zanshin-simulations/src/it/unitn/disi/zanshin/simulation/cases/scheduler/scheduler.ecore" xmlns:it.unitn.disi.zanshin.model="https://raw.githubusercontent.com/hbcesar/zanshin/master/it.unitn.disi.zanshin.core/META-INF/eca.ecore">
+	<rootGoal xsi:type="scheduler:G_SchedMeet">
+		<refinements xsi:type="scheduler:T_CharactMeet">
+			<awreqs xsi:type="scheduler:AR1">
+				<condition xsi:type="it.unitn.disi.zanshin.model:SimpleResolutionCondition"/>
+				<strategies xsi:type="it.unitn.disi.zanshin.model:RetryStrategy" time="5000">
+					<condition xsi:type="it.unitn.disi.zanshin.model:MaxExecutionsPerSessionApplicabilityCondition" maxExecutions="2"/>
+				</strategies>
+			</awreqs>
+		</refinements>
+		<refinements xsi:type="scheduler:G_CollectTime" refinementType="or">
+			<refinements xsi:type="scheduler:T_CallPartic"/>
+			<refinements xsi:type="scheduler:T_EmailPartic"/>
+			<refinements xsi:type="scheduler:G_CollectAuto">
+				<assumptions xsi:type="scheduler:D_ParticUseCal"/>
+				<refinements xsi:type="scheduler:T_CollectCal"/>
+			</refinements>
+		</refinements>
+		<refinements xsi:type="scheduler:G_FindRoom" refinementType="or">
+			<refinements xsi:type="scheduler:G_UseLocal">
+				<refinements xsi:type="scheduler:G_FindLocal" refinementType="or">
+					<refinements xsi:type="scheduler:T_GetSuggest"/>
+					<refinements xsi:type="scheduler:T_ListAvail"/>
+				</refinements>
+				<assumptions xsi:type="scheduler:D_LocalAvail"/>
+				<refinements xsi:type="scheduler:G_BookRoom" refinementType="or">
+					<refinements xsi:type="scheduler:T_UseAvail"/>
+					<refinements xsi:type="scheduler:T_CancelLess"/>
+				</refinements>
+			</refinements>
+			<refinements xsi:type="scheduler:T_CallPartner"/>
+			<refinements xsi:type="scheduler:T_CallHotel"/>
+			<awreqs xsi:type="scheduler:AR4">
+				<condition xsi:type="it.unitn.disi.zanshin.model:ReconfigurationResolutionCondition"/>
+				<strategies xsi:type="it.unitn.disi.zanshin.model:ReconfigurationStrategy" algorithmId="qualia">
+					<condition xsi:type="it.unitn.disi.zanshin.model:ReconfigurationApplicabilityCondition"/>
+				</strategies>
+			</awreqs>
+		</refinements>
+		<refinements xsi:type="scheduler:G_ChooseSched" refinementType="or">
+			<refinements xsi:type="scheduler:T_SchedManual"/>
+			<refinements xsi:type="scheduler:T_SchedSystem"/>
+		</refinements>
+		<refinements xsi:type="scheduler:G_ManageMeet" refinementType="or">
+			<refinements xsi:type="scheduler:T_CancelMeet"/>
+			<refinements xsi:type="scheduler:T_CancelMeet"/>
+		</refinements>
+		<refinements xsi:type="scheduler:S_LowCost">
+			<constraints xsi:type="scheduler:Q_CostLess100"/>
+		</refinements>
+		<refinements xsi:type="scheduler:S_GoodPartic">
+			<constraints xsi:type="scheduler:Q_Min90pctPart"/>
+		</refinements>
+		<refinements xsi:type="scheduler:S_FastSched">
+			<constraints xsi:type="scheduler:Q_Sched1Day"/>
+		</refinements> 
+	</rootGoal>
+	
+	<configuration>
+		<parameters xsi:type="scheduler:CV_RfM" unit="1" value="5" metric="integer"/>
+	</configuration>
+	
+	<relations indicator="//@rootGoal/@refinements.0/@awreqs.0" parameter="//@configuration/@parameters.0" lowerBound="0" upperBound="10"/>
+</scheduler:SchedulerGoalModel>
+
+\end{lstlisting}

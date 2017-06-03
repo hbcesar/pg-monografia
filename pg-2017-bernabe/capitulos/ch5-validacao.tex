@@ -6,3 +6,51 @@
 \chapter{Validação}
 \label{sec-validacao}
 
+Nesse capítulo são discutidas as etapas de verificação e validação de ambos as realizações no contexto desse trabalho: a adaptação do \zanshin a nova proposta de metamodelo e a criação da ferramenta \unagi.
+
+\section{Zanshin}
+\label{sec-validacao-zanshin}
+
+O processo de validação do \zanshin teve foco nas simulações de adaptação que já estavam disponíveis. O \framework disponibiliza alguns  exemplos de modelos de sistemas que podem ser usados para simular situações em que  seriam necessárias operações de adaptação sobre os objetivos elicitados. Entre essas simulações disponíveis podemos citar o sistema de agendamento de reuniões (\textit{Meeting Scheduler}) e o sistema de despacho de ambulâncias (\textit{ACAD System}).
+
+Nessa fase, os arquivos \ecore e \xml de especificação dos metamodelos dos sistemas citados foram reescritos para referenciarem corretamente os elementos do novo metamodelo. Primeiramente, o metamodelo anterior referia-se aos refinamentos do objetivo principal como ``children'', e na nova proposta são referenciados como ``refinements'', portanto o primeiro passo foi a modificação do nome da referencia, como mostrado nas listagens~\ref{xml-children} e~\ref{xml-refinements}. 
+
+\begin{lstlisting}[caption={Trecho de XML representando o ACAD no metamodelo antigo},label={xml-children}]
+<rootGoal xsi:type="scheduler:G_SchedMeet">
+	<children xsi:type="scheduler:T_CharactMeet"/>
+		<children xsi:type="scheduler:G_CollectTime" refinementType="or">
+			...
+		</children>
+	...
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Trecho de XML representando o ACAD no novo metamodelo},label={xml-refinements}]
+<rootGoal xsi:type="scheduler:G_SchedMeet">
+	<refinements xsi:type="scheduler:T_CharactMeet">
+		<awreqs xsi:type="scheduler:AR1">
+			<condition xsi:type="it.unitn.disi.zanshin.model:SimpleResolutionCondition"/>
+			<strategies xsi:type="it.unitn.disi.zanshin.model:RetryStrategy" time="5000">
+				<condition xsi:type="it.unitn.disi.zanshin.model:MaxExecutionsPerSessionApplicabilityCondition" maxExecutions="2"/>
+			</strategies>
+		</awreqs>
+	</refinements>
+	<refinements xsi:type="scheduler:G_CollectTime" refinementType="or">
+	...
+\end{lstlisting}
+
+Além da substituição do nome para referenciar os refinamentos, pode-se identificar que agora os \awreqs são definidos dentro do escopo do componente ao qual se referem. No processo anterior os \awreqs deviam ser especificados separadamente e conter um campo de referência para o elemento ao qual apontavem, como mostrado na listagem~\ref{xml-awreq-antigo}. A principal vantagem dessa modificação foi o aumento do nível de legibilidade do código do arquivo de especificação já que, como pode ser percebido em~\ref{xml-awreq-antigo}, o alvo do \awreq, definido pela variável ``target'', referenciava a linha a qual o elemento estava descrito. Assim como os refinamentos que deixaram de ser referenciados por ``children'', os \awreqs também passaram a receber uma nova forma de referenciamento: ``awreqs''.
+ 
+\begin{lstlisting}[caption={Trecho de XML representando o ACAD no novo metamodelo},label={xml-refinements}]
+	<children xsi:type="scheduler:AR1" target="//@rootGoal/@children.0">
+		<condition xsi:type="it.unitn.disi.zanshin.model:SimpleResolutionCondition"/>
+		<strategies xsi:type="it.unitn.disi.zanshin.model:RetryStrategy" time="5000">
+			<condition xsi:type="it.unitn.disi.zanshin.model:MaxExecutionsPerSessionApplicabilityCondition" maxExecutions="2"/>
+		</strategies>
+	</children>
+\end{lstlisting}
+
+Seguindo a mesma motivação dos elementos anteriores, a referência para \textit{Domain Assumptions} passou de ``children'' para ``assumptions'', caracterizando assim uma separação dos diferentes tipos de refinamentos do modelo, facilitanto então tanto o processo de implementação quando de leitura dos arquivos de especificação. 
+
+Ao final do processo de reescrita dos arquivos dos modelos dos sistemas \textit{Meeting Scheduler} e \textit{ACAD}, ambos foram importados para dentro do \eclipse, onde o \zanshin é executado, e pode-se verificar que o processo de simulação, que não teve nenhuma parte do código modificada, rodou perfeitamente com a nova versão do \zanshin e produziu as saídas esperadas para todos os casos.
+
+Os arquivos completos dos modelos antigos podem ser encontrados no repositório original do \framework~\footnote{https://github.com/sefms-disi-unitn/Zanshin/tree/master/zanshin-simulations/src/it/unitn/disi/zanshin/simulation/cases}, enquanto as novas versões dos mesmos encontram-se em apêndice a esse texto.
