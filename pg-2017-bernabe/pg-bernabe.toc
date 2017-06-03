@@ -35,23 +35,24 @@
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Valida\IeC {\c c}\IeC {\~a}o}}{43}{chapter.5}
 \contentsline {section}{\numberline {5.1}Zanshin}{43}{section.5.1}
+\contentsline {section}{\numberline {5.2}Unagi}{44}{section.5.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Considera\IeC {\c c}\IeC {\~o}es Finais}}{45}{chapter.6}
-\contentsline {section}{\numberline {6.1}Conclus\IeC {\~o}es}{45}{section.6.1}
-\contentsline {section}{\numberline {6.2}Limita\IeC {\c c}\IeC {\~o}es e Perspectivas Futuras}{46}{section.6.2}
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Considera\IeC {\c c}\IeC {\~o}es Finais}}{46}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclus\IeC {\~o}es}{46}{section.6.1}
+\contentsline {section}{\numberline {6.2}Limita\IeC {\c c}\IeC {\~o}es e Perspectivas Futuras}{47}{section.6.2}
 \vspace {\cftbeforechapterskip }
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{47}{section*.35}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{48}{section*.35}
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
 \setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
 \cftinsert {A}
-\contentsline {part}{\uppercase {Ap\^endices}}{49}{section*.36}
+\contentsline {part}{\uppercase {Ap\^endices}}{50}{section*.36}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Especifica\IeC {\c c}\IeC {\~a}o textual do \textit {ACAD}}}{50}{appendix.A}
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Especifica\IeC {\c c}\IeC {\~a}o textual do \textit {ACAD}}}{51}{appendix.A}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Especifica\IeC {\c c}\IeC {\~a}o textual do \textit {Meeting Scheduler}}}{53}{appendix.B}
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Especifica\IeC {\c c}\IeC {\~a}o textual do \textit {Meeting Scheduler}}}{54}{appendix.B}

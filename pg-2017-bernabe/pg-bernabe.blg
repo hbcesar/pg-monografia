@@ -7,7 +7,8 @@ A level-1 auxiliary file: capitulos/ch3-zanshin.aux
 A level-1 auxiliary file: capitulos/ch4-unagi.aux
 A level-1 auxiliary file: capitulos/ch5-validacao.aux
 A level-1 auxiliary file: capitulos/ch6-conclusoes.aux
-A level-1 auxiliary file: apendices/acad.tex.aux
+A level-1 auxiliary file: apendices/acad.aux
+A level-1 auxiliary file: apendices/meetingscheduler.aux
 The style file: abntex2-alf.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -39,7 +40,7 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 +---------------------------------------------------------+
 You've used 30 entries,
             6714 wiz_defined-function locations,
-            1369 strings with 14637 characters,
+            1370 strings with 14663 characters,
 and the built_in function-call counts, 29197 in all, are:
 = -- 2554
 > -- 998
