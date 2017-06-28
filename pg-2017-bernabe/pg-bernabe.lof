@@ -1,21 +1,21 @@
 \select@language {brazil}
-\contentsline {figure}{\numberline {1}{\ignorespaces Exemplo de modelos de objetivos~\cite {tesevitor}\relax }}{19}{figure.caption.10}
-\contentsline {figure}{\numberline {2}{\ignorespaces Exemplo de modelos de objetivos de um sistema de despacho de ambul\IeC {\^a}ncias ~\cite {tesevitor}\relax }}{21}{figure.caption.11}
-\contentsline {figure}{\numberline {3}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o gr\IeC {\'a}fica de elementos de \textit {GORE}\xspace \relax }}{22}{figure.caption.12}
-\contentsline {figure}{\numberline {4}{\ignorespaces Metamodelo que define a sintaxe abstrata para o \textit {Zanshin}\xspace \relax }}{23}{figure.caption.14}
-\contentsline {figure}{\numberline {5}{\ignorespaces Exemplo de um elemento do modelo de dom\IeC {\'\i }nio espec\IeC {\'\i }fico instanciado em \textit {Zanshin}\xspace .\relax }}{24}{figure.caption.15}
-\contentsline {figure}{\numberline {6}{\ignorespaces Metamodelo de \textit {Ecore}\xspace ~\cite {kern2008interchange}\relax }}{30}{figure.caption.17}
-\contentsline {figure}{\numberline {7}{\ignorespaces Classes do diagrama do exemplo em UML\xspace \relax }}{30}{figure.caption.18}
-\contentsline {figure}{\numberline {8}{\ignorespaces Classes do diagrama do exemplo em \textit {Ecore}\xspace \relax }}{31}{figure.caption.19}
-\contentsline {figure}{\numberline {9}{\ignorespaces Convers\IeC {\~a}o do diagrama de exemplo de UML\xspace para \textit {Ecore}\xspace \relax }}{31}{figure.caption.20}
-\contentsline {figure}{\numberline {10}{\ignorespaces Exemplo de \textit {Viewpoint Specification Model}\relax }}{32}{figure.caption.21}
-\contentsline {figure}{\numberline {11}{\ignorespaces Proposta de evolu\IeC {\c c}\IeC {\~a}o do metamodelo do \textit {Framework}\xspace \textit {Zanshin}\xspace \relax }}{35}{figure.caption.22}
-\contentsline {figure}{\numberline {12}{\ignorespaces Exemplifica\IeC {\c c}\IeC {\~a}o da representa\IeC {\c c}\IeC {\~a}o de refinamentos no novo metamodelo.\relax }}{36}{figure.caption.23}
-\contentsline {figure}{\numberline {13}{\ignorespaces Gera\IeC {\c c}\IeC {\~a}o autom\IeC {\'a}tica de c\IeC {\'o}digo no Eclipse\texttrademark \xspace \relax }}{38}{figure.caption.24}
-\contentsline {figure}{\numberline {14}{\ignorespaces Sirius Viewpoint Specification Project\relax }}{38}{figure.caption.25}
-\contentsline {figure}{\numberline {15}{\ignorespaces Propriedades de Representa\IeC {\c c}\IeC {\~a}o de Elemento em Sirius\texttrademark \xspace \relax }}{39}{figure.caption.26}
-\contentsline {figure}{\numberline {16}{\ignorespaces Cria\IeC {\c c}\IeC {\~a}o de Nodes no Sirius\texttrademark \xspace - Exemplo de cria\IeC {\c c}\IeC {\~a}o de n\IeC {\'o}\relax }}{40}{figure.caption.27}
-\contentsline {figure}{\numberline {17}{\ignorespaces Cria\IeC {\c c}\IeC {\~a}o de Nodes no Sirius\texttrademark \xspace - Exemplo de cria\IeC {\c c}\IeC {\~a}o de instancia de n\IeC {\'o}\relax }}{40}{figure.caption.28}
-\contentsline {figure}{\numberline {18}{\ignorespaces Editor Unagi\relax }}{41}{figure.caption.29}
-\contentsline {figure}{\numberline {19}{\ignorespaces Editor Unagi - Paleta de Op\IeC {\c c}\IeC {\~o}es\relax }}{41}{figure.caption.30}
-\contentsline {figure}{\numberline {20}{\ignorespaces Editor Unagi - Subdiagrama de Especifica\IeC {\c c}\IeC {\~a}o de \textit {EvoReqs}\xspace \relax }}{42}{figure.caption.31}
+\contentsline {figure}{\numberline {1}{\ignorespaces Exemplo de modelos de objetivos~\cite {tesevitor}.\relax }}{19}{figure.caption.14}
+\contentsline {figure}{\numberline {2}{\ignorespaces Exemplo de modelos de objetivos de um sistema de despacho de ambul\IeC {\^a}ncias~\cite {tesevitor}.\relax }}{21}{figure.caption.17}
+\contentsline {figure}{\numberline {3}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o gr\IeC {\'a}fica de elementos de \textit {GORE}\xspace .\relax }}{22}{figure.caption.18}
+\contentsline {figure}{\numberline {4}{\ignorespaces Metamodelo que define a sintaxe abstrata para o \textit {Zanshin}\xspace .\relax }}{24}{figure.caption.22}
+\contentsline {figure}{\numberline {5}{\ignorespaces Exemplo de um elemento do modelo de dom\IeC {\'\i }nio espec\IeC {\'\i }fico instanciado em \textit {Zanshin}\xspace .\relax }}{25}{figure.caption.23}
+\contentsline {figure}{\numberline {6}{\ignorespaces Classes do diagrama do exemplo em UML\xspace .\relax }}{30}{figure.caption.27}
+\contentsline {figure}{\numberline {7}{\ignorespaces Classes do diagrama do exemplo em \textit {Ecore}\xspace .\relax }}{30}{figure.caption.28}
+\contentsline {figure}{\numberline {8}{\ignorespaces Metamodelo de \textit {Ecore}\xspace ~\cite {kern2008interchange}.\relax }}{31}{figure.caption.29}
+\contentsline {figure}{\numberline {9}{\ignorespaces Convers\IeC {\~a}o do diagrama de exemplo de UML\xspace para \textit {Ecore}\xspace .\relax }}{32}{figure.caption.30}
+\contentsline {figure}{\numberline {10}{\ignorespaces Exemplo de \textit {Viewpoint Specification Model}.\relax }}{33}{figure.caption.31}
+\contentsline {figure}{\numberline {11}{\ignorespaces Proposta de evolu\IeC {\c c}\IeC {\~a}o do metamodelo do \textit {framework}\xspace \textit {Zanshin}\xspace .\relax }}{36}{figure.caption.37}
+\contentsline {figure}{\numberline {12}{\ignorespaces Exemplifica\IeC {\c c}\IeC {\~a}o da representa\IeC {\c c}\IeC {\~a}o de refinamentos no novo metamodelo.\relax }}{37}{figure.caption.40}
+\contentsline {figure}{\numberline {13}{\ignorespaces Gera\IeC {\c c}\IeC {\~a}o autom\IeC {\'a}tica de c\IeC {\'o}digo no Eclipse\texttrademark \xspace .\relax }}{39}{figure.caption.45}
+\contentsline {figure}{\numberline {14}{\ignorespaces Sirius Viewpoint Specification Project.\relax }}{40}{figure.caption.46}
+\contentsline {figure}{\numberline {15}{\ignorespaces Propriedades de Representa\IeC {\c c}\IeC {\~a}o de Elemento em Sirius\texttrademark \xspace .\relax }}{40}{figure.caption.47}
+\contentsline {figure}{\numberline {16}{\ignorespaces Cria\IeC {\c c}\IeC {\~a}o de Nodes no Sirius\texttrademark \xspace - Exemplo de cria\IeC {\c c}\IeC {\~a}o de n\IeC {\'o}.\relax }}{41}{figure.caption.48}
+\contentsline {figure}{\numberline {17}{\ignorespaces Cria\IeC {\c c}\IeC {\~a}o de Nodes no Sirius\texttrademark \xspace - Exemplo de cria\IeC {\c c}\IeC {\~a}o de instancia de n\IeC {\'o}.\relax }}{41}{figure.caption.49}
+\contentsline {figure}{\numberline {18}{\ignorespaces Editor Unagi.\relax }}{42}{figure.caption.50}
+\contentsline {figure}{\numberline {19}{\ignorespaces Editor Unagi - Paleta de Op\IeC {\c c}\IeC {\~o}es.\relax }}{42}{figure.caption.51}
+\contentsline {figure}{\numberline {20}{\ignorespaces Editor Unagi - Subdiagrama de Especifica\IeC {\c c}\IeC {\~a}o de \textit {EvoReqs}\xspace .\relax }}{43}{figure.caption.52}

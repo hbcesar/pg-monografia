@@ -21,14 +21,6 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: bibliografia.bib
-Repeated entry---line 121 of file bibliografia.bib
- : @inproceedings{souza2012requirement
- :                                    ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 157 of file bibliografia.bib
- : @incollection{brun2009engineering
- :                                  ,
-I'm skipping whatever remains of this entry
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -79,4 +71,3 @@ warning$ -- 0
 while$ -- 236
 width$ -- 0
 write$ -- 483
-(There were 2 error messages)
