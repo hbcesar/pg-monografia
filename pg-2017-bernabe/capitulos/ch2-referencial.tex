@@ -7,7 +7,95 @@
 
 Este capítulo apresenta os principais conceitos teóricos que alicerçaram a evolução do metamodelo de requisitos do \zanshin e de conceitos que fundamentaram o desenvolvimento da ferramenta \unagi. A Seção~\ref{sec-referencial-engenharia-objetivos} fala sobre Engenharia de Requisitos Orientada a Objetivos, destacando os principais conceitos dessa área que foram utilizados ao longo deste trabalho. A Seção~\ref{sec-referencial-zanshin} apresenta o sistema \zanshin e os detalhes do metamodelo original do \framework. A Seção~\ref{referencial-mdd} apresenta um breve resumo sobre Desenvolvimento Dirigido por Modelos (\mdd ou MDD) assim como  as principais ferramentas que foram utilizadas durante o desenvolvimento do \unagi, como as funcionalidades \emf de modelagem do \eclipse, o plugin \sirius, dentre outros.
 
-\vitor{Nomes de seções e de figuras são considerados nomes próprios e, portanto, devem ter a primeira letra maiúscula.}
+% ======================================================================================================
+% SUBSEÇÃO: Desenvolvimento Dirigido por Modelos
+% ======================================================================================================
+\section{Desenvolvimento Dirigido por Modelos}
+\label{referencial-mdd}
+Pesquisadores vem tentando ao longo dos anos criar abstrações que ajudem programadores a focar no conteúdo do desenvolvimento ao invés das especifidades da tecnologia de criação adotada~\cite{viyovic2014sirius}. O Desenvolvimento Dirigido por Modelos (\mdd ou MDD) pode ser visto como a forma de programação de mais alto nível de abstração existente atualmente~\cite{atkinson2003model}, promovendo o uso de artefatos do processo de desenvolvimento de software para lidar com complexidade através de abstração~\cite{viyovic2014sirius}.
+
+Em outras palavras, MDD parte da premissa que um sistema é um modelo consistente com seu metamodelo~\cite{vujovic2014comparative} e, assim, em vez de exigir que programadores escrevam cada simples detalhe da implementação de um sistema, permite que uma funcionalidade necessária para um software possa ser visualmente modelada~\cite{atkinson2003model}. Portanto, essa técnica viabiliza que muitas atividades complexas (porém rotineiras) da área de programação de software sejam automatizadas como, por exemplo, o suporte a persistência, interoperabilidade e distribuição~\cite{atkinson2003model}.
+
+A modelagem usa da percepção visual humana para melhorar o processo de compreensão sobre o domínio de um software, já que modelos nos auxiliam a entender problema complexos e suas possíveis soluções através da abstração. Assim, MDD baseia-se na premissa de que o desenvolvimento de software deve focar principalmente na produção de modelos e não na criação de código~\cite{selic2003pragmatics}.
+
+A primeira vantagem dessa abordagem é que podemos usar conceitos mais ligados ao domínio do problema que software vai resolver do que conceitos técnicos ligados a linguagem de programação, em consequência essa vantagem acarreta em alguns outros benefícios: modelos são mais compreensíveis do que códigos e portanto, tornam-se também mais fáceis de especificar e manter~\cite{selic2003pragmatics}. Além disso, modelos são menos sensíveis a alterações de tecnologias, ou seja, são independentes de plataforma~\cite{selic2003pragmatics}. 
+
+Esse trabalho usa MDD em vários processos: primeiramente podemos considerar que \zanshin usa das ferramentas dessa metodologia para instanciação, validação e outras atividades relacionadas ao modelo do sistema que é fornecido pelo usuário. Segundo, unagi usa o produção automática de código através da interpretação de modelos visuais~\cite{selic2003pragmatics, viyovic2014sirius}, além do que  modelagem de sistemas e a geração automática do arquivo \xml também pode ser vista como um processo de \mdd.
+
+
+% ======================================================================================================
+% SUBSEÇÃO EMF
+% ======================================================================================================
+\subsection{Eclipse Modeling Framework}
+O \eclipse é um projeto de código aberto com o objetivo de prover uma plataforma de desenvolvimento altamente integrada. O processo de criação de sistemas no \eclipse pode ser divido em alguns projetos, entre eles o Projeto de Modelagem (\textit{Modeling Project}), que concentra-se em tecnologias baseadas no desenvolvimento orientado a modelos~\cite{steinberg2008emf}. Esse ambiente é chamado de \textit{Eclipse Modeling Framework} ou \textit{EMF}, e provê funcionalidades como transformação de modelos, integração de bases de dados e geração de editores gráficos~\cite{steinberg2008emf}. Modelos especificados dentro do contexto \emf relacionam abstrações de modelagem diretamente a seus conceitos de implementação, sendo a união das tecnologias \uml, \xml e \java, permitindo a conversão automática entre todas essas~\cite{steinberg2008emf}. 
+
+A tecnologia \emf pode ser mais bem explicada com um exemplo: um sistema de gerenciamento de ordem de compras de uma loja, que necessita incluir casos como ``cobrar'' e ``entregar'' em um endereço e uma coleção de itens (nesse caso, compras). A Figura~\ref{exemplo-uml} mostra o diagrama do sistema em \uml. Esse modelo pode também ser descrito dentro do \emf usando modelos \ecore, como na Figura~\ref{exemplo-ecore}. Modelos \ecore são basedos no metamodelo para especificação exibido na Figura~\ref{metamodelo-ecore}, onde classes são representadas por \texttt{EClass}, atributos por \texttt{EAttribute}, relações por \texttt{EReference} e tipos de dados por \texttt{EDataType}. Assim, a ``conversão'' do modelo \uml para \ecore é dada ao se instanciar classes de \ecore de acordo com a especificidade do domínio do problema~\cite{steinberg2008emf}, como pode ser visto na Figura~\ref{exemplo-uml-to-ecore}. 
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.65\textwidth]{figuras/exemplos-emf/exemplo-uml.png}
+	\caption{Classes do diagrama do exemplo em \uml.}
+	\label{exemplo-uml}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\textwidth]{figuras/exemplos-emf/exemplo-ecore.PNG}
+	\caption{Classes do diagrama do exemplo em \ecore.}
+	\label{exemplo-ecore}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.95\textwidth]{figuras/exemplos-emf/metamodelo-ecore.png}
+	\caption{Metamodelo de \ecore~\cite{kern2008interchange}.}
+	\label{metamodelo-ecore}
+\end{figure}
+
+Assim que o modelo é detalhado em \ecore, o \emf está pronto para gerar código automaticamente, por meio dos seguintes passos:
+
+\begin{itemize}
+	\item Para cada tipo \texttt{EClass} são criadas uma interface e a classe de implementação correspondente. No caso do exemplo, para a classe \texttt{OrdemCompra} seriam criadas a interface \texttt{OrdemCompra} e a classe \texttt{OrdemCompraImpl}. Essa especificação permite que sejam implementadas funções de persistência e distribuição, porém não serão discutidas aqui por fugirem do escopo desse trabalho.
+	\item As classes do tipo \texttt{EAtributte} são transformadas em atributos nas classes correspondentes
+	\item As classes tipo \texttt{EReference} são transformadas em referências nas respectivas classes as quais referenciam.
+\end{itemize}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{figuras/exemplos-emf/uml-to-ecore.png}
+	\caption{Conversão do diagrama de exemplo de \uml para \ecore.}
+	\label{exemplo-uml-to-ecore}
+\end{figure}
+
+Em suma, o \framework de modelagem do \eclipse permite que usuários criem modelos apoiados em metamodelos, e baseando-se no modelo criado, gera partes de código de sistema~\cite{vujovic2014comparative}.
+
+%https://books.google.com.br/books?id=sA0zOZuDXhgC&lpg=PT23&ots=2IQIWZWqNm&dq=eclipse&lr&hl=pt-BR&pg=PT45#v=onepage&q=eclipse&f=false
+
+% ======================================================================================================
+% SUBSEÇÃO Sirius
+% ======================================================================================================
+\subsection{Sirius}
+
+O \sirius é um plugin que simplifica o \framework de Modelagem Gráfica (\textit{Graphical Modeling Framework} ou \textit{GMF}) do \eclipse, reduzindo a complexidade de uso do mesmo e permitindo a produção de editores gráficos de modelos personalizados~\cite{viyovic2014sirius}. O \sirius é construído em cima das utilidades para (des)serialização de modelos, checagem de condições e geração de editores baseados em \ecore providas pelo \eclipse~\cite{budinsky2004eclipse}. Representações criadas com \sirius podem ser apresentadas em diagramas, tabelas e árvores~\cite{viyovic2014sirius}. Em síntese, \sirius provê ferramentas que permitem a especificação de um modelo de um domínio qualquer em diferentes perspectivas gráficas~\cite{vujovic2014comparative}.
+
+Por meio de modelos de especificação (\textit{Viewpoint Specification Model} ou VSM), o \textit{plugin} permite especificar a estrutura, aparência e comportamento do metamodelo do editor a ser criado~\cite{viyovic2014sirius}. Os VSMs são especificados em arquivos \textit{.odesign}~\cite{viyovic2014sirius}, e baseam-se no metamodelo de domínio descrito em \ecore. Um exemplo de caracterização de representação de modelos é mostrado na Figura~\ref{exemplo-sirius}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\textwidth]{figuras/exemplos-emf/exemplo-sirius-vsm.png}
+	\caption{Exemplo de \textit{Viewpoint Specification Model}.}
+	\label{exemplo-sirius}
+\end{figure}
+
+\sirius provê vários mecanismos que auxiliam no gerenciamento da complexidade de modelos~\cite{madiot2015eclipse}:
+
+\begin{itemize}
+	\item \textbf{Camadas}: é possível separar elementos em camadas diferentes, e ativar ou desativar essas.
+	\item \textbf{Filtros}: exibir ou esconder elementos dependendo de determinada condição.
+	\item \textbf{Fersonalização de Estilos}: permite modificar propriedades gráficas de elementos do diagrama.
+	\item \textbf{Regras de Validação}: permite que a qualidade do modelo seja avaliada.
+\end{itemize}
+
 
 % ======================================================================================================
 % SEÇÃO Engenharia de Requisitos Orientada a Objetivos
@@ -60,6 +148,49 @@ Em questões de representação gráfica, os modelos de objetivos discutidos nes
 \end{figure}
 
 % ======================================================================================================
+% SUBSEÇÃO GORO
+% ======================================================================================================
+\subsection{GORO}
+\label{sec-referencia-engenharia-objetivos-goro}
+\goro (\textit{Goal-Oriented Requirements Ontology}) é uma ontologia de referência baseada no domínio de \gore e fundamentada em UFO (\textit{Unified Formal Ontology})~\cite{guizzardi2005ontological}. Essa ontologia foca principalmente no conceito de objetivos, tendo como principal objetivo o esclarescer e explorar a natureza dos conceitos envolvidos, buscando assim aumentar a eficiência da comunicação entre os \textit{stakeholders} de um projeto. 
+
+\goro foi construída através da extração de conceitos de diferentes ontologias, como \istar~cite{dalpiaz2016istar}, KAOS~\cite{dardenne1993goal}, Techne~\cite{borgida2009techne} e UFO. Assim, os principais elementos de \goro são:
+
+\begin{itemize}
+	\item \textbf{Intentions e Desires}: concentram-se na modelagem dos objetivos dos agentes, que são definidos em UFO como algo que existe na realidade e possui uma identidade particular, não tendo partes temporais mas existindo no tempo e existencialmente independente. Agentes possuem propriedades relacionadas a intenção, como Desejos (\textit{Desires}), Crenças (\textit{Beliefs}) e Intenções (\textit{Intentions}). Assim, um objetivo é um conteúdo proposicional relacionado ou a intenção ou ao desejo do agente~\cite{pedrogoro}.
+	\item \textbf{Goals e Requirements}: Um requisito é um comportamento desejado, portanto, um requisito é também um objetivo "ue descreve as condições ambientais a serem alcançadas através de uma solução desejada, resultando na satisfação dos objetivos estratégicos subjacentes"~\cite{pedrogoro}.
+	\item \textbf{Hardgoals, Softgoals, Requisitos Funcionais e Não-Funcionais}: Adotando a conceituação de~\cite{guizzardi2014ontological}, \textit{Hardgoals} são definidos em \goro como requisitos que são satisfeitos mediante um dado conjunto de situações, enquanto \textit{Softgoals} referem-se a uma definição vaga de qualidade que só podem ser consideradas satisfeitas mediante julgamento do \textit{stakeholder}. Por fim, Requisitos Funcionais referem-se a funções que podem manifestar determinado comportamento através de determinadas situações, enquanto Requisitos Não-funcionais referem-se a qualidades~\cite{pedrogoro}.
+	\item \textbf{Assumptions}: referem-se a pressuposições de domínio das quais as partes interessadas acreditam ser uma verdade no domínio do problema.
+	\item \textbf{Decomposition, Alternatives, Operationalization e Plans}: \textit{Decomposition} é, como o próprio nome diz, uma decomposição de um Objetivos em Sub-objetivos, assim, diz que um objetivo é satisfeito quando todos os seus sub-objetivos são satisfeitos. Da mesma forma, diz que um objetivo pode ser atingido de diferentes maneiras, sendo essas as alternativas (\textit{Alternatives}) de satisfação daquele. \textit{Operationalization} é um link que conecta um Objetivo a uma Tarefa, e especifica como aquele objetivo deve ser satisfeito através da tarefa. Por fim, \textit{Plans} é descrito como uma forma de fazer alguma coisa.	
+\end{itemize}
+
+% ======================================================================================================
+% SEÇÃO Zanshin
+% ======================================================================================================
+
+\section{Zanshin}
+\label{sec-referencial-zanshin}
+
+Apresentado por~\citeonline{tesevitor}, \zanshin é um \framework que utiliza de ciclos de retro-alimentação para monitorar sistemas e enviar estratégias de adaptação com base em informações de modelos de requisitos orientados a objetivos enriquecidos com elementos como os \awreqs e os \evoreqs. O nome \zanshin vem do japonês e significa ``estado de completa consciência''.
+
+Em tempo de execução, os elementos do modelo de objetivos são representados por classes e instanciados cada vez que o usuário (ou sistema) busca atingir um objetivo, e então o sistema passa a enviar mensagens a essas instâncias quando há mudança de estado. Percebe-se, assim, que objetivos e pressuposições de domínio não são tratadas como invariantes que devem sempre ser atingidas, já que o sistema pode falhar ao tentar atingir seus objetivos iniciais e, então, o componente de adaptação lidará com essas falhas e tomará medidas para que os objetivos voltem a ser satisfeitos~\cite{souza2013requirements}.
+
+Assim como o monitoramento de objetivos através do \textit{Feedback Loop}, o \zanshin também monitora Parâmetros (\textit{Parameters}) que podem ser definidos em dois tipos. Primeiro, os Pontos de Variação (ou \textit{Variation Points}), que representam refinamentos do tipo ``OU'' (\textit{OR}). Segundo, as Variáveis de Controle (ou \textit{Control Variables}), que são abstrações referentes a pontos de variação repetitivos ou usados em grande escala. A especificação do comportamento dessas estratégias é discutido em seções posteriores.
+
+O metamodelo dos modelos de objetivos usados no \zanshin é representado na Figura~\ref{figura-metamodelo-antigo}, e especificado no código do \textit{framework} através de uma tecnologia \ecore para descrição e suporte a modelos em tempo de execução. Nessa caso, o modelo representa os tipos de requisitos em nível de classe~\cite{souza2013requirements}. 
+
+%\vitor{É estranho falar de todas as tecnologias específicas do Eclipse aqui sem ter explicado elas antes. Talvez seja o caso de retomar isto quando você falar de EMF, mais à frente.}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{figuras/metamodelos/metamodelo-zanshin-antigo.png}
+	\caption{Metamodelo que define a sintaxe abstrata para o \zanshin.}
+	\label{figura-metamodelo-antigo}
+\end{figure}
+
+O \zanshin pode ser dividido em quatro componentes principais, entretanto essa seção foca na discussão de dois desses: o componente de monitoramento e o componente de adaptação.
+
+% ======================================================================================================
 % SUBSEÇÃO Modelos de Objetivos em Tempo de Execução
 % ======================================================================================================
 
@@ -81,7 +212,7 @@ Requisitos autoconscientes são divididos por~\citeonline{souza2012requirement} 
 
 Em suma, \awreqs especificam quando um determinado objetivo precisa de mudanças para continuar a ser atendido, enquanto \evoreqs especificam como executar tais mudanças. A seguir, o modelo de exemplo apresentado na seção~\ref{sec-referencial-engenharia-objetivos} é novamente apresentado, porém com novos requisitos de adaptação que são devidamente discutidos na próxima sessão.
 
-\vitor{Achei que esta seção (acima) fala mais de Zanshin do que Modelos de Objetivos em Tempo de Execução...}
+%\vitor{Achei que esta seção (acima) fala mais de Zanshin do que Modelos de Objetivos em Tempo de Execução...}
 
 % ======================================================================================================
 % SUBSEÇÃO Exemplo de Caso de Uso
@@ -89,9 +220,7 @@ Em suma, \awreqs especificam quando um determinado objetivo precisa de mudanças
 \subsection{Um Exemplo de Modelo \gore}
 \label{sec-referencial-engenharia-objetivos-exemplo}
 
-Na Figura~\ref{figura-acad-completo} é apresentado o modelo visual completo do sistema de despacho de ambulâncias (\textit{Adaptive Computer-aided Ambulance Dispatch} ou \textit{A-CAD}). Nele, observa-se o objetivo principal ``Gerar Instruções de Despacho Otimizadas'', representado por uma oval, que é imediatamente refinado em outros objetivos e em uma pressuposição de domínio (retângulo, vide legenda na Figura~\ref{figura-acad-simples}). O refinamento entre o objetivo raiz e seus filhos imediatos é do tipo ``E'' e portanto, para que o objetivo principal seja considerado satisfeito, todos as suas decomposições de primeiro grau precisam ser satisfeitas. Então, verifica-se que o primeiro nível de refinamento do objetivo principal é composto dos objetivos ``Gerenciar Chamadas'' (\textit{Call Talking}), ``Identificação de Recursos'' (\textit{Resource Identification}), ``Mobilização de Recursos'' (\textit{Resource Mobilization}), ``Obtenção de Mapas'' (\textit{Map Retrieval}) e da pressuposição de domínio ``Dados sobre recursos está sempre atualizado'' (\textit{Resource data is up-to-date}).
-
-\vitor{Faltou ``Incident Update''.}
+Na Figura~\ref{figura-acad-completo} é apresentado o modelo visual completo do sistema de despacho de ambulâncias (\textit{Adaptive Computer-aided Ambulance Dispatch} ou \textit{A-CAD}). Nele, observa-se o objetivo principal ``Gerar Instruções de Despacho Otimizadas'', representado por uma oval, que é imediatamente refinado em outros objetivos e em uma pressuposição de domínio (retângulo, vide legenda na Figura~\ref{figura-acad-simples}). O refinamento entre o objetivo raiz e seus filhos imediatos é do tipo ``E'' e portanto, para que o objetivo principal seja considerado satisfeito, todos as suas decomposições de primeiro grau precisam ser satisfeitas. Então, verifica-se que o primeiro nível de refinamento do objetivo principal é composto dos objetivos ``Gerenciar Chamadas'' (\textit{``Call Talking''}), ``Identificação de Recursos'' (\textit{``Resource Identification''}), ``Mobilização de Recursos'' (\textit{``Resource Mobilization''}), ``Obtenção de Mapas'' (\textit{``Map Retrieval''}), ``Receber atualizações sobre o Incidente'' (\textit{``Incident Update''}) e da pressuposição de domínio ``Dados sobre recursos está sempre atualizado'' (\textit{``Resource data is up-to-date''}).
 
 \begin{figure}
 	\centering
@@ -125,33 +254,7 @@ Sobre os \evoreqs associados ao ``AR15'', podemos definir seus respectivos Requi
 
 O processo de especificação de como as estratégias de evolução são realizadas pelo sistema é discutido na próxima seção.
 
-\vitor{Também achei esta seção muito ligada ao Zanshin... Na próxima reunião, vamos conversar sobre uma possível reestruturação, pois vai exigir uma adaptação bem grande na sequência do texto...}
-
-% ======================================================================================================
-% SEÇÃO Zanshin
-% ======================================================================================================
-
-\section{Zanshin}
-\label{sec-referencial-zanshin}
-
-Apresentado por~\citeonline{tesevitor}, \zanshin é uma \framework que utiliza de ciclos de retro-alimentação para monitorar sistemas e enviar estratégias de adaptação com base em informações de modelos de requisitos orientados a objetivos enriquecidos com elementos como os \awreqs e os \evoreqs. O nome \zanshin vem do japonês e significa ``estado de completa consciência''.
-
-Em tempo de execução, os elementos do modelo de objetivos são representados por classes e instanciados cada vez que o usuário (ou sistema) busca atingir um objetivo, e então o sistema passa a enviar mensagens a essas instâncias quando há mudança de estado. Percebe-se, assim, que objetivos e pressuposições de domínio não são tratadas como invariantes que devem sempre ser atingidas, já que o sistema pode falhar ao tentar atingir seus objetivos iniciais e, então, o componente de adaptação lidará com essas falhas e tomará medidas para que os objetivos voltem a ser satisfeitos~\cite{souza2013requirements}.
-
-Assim como o monitoramento de objetivos através do \textit{Feedback Loop}, o \zanshin também monitora Parâmetros (\textit{Parameters}) que podem ser definidos em dois tipos. Primeiro, os Pontos de Variação (ou \textit{Variation Points}), que representam refinamentos do tipo ``OU'' (\textit{OR}). Por exemplo, o VP4 do modelo de objetivos do sistema A-CAD (Figura~\ref{figura-acad-completo}) que refere-se ao objetivo ``Atualizar posição de ambulâncias em uso'' especifica que atualizações de posição das ambulâncias podem ser obtidas automaticamente ou via rádio. Segundo, as Variáveis de Controle (ou \textit{Control Variables}), que são abstrações referentes a pontos de variação repetitivos ou usados em grande escala, como por exemplo a variável MST (``Tempo de Busca Mínimo'' ou \textit{Minimum Search Time}), que refere-se a tarefa ``Procurar por (incidentes) duplicados''. A especificação do comportamento dessas estratégias é discutido em seções posteriores.
-
-O metamodelo dos modelos de objetivos usados no \zanshin é representado na Figura~\ref{figura-metamodelo-antigo}, e especificado no código do \textit{framework} como um modelo \ecore e carregado em memória como objetos \java usando um \framework do \eclipse conhecido como \textit{Eclipse Modeling Framework}. Nessa caso, o modelo \ecore representa os tipos de requisitos em nível de classe~\cite{souza2013requirements}. 
-
-\vitor{É estranho falar de todas as tecnologias específicas do Eclipse aqui sem ter explicado elas antes. Talvez seja o caso de retomar isto quando você falar de EMF, mais à frente.}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=1\textwidth]{figuras/metamodelos/metamodelo-zanshin-antigo.png}
-	\caption{Metamodelo que define a sintaxe abstrata para o \zanshin.}
-	\label{figura-metamodelo-antigo}
-\end{figure}
-
-O \zanshin pode ser dividido em quatro componentes principais, entretanto essa seção foca na discussão de dois desses: o componente de monitoramento e o componente de adaptação.
+%\vitor{Também achei esta seção muito ligada ao Zanshin... Na próxima reunião, vamos conversar sobre uma possível reestruturação, pois vai exigir uma adaptação bem grande na sequência do texto...}
 
 % ======================================================================================================
 % SUBSEÇÃO Zanshin: Monitoramento
@@ -265,101 +368,12 @@ Para exemplificar esse processo, tomemos novamente o \awreq ``AR15'', que garant
 
 %For example, the trivial case is considering the problem solved if the (next) AwReq evaluates to success, but this abstract class can be extended to provide di↵erent kinds of resolution conditions, including, e.g., involving a human-in-the-loop to confirm if the problem has indeed been solved, organizing conditions into AND/OR-refinement trees (like in a goal model), etc.
 
-% ======================================================================================================
-% SUBSEÇÃO: Desenvolvimento Dirigido por Modelos
-% ======================================================================================================
-\section{Desenvolvimento Dirigido por Modelos}
-\label{referencial-mdd}
-Pesquisadores vem tentando ao longo dos anos criar abstrações que ajudem programadores a focar no conteúdo do desenvolvimento ao invés das especifidades da tecnologia de criação adotada~\cite{viyovic2014sirius}. O Desenvolvimento Dirigido por Modelos (\mdd ou MDD) pode ser visto como a forma de programação de mais alto nível de abstração existente atualmente~\cite{atkinson2003model}, promovendo o uso de artefatos do processo de desenvolvimento de software para lidar com complexidade através de abstração~\cite{viyovic2014sirius}.
-
-Em outras palavras, MDD parte da premissa que um sistema é um modelo consistente com seu metamodelo~\cite{vujovic2014comparative} e, assim, em vez de exigir que programadores escrevam cada simples detalhe da implementação de um sistema, permite que uma funcionalidade necessária para um software possa ser visualmente modelada~\cite{atkinson2003model}. Portanto, essa técnica viabiliza que muitas atividades complexas (porém rotineiras) da área de programação de software sejam automatizadas como, por exemplo, o suporte a persistência, interoperabilidade e distribuição~\cite{atkinson2003model}.
-
-A modelagem usa da percepção visual humana para melhorar o processo de compreensão sobre o domínio de um software, já que modelos nos auxiliam a entender problema complexos e suas possíveis soluções através da abstração. Assim, MDD baseia-se na premissa de que o desenvolvimento de software deve focar principalmente na produção de modelos e não na criação de código~\cite{selic2003pragmatics}.
-
-A primeira vantagem dessa abordagem é que podemos usar conceitos mais ligados ao domínio do problema que software vai resolver do que conceitos técnicos ligados a linguagem de programação, em consequência essa vantagem acarreta em alguns outros benefícios: modelos são mais compreensíveis do que códigos e portanto, tornam-se também mais fáceis de especificar e manter~\cite{selic2003pragmatics}. Além disso, modelos são menos sensíveis a alterações de tecnologias, ou seja, são independentes de plataforma~\cite{selic2003pragmatics}. Esse trabalho usa MDD como ferramenta de produção automática de código através da interpretação de modelos visuais~\cite{selic2003pragmatics, viyovic2014sirius}.
-
-\vitor{MDD foi usado apenas produção automática de código? O desenvolvimento do Unagi entra nesta categoria? Ou talvez poderíamos incrementar a última frase acima?}
-
-% ======================================================================================================
-% SUBSEÇÃO EMF
-% ======================================================================================================
-\subsection{Eclipse Modeling Framework}
-O \eclipse é um projeto de código aberto com o objetivo de prover uma plataforma de desenvolvimento altamente integrada. O processo de criação de sistemas no \eclipse pode ser divido em alguns projetos, entre eles o Projeto de Modelagem (\textit{Modeling Project}), que concentra-se em tecnologias baseadas no desenvolvimento orientado a modelos~\cite{steinberg2008emf}. Esse ambiente é chamado de \textit{Eclipse Modeling Framework} ou \textit{EMF}, e provê funcionalidades como transformação de modelos, integração de bases de dados e geração de editores gráficos~\cite{steinberg2008emf}. Modelos especificados dentro do contexto \emf relacionam abstrações de modelagem diretamente a seus conceitos de implementação, sendo a união das tecnologias \uml, \xml e \java, permitindo a conversão automática entre todas essas~\cite{steinberg2008emf}. 
-
-A tecnologia \emf pode ser mais bem explicada com um exemplo: um sistema de gerenciamento de ordem de compras de uma loja, que necessita incluir casos como ``cobrar'' e ``entregar'' em um endereço e uma coleção de itens (nesse caso, compras). A Figura~\ref{exemplo-uml} mostra o diagrama do sistema em \uml. Esse modelo pode também ser descrito dentro do \emf usando modelos \ecore, como na Figura~\ref{exemplo-ecore}. Modelos \ecore são basedos no metamodelo para especificação exibido na Figura~\ref{metamodelo-ecore}, onde classes são representadas por \texttt{EClass}, atributos por \texttt{EAttribute}, relações por \texttt{EReference} e tipos de dados por \texttt{EDataType}. Assim, a ``conversão'' do modelo \uml para \ecore é dada ao se instanciar classes de \ecore de acordo com a especificidade do domínio do problema, como pode ser visto na Figura~\ref{exemplo-uml-to-ecore}~\cite{steinberg2008emf}. 
-
-\vitor{A Figura~\ref{exemplo-uml-to-ecore} foi retirada da referência~\cite{steinberg2008emf}? Se sim, a referência deve ir no caption da figura.}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.65\textwidth]{figuras/exemplos-emf/exemplo-uml.png}
-	\caption{Classes do diagrama do exemplo em \uml.}
-	\label{exemplo-uml}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.7\textwidth]{figuras/exemplos-emf/exemplo-ecore.PNG}
-	\caption{Classes do diagrama do exemplo em \ecore.}
-	\label{exemplo-ecore}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.95\textwidth]{figuras/exemplos-emf/metamodelo-ecore.png}
-	\caption{Metamodelo de \ecore~\cite{kern2008interchange}.}
-	\label{metamodelo-ecore}
-\end{figure}
-
-Assim que o modelo é detalhado em \ecore, o \emf está pronto para gerar código automaticamente, por meio dos seguintes passos:
-
-\begin{itemize}
-	\item Para cada tipo \texttt{EClass} são criadas uma interface e a classe de implementação correspondente. No caso do exemplo, para a classe \texttt{OrdemCompra} seriam criadas a interface \texttt{OrdemCompra} e a classe \texttt{OrdemCompraImpl}. Essa especificação permite que sejam implementadas funções de persistência e distribuição, porém não serão discutidas aqui por fugirem do escopo desse trabalho.
-	\item As classes do tipo \texttt{EAtributte} são transformadas em atributos nas classes correspondentes
-	\item As classes tipo \texttt{EReference} são transformadas em referências nas respectivas classes as quais referenciam.
-\end{itemize}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=1\textwidth]{figuras/exemplos-emf/uml-to-ecore.png}
-	\caption{Conversão do diagrama de exemplo de \uml para \ecore.}
-	\label{exemplo-uml-to-ecore}
-\end{figure}
-
-Em suma, o \framework de modelagem do \eclipse permite que usuários criem modelos apoiados em metamodelos, e baseando-se no modelo criado, gera partes de código de sistema~\cite{vujovic2014comparative}.
-
-%https://books.google.com.br/books?id=sA0zOZuDXhgC&lpg=PT23&ots=2IQIWZWqNm&dq=eclipse&lr&hl=pt-BR&pg=PT45#v=onepage&q=eclipse&f=false
-
-% ======================================================================================================
-% SUBSEÇÃO Sirius
-% ======================================================================================================
-\subsection{Sirius}
-
-O \sirius é um plugin que simplifica o \framework de Modelagem Gráfica (\textit{Graphical Modeling Framework} ou \textit{GMF}) do \eclipse, reduzindo a complexidade de uso do mesmo e permitindo a produção de editores gráficos de modelos personalizados~\cite{viyovic2014sirius}. O \sirius é construído em cima das utilidades para (des)serialização de modelos, checagem de condições e geração de editores baseados em \ecore providas pelo \eclipse~\cite{budinsky2004eclipse}. Representações criadas com \sirius podem ser apresentadas em diagramas, tabelas e árvores~\cite{viyovic2014sirius}. Em síntese, \sirius provê ferramentas que permitem a especificação de um modelo de um domínio qualquer em diferentes perspectivas gráficas~\cite{vujovic2014comparative}.
-
-Por meio de modelos de especificação (\textit{Viewpoint Specification Model} ou VSM), o \textit{plugin} permite especificar a estrutura, aparência e comportamento do metamodelo do editor a ser criado~\cite{viyovic2014sirius}. Os VSMs são especificados em arquivos \textit{.odesign}~\cite{viyovic2014sirius}, e baseam-se no metamodelo de domínio descrito em \ecore. Um exemplo de caracterização de representação de modelos é mostrado na Figura~\ref{exemplo-sirius}.
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.9\textwidth]{figuras/exemplos-emf/exemplo-sirius-vsm.png}
-	\caption{Exemplo de \textit{Viewpoint Specification Model}.}
-	\label{exemplo-sirius}
-\end{figure}
-
-\sirius provê vários mecanismos que auxiliam no gerenciamento da complexidade de modelos~\cite{madiot2015eclipse}:
-
-\begin{itemize}
-	\item \textbf{Camadas}: é possível separar elementos em camadas diferentes, e ativar ou desativar essas.
-	\item \textbf{Filtros}: exibir ou esconder elementos dependendo de determinada condição.
-	\item \textbf{Fersonalização de Estilos}: permite modificar propriedades gráficas de elementos do diagrama.
-	\item \textbf{Regras de Validação}: permite que a qualidade do modelo seja avaliada.
-\end{itemize}
 
 % ======================================================================================================
 % SUBSEÇÃO Acceleo
 % ======================================================================================================
 \subsection{Acceleo}
 
-\vitor{Vai escrever sobre Acceleo também? Você usou Acceleo?}
+%\vitor{Vai escrever sobre Acceleo também? Você usou Acceleo?}
 
-\vitor{Com relação à Seção~\ref{referencial-mdd} como um todo, acho que pode resolver a questão da reestruturação colocada anteriormente se você falar primeiro de MDD, depois de Engenharia de Requisitos.}
+%\vitor{Com relação à Seção~\ref{referencial-mdd} como um todo, acho que pode resolver a questão da reestruturação colocada anteriormente se você falar primeiro de MDD, depois de Engenharia de Requisitos.}
