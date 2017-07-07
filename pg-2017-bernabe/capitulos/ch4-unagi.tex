@@ -9,18 +9,18 @@ O editor gráfico \unagi foi desenvolvido com o principal objetivo de facilitar 
 
 Usando um ferramental disponível na plataforma \eclipse para criação de editores gráficos usando \emf, além da utilização de aspectos de desenvolvimento dirigido por modelos, o processo de desenvolvimento do \unagi pode ser dividido em duas fases: a criação do editor gráfico usando \sirius e o desenvolvimento do conversor de diagramas apoiado em código gerado automaticamente por técnicas MDD (\mdd). As próximas subseções dão detalhes sobre o processo de implementação da ferramenta, a Subseção~\ref{sec-unagi-criacao-editor} explica como o editor gráfico foi elaborado, usando as tecnologias já discutidas nesse texto, e então a Subseção~\ref{sec-unagi-apresentacao-editor} explica as funcionalidades da ferramenta modeladora. Por fim, a Subseção~\ref{sec-unagi-conversor} demonstra como o componente responsável pela conversão do modelo visual para os arquivos nos padrões do \zanshin foi construído.
 
-
+O código fonte do plugin, bem como o arquivo de instalação da ferramenta podem ser encontrados em \codigoUnagi.
 % ======================================================================================================
 % SEÇÃO criação do Editor Gráfico
 % ======================================================================================================
 \section{Criação do Editor Gráfico}
 \label{sec-unagi-criacao-editor}
 
-A primeira parte do desenvolvimento da ferramenta consistiu  na criação do editor gráfico para modelagem de diagramas de objetivos para sistemas de adaptativos. Devido ao fato de \zanshin ser um sistema que também se baseia nas ferramentas da plataforma \eclipse, aliado ao fato dessa plataforma também prover todos os utensílios necessários para o desenvolvimento de editores de diagramas, como \ecore, \emf e o plugin \sirius, foi fácil decidir que para o desenvolvimento do \unagi também seriam usados os mesmos recursos, com objetivo assim de permitir maior compatibilidade com o \zanshin em trabalhos futuros.
+A primeira parte do desenvolvimento da ferramenta consistiu  na criação do editor gráfico para modelagem de diagramas de objetivos para sistemas adaptativos. Devido ao fato de \zanshin ser um sistema que também se baseia nas ferramentas da plataforma \eclipse, aliado ao fato dessa plataforma também prover todos os utensílios necessários para o desenvolvimento de editores de diagramas, como \ecore, \emf e o plugin \sirius, foi fácil decidir que para o desenvolvimento do \unagi também seriam usados os mesmos recursos, com objetivo de permitir maior compatibilidade com o \zanshin em trabalhos futuros.
 
-Inicialmente, o mesmo modelo \ecore usado para operacionalização dos requisitos no \zanshin foi usado para geração automática de código dentro do \eclipse \emf. É importante salientar que junto com as classes específicas de domínio, o \emf também gera código automático para criação de editores e para criação de processos de teste e validação (Figura~\ref{figura-gera-codigo}). Assim, após completa especificação do \ecore, foi gerado código automático para implantação do editor. O código gerado pode então ser executado como uma aplicação \eclipse e a partir daí pode-se criar um editor de modelos personalizado usando o \sirius.
+Inicialmente, o mesmo modelo \ecore usado para operacionalização dos requisitos no \zanshin foi usado para geração automática de código dentro do \eclipse \emf. É importante salientar que junto com as classes específicas de domínio, o \emf também gera código automático que serve como base para criação de editores e para criação de processos de teste e validação (Figura~\ref{figura-gera-codigo}). Em outras palavras, o \emf gera classes relativas ao metamodelo que podem ser instanciadas em tempo de execução da ferramenta gráfica.  Assim, após completa especificação do \ecore, foi gerado código automático que serviu como base para o processo inicial de implantação do editor. O código gerado pode então ser executado como uma aplicação \eclipse e a partir daí pode-se criar um editor de modelos personalizado usando o \sirius.
 
-\vitor{Não fica claro no parágrafo acima que o editor que é gerado automaticamente não permite a criação do modelo de forma diagramática. Fica parecendo que o EMF gerou o Unagi com apenas um clique...}
+%\vitor{Não fica claro no parágrafo acima que o editor que é gerado automaticamente não permite a criação do modelo de forma diagramática. Fica parecendo que o EMF gerou o Unagi com apenas um clique...}
 
 \begin{figure}
 	\centering
@@ -111,6 +111,4 @@ Para acessar a perspectiva que permite o detalhamento dos \evoreqs referentes a 
 % ======================================================================================================
 \section{Conversor}
 
-\vitor{Faltou esta seção...}
-
-\vitor{Onde pode ser encontrado o código-fonte do Unagi? Antes de você citar a URL do GitHub aqui, acho que deveríamos transferir o repositório para o NEMO. Pode ser?}
+O conversor do Unagi foi desenvolvido usando linguagem Acceleo. O processo de transformação consiste em percorrer a árvore de elementos do editor gráfico e, baseando-se no \textit{template} implementado usando a linguagem, os objetos são transformados um a um em linhas do texto dos arquivos \xml formatadas aos padrões do \zanshin. De uma forma mais detalhada, o editor procura inicialmente pelo elemento raiz, gera sua linha com as características específicas, checa pela existência de refinamentos e: se houver, percorre a lista de elementos e a lista de refinamentos deles recursivamente, até que sejam atingidas as folhas da árvore. Ao fim, os arquivos que podem ser importados no \zanshin são armazenados na pasta ``zanshin-src'' criada dentro da pasta do projeto de modelagem. Caso o conversor encontre algum erro no processo, um arquivo de nome ``ERROR.txt'' é gerado com informações sobre o ocorrido e, se disponível, um link para página de ajuda.
