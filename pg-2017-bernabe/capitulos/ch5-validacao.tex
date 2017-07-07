@@ -40,7 +40,7 @@ Nessa fase, os arquivos \ecore e \xml de especificação dos metamodelos dos sis
 
 Além da substituição do nome para referenciar os refinamentos, pode-se identificar que agora os \awreqs são definidos dentro do escopo do componente ao qual se referem. No processo anterior os \awreqs deviam ser especificados separadamente e conter um campo de referência para o elemento ao qual apontavem, como mostrado na listagem~\ref{xml-awreq-antigo}. A principal vantagem dessa modificação foi o aumento do nível de legibilidade do código do arquivo de especificação já que, como pode ser percebido em~\ref{xml-awreq-antigo}, o alvo do \awreq, definido pela variável ``target'', referenciava a linha a qual o elemento estava descrito. Assim como os refinamentos que deixaram de ser referenciados por ``children'', os \awreqs também passaram a receber uma nova forma de referenciamento: ``awreqs''.
  
-\begin{lstlisting}[caption={Trecho de XML representando o ACAD no novo metamodelo},label={xml-awreq-antigo}]
+\begin{lstlisting}[caption={Trecho de XML representando o ACAD no metamodelo original},label={xml-awreq-antigo}]
 	<children xsi:type="scheduler:AR1" target="//@rootGoal/@children.0">
 		<condition xsi:type="it.unitn.disi.zanshin.model:SimpleResolutionCondition"/>
 		<strategies xsi:type="it.unitn.disi.zanshin.model:RetryStrategy" time="5000">
@@ -48,8 +48,6 @@ Além da substituição do nome para referenciar os refinamentos, pode-se identi
 		</strategies>
 	</children>
 \end{lstlisting}
-
-\vitor{O caption e o label da Listagem~\ref{xml-awreq-antigo} estavam iguais ao da Listagem~\ref{xml-refinements}. O label eu corrigi para acertar as referências cruzadas, mas falta corrigir o caption.}
 
 Seguindo a mesma motivação dos elementos anteriores, a referência para \textit{Domain Assumptions} passou de ``children'' para ``assumptions'', caracterizando assim uma separação dos diferentes tipos de refinamentos do modelo, facilitanto então tanto o processo de implementação quanto o de leitura dos arquivos de especificação. 
 

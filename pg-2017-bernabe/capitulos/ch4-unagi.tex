@@ -5,11 +5,10 @@
 \chapter{Unagi}
 \label{sec-unagi}
 
-O editor gráfico \unagi foi desenvolvido com o principal objetivo de facilitar a criação de arquivos de especificação do modelo de dominio para uso no \zanshin, considerando que até então não havia nenhuma ferramenta que automatizasse esse processo, assim o usuário precisava escrever o arquivo \xml e \ecore manualmente. 
+O editor gráfico \unagi foi desenvolvido com o principal objetivo de facilitar a criação de arquivos de especificação do modelo de domínio para uso no \zanshin, considerando que até então não havia nenhuma ferramenta que automatizasse esse processo, assim o usuário precisava escrever o arquivo \xml e \ecore manualmente. 
 
-Usando um ferramental disponível na plataforma \eclipse para criação de editores gráficos usando \emf, além da utilização de aspectos de desenvolvimento dirigido por modelos, o processo de desenvolvimento do \unagi pode ser dividido em duas fases: a criação do editor gráfico usando \sirius e o desenvolvimento do conversor de diagramas apoiado em código gerado automaticamente por técnicas MDD (\mdd).
+Usando um ferramental disponível na plataforma \eclipse para criação de editores gráficos usando \emf, além da utilização de aspectos de desenvolvimento dirigido por modelos, o processo de desenvolvimento do \unagi pode ser dividido em duas fases: a criação do editor gráfico usando \sirius e o desenvolvimento do conversor de diagramas apoiado em código gerado automaticamente por técnicas MDD (\mdd). As próximas subseções dão detalhes sobre o processo de implementação da ferramenta, a Subseção~\ref{sec-unagi-criacao-editor} explica como o editor gráfico foi elaborado, usando as tecnologias já discutidas nesse texto, e então a Subseção~\ref{sec-unagi-apresentacao-editor} explica as funcionalidades da ferramenta modeladora. Por fim, a Subseção~\ref{sec-unagi-conversor} demonstra como o componente responsável pela conversão do modelo visual para os arquivos nos padrões do \zanshin foi construído.
 
-\vitor{Mencionar subseções.}
 
 % ======================================================================================================
 % SEÇÃO criação do Editor Gráfico
@@ -17,7 +16,7 @@ Usando um ferramental disponível na plataforma \eclipse para criação de edito
 \section{Criação do Editor Gráfico}
 \label{sec-unagi-criacao-editor}
 
-A primeira parte do desenvolvimento da ferramenta consitiu  na criação do editor gráfico para modelagem de diagramas de objetivos para sistemas de adaptativos. Devido ao fato de \zanshin ser um sistema que também se baseia nas ferramentas da plataforma \eclipse, aliado ao fato dessa plataforma também prover todos os utensílios necessários para o desenvolvimento de editores de diagramas, como \ecore, \emf e o plugin \sirius, foi fácil decidir que para o desenvolvimento do \unagi também seriam usados os mesmos recursos, com objetivo assim de permitir maior compatibilidade com o \zanshin em trabalhos futuros.
+A primeira parte do desenvolvimento da ferramenta consistiu  na criação do editor gráfico para modelagem de diagramas de objetivos para sistemas de adaptativos. Devido ao fato de \zanshin ser um sistema que também se baseia nas ferramentas da plataforma \eclipse, aliado ao fato dessa plataforma também prover todos os utensílios necessários para o desenvolvimento de editores de diagramas, como \ecore, \emf e o plugin \sirius, foi fácil decidir que para o desenvolvimento do \unagi também seriam usados os mesmos recursos, com objetivo assim de permitir maior compatibilidade com o \zanshin em trabalhos futuros.
 
 Inicialmente, o mesmo modelo \ecore usado para operacionalização dos requisitos no \zanshin foi usado para geração automática de código dentro do \eclipse \emf. É importante salientar que junto com as classes específicas de domínio, o \emf também gera código automático para criação de editores e para criação de processos de teste e validação (Figura~\ref{figura-gera-codigo}). Assim, após completa especificação do \ecore, foi gerado código automático para implantação do editor. O código gerado pode então ser executado como uma aplicação \eclipse e a partir daí pode-se criar um editor de modelos personalizado usando o \sirius.
 
