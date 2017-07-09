@@ -8,9 +8,9 @@
 
 O avanço da tecnologia nas ultimas décadas permitiu que a complexidade das atividades realizadas por computadores se tornasse cada vez maior, demandando que projetos de sistemas de software passassem a abranger ainda mais os detalhes de domínio do ambiente em que os programas computacionais seriam executados ~\cite{andersson2009modeling,brun2009engineering}. Esse fator motivou estudos na área de modelagem e projeto de sistemas, fazendo com que novas pesquisas buscassem abranger os processos de projeto, construção e teste de software. 
 
-Entretanto, para garantir a estabilidade dos sistemas, fazia-se uso majoritariamente da intervenção humana, o que rapidamente tornou-se inviável à medida que os sistemas cresciam para atender o aumento na demanda de usuários~\cite{andersson2009modeling}. Assim, a utilização de sistemas adaptativos vem tornando-se a solução mais viável e prática para a atual conjuntura do desenvolvimento de softwares. Além disso, o aumento do número de diferentes dispositivos e situações em que os softwares podem ser executados faz com que esses passem a enfrentar uma grande diversidade de contextos (muitas vezes imprevisíveis) de execução, fundamentando ainda mais a pesquisa na área de softwares adaptativos~\cite{kephart2003vision}.
+Entretanto, para garantir a estabilidade dos sistemas, fazia-se uso majoritariamente da intervenção humana, o que rapidamente tornou-se inviável à medida que os sistemas cresciam para atender o aumento da demanda de novos usuários~\cite{andersson2009modeling}. Assim, a utilização de sistemas adaptativos vem tornando-se a solução mais viável e prática para a atual conjuntura do desenvolvimento de softwares. Além disso, o aumento do número de diferentes dispositivos e situações em que os esses softwares podem ser executados faz com que eles passem a enfrentar uma grande diversidade de contextos (muitas vezes imprevisíveis) de execução, fundamentando ainda mais a pesquisa na área de softwares adaptativos~\cite{kephart2003vision}.
 
-Sistemas adaptativos são dotados da capacidade de tomar decisões para se ajustar e se reconfigurar mediante mudanças de contexto, permitindo assim que os requisitos elicitados continuem a ser atendidos de forma satisfatória~\cite{souza2012requirement}. Entretanto, poucas soluções desse tipo consideram a modelagem das características adaptativas no sistema desde a fase de levantamento de requisitos de software, dentre elas podemos citar o \zanshin~\cite{tesevitor}, uma abordagem que baseia-se em modelos de requisitos para projetar características adaptativas em sistemas por meio de novos tipos de requisitos, que representam os requisitos do ciclo de retroalimentação que operacionaliza a adaptação. Portanto, \zanshin apresenta um metamodelo que permite que modelos de sistemas sejam especificados de acordo com os requisitos do \framework.
+Sistemas adaptativos são dotados da capacidade de tomar decisões para se ajustar e se reconfigurar mediante mudanças de contexto, permitindo assim que os requisitos elicitados continuem a ser atendidos de forma satisfatória~\cite{souza2012requirement}. Entretanto, poucas soluções desse tipo consideram a modelagem das características adaptativas no sistema desde a fase de modelagem do mesmo. \zanshin~\cite{tesevitor} aparece como uma abordagem que baseia-se em modelos para projetar características adaptativas em sistemas por meio de novos tipos de requisitos, que definem o chamado ``ciclo de retroalimentação'', que operacionaliza a adaptação. Assim, \zanshin apresenta um metamodelo que permite que modelos de sistemas sejam especificados de acordo com os requisitos do \framework.
 
 %\vitor{Como no resumo, falar brevemente aqui também que o Zanshin possui um metamodelo.}
 
@@ -21,21 +21,21 @@ Este trabalho encontra-se no contexto da pesquisa em torno da abordagem \zanshin
 \section{Objetivos}
 \label{sec-intro-objetivos}
 
-Este trabalho possui dois objetivos principais: a reconstrução do metamodelo operacional do \zanshin e a criação de uma ferramenta gráfica usada para modelar sistemas adaptativos usando Engenharia de Requisitos Orientada a Objetivos (\textit{Goal-Oriented Requirements Engineering} ou \gore). O primeiro refere-se ao metamodelo de objetivos que é baseado em \textit{CORE} (\textit{Core Ontology for Requirements Engineering})~\cite{jureta2007core}, usado pelo framework para casar os requisitos do modelo de domínio específico com as instâncias dos elementos do metamodelo de \gore, e assim garantir que os objetivos do sistema estão sendo atendidos satisfatoriamente. Já a segunda atividade refere-se a ferramenta de modelagem de sistemas baseada nesse metamodelo operacional do \zanshin, usando sintaxe baseada em \istar. Para ambas os casos, foram utilizados os conceitos aprendidos ao longo do curso de Ciência da Computação, dessa forma são objetivos específicos deste projeto:
+Este trabalho possui dois objetivos principais: a reconstrução do metamodelo operacional do \zanshin e a criação de uma ferramenta gráfica usada para modelar sistemas adaptativos usando Engenharia de Requisitos Orientada a Objetivos (\textit{Goal-Oriented Requirements Engineering} ou \gore). O primeiro refere-se ao metamodelo de objetivos que é baseado em \textit{CORE} (\textit{Core Ontology for Requirements Engineering})~\cite{jureta2007core}, usado pelo framework para casar os requisitos do modelo de domínio específico com as instâncias dos elementos do metamodelo de \gore, e assim garantir que os objetivos do sistema estão sendo atendidos satisfatoriamente. Já a segunda atividade refere-se à ferramenta de modelagem de sistemas baseada nesse metamodelo operacional do \zanshin, usando sintaxe baseada em uma linguagem de especificação de modelos ontológicos conceituais conhecida como\istar~\cite{dalpiaz2016istar}. Para ambas os casos, foram utilizados os conceitos aprendidos ao longo do curso de Ciência da Computação. Dessa forma são objetivos específicos deste projeto:
 
 %\vitor{O metamodelo do Zanshin não é baseado em iStar, mas sim na CORE (Core Ontology for RE). A sua sintaxe concreta (símbolos usados) é que é inspirada em iStar.}
 
 \begin{itemize}
 	
-	\item Levantar as deficiências dos metamodelo atual do \zanshin, identificando os pontos em que as relações entre os elementos deveriam ser modificadas para representarem mais fielmente as formalidades da Engenharia de Requisitos Orientada a Objetivos;
+	\item Levantar as deficiências do metamodelo atual do \zanshin, identificando os pontos em que as relações entre os elementos deveriam ser modificadas para representarem mais fielmente as formalidades da Engenharia de Requisitos Orientada a Objetivos;
 	
 	\item Elaborar um metamodelo atualizado que, além de representar mais rigorosamente a hierarquia dos elementos \gore, também reflita as necessidades da arquitetura do \zanshin, como por exemplo as relações entre elementos;
 	
 	\item Modificar o código fonte do \textit{framework} para que o mesmo possa utilizar o novo metamodelo desenvolvido e executar o mecanismo de adaptações considerando esse novo metamodelo;
 	
-	\item Desenvolver uma ferramenta que permita ao usuário criar uma representação gráfica do modelo do sistema alvo e implementar, dentro dessa ferramenta, um módulo que permita converter o modelo gráfico representado para arquivos \xml que podem ser importados diretamente para o \zanshin;
+	\item Desenvolver uma ferramenta que permita ao usuário criar uma representação gráfica do modelo do sistema alvo e implementar, dentro dessa ferramenta, um módulo para converter o modelo gráfico representado para arquivos \xml que possam ser importados diretamente para o \zanshin;
 	
-	\item Apresentar os trabalhos desenvolvidos, juntamente com as perspectivas futuras de otimização de ambos os sistemas apresentados nesse trabalho.
+	\item Apresentar os trabalhos desenvolvidos, juntamente com as perspectivas futuras de otimização de ambos os sistemas apresentados.
 
 \end{itemize}
 
@@ -50,13 +50,13 @@ O trabalho realizado compreendeu as seguintes atividades:
 	
 	\item \textit{Revisão Bibliográfica}: Estudo sobre Engenharia de Requisitos Orientada a Objetivos, Desenvolvimento Dirigido por Modelos e suas ferramentas, de publicações acadêmicas sobre \zanshin e sobre desenvolvimento de sistemas adaptativos;
 	
-	\item \textit{Estudo das Tecnologias:} Levantamento das tecnologias disponíveis para \textit{Eclipse Modeling Framework} (\emf) que permitam o desenvolvimento de editores gráficos dentro da plataforma \eclipse, de tecnologias que podem ser utilizadas para o desenvolvimento de editores gráficos e do código fonte do \zanshin (que também foi desenvolvido nesta plataforma);
+	\item \textit{Estudo das Tecnologias:} Levantamento das tecnologias disponíveis para \textit{Eclipse Modeling Framework} (\emf) que permitam o desenvolvimento de editores gráficos dentro da plataforma \eclipse, de tecnologias que podem ser utilizadas para o desenvolvimento de editores gráficos e do código fonte do \zanshin (que também foi desenvolvido nessa plataforma);
 	
 	\item \textit{Elaboração do novo Metamodelo}: Nessa etapa o novo metamodelo a ser usado foi elaborado gradativamente a partir de informações obtidas dos documentos estudados e das discussões realizadas em reuniões com grupo de estudos de Engenharia de Requisitos na UFES;
 	
-	\item \textit{Adequação do \zanshin ao novo Metamodelo}: Após finalização do metamodelo, inicou-se processo de adequação do \framework para que o mesmo pudesse operar adequadamente de acordo com a nova proposta, consistindo da modificação do código-fonte do \zanshin, bem como realização de testes de validação para garantir a consistência do novo metamodelo;
+	\item \textit{Adequação do \zanshin ao novo Metamodelo}: Após finalização do metamodelo, inicou-se processo de adequação do \framework para que o mesmo pudesse operar de acordo com a nova proposta, consistindo da modificação do código-fonte do \zanshin, bem como realização de testes de validação para garantir a consistência do novo metamodelo;
 	
-	\item \textit{Implementação da Ferramenta de Modelagem}: Uma primeira versão da ferramenta foi desenvolvida no contexto de trabalho de Iniciação Científica, entretanto a mesma usava o metamodelo antigo do \zanshin. Essa etapa consiste, portanto, no refatoramento da ferramenta gráfica que permite a modelagem de sistemas adaptativos seguindo as formalidades do novo metamodelo proposto para o sistema \zanshin, bem como a criação de módulo Java que permite a exportação do modelo desenvolvido nessa ferramenta para arquivo \xml adequado aos padrões do \framework;
+	\item \textit{Implementação da Ferramenta de Modelagem}: Uma primeira versão da ferramenta foi desenvolvida no contexto de trabalho de Iniciação Científica, entretanto a mesma usava o metamodelo antigo do \zanshin. Essa etapa consiste, portanto, no refatoramento da ferramenta gráfica que permite a modelagem de sistemas adaptativos seguindo as formalidades do novo metamodelo proposto para o sistema \zanshin, bem como a criação de módulo usando linguagem de transformação de modelos para texto, que permite a exportação do modelo desenvolvido nessa ferramenta para arquivo \xml adequado aos padrões do \framework;
 	
 	\item \textit{Redação da Monografia:} Escrita da monografia, etapa obrigatória do processo de elaboração do Projeto de Graduação. Para a escrita desta, foi utilizada a linguagem \textit{LaTeX}\footnote{LaTeX -- http://www.latex-project.org/} utilizando o template \textit{abnTeX}\footnote{abnTeX -- http://www.abntex.net.br} que atende os requisitos das normas da ABNT (Associação Brasileira de Normas Técnicas) para elaboração de documentos técnicos e científicos brasileiros. Para apoiar este processo, foi utilizado o aplicativo \textit{TeXstudio}.\footnote{www.texstudio.org}
 	
@@ -72,9 +72,9 @@ Este texto está dividido em quatro partes principais além desta introdução, 
 \begin{itemize}
 	\item \textbf{Capítulo \ref{sec-referencial} --} Referencial Teórico: apresenta discussão acerca de \gore e \mdd, focando na relação desses tópicos com sistemas adaptativos e com o processo de desenvolvimento da ferramenta \unagi. Ademais, é discutida a arquitetura do sistema \zanshin e suas características;
 	
-	\item \textbf{Capítulo \ref{sec-zanshin} --} Zanshin: nesse capitulo são apresentados os processos e decisões que levaram a elaboração do novo metamodelo do \zanshin, bem como as modificações decorrentes dessas modificações na arquitetura da plataforma;
+	\item \textbf{Capítulo \ref{sec-zanshin} --} Zanshin: nesse capitulo são apresentados os processos e decisões que levaram à elaboração do novo metamodelo do \zanshin, bem como as modificações decorrentes dessas modificações na arquitetura da plataforma;
 	
-	\item \textbf{Capítulo \ref{sec-unagi} --} Unagi: Nesse capítulo é abordado o processo de desenvolvimento da ferramenta \unagi e os pormenores da implementação de todos os modulos da mesma;
+	\item \textbf{Capítulo \ref{sec-unagi} --} Unagi: Nesse capítulo é abordado o processo de desenvolvimento da ferramenta \unagi e os pormenores da implementação de todos os módulos da mesma;
 	
 	\item \textbf{Capítulo \ref{sec-validacao} --} Revisão: é feita validação do metamodelo evoluído do \zanshin e da implementação da ferramenta \unagi;
 	

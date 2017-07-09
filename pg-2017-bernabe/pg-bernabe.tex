@@ -181,7 +181,7 @@
 %%% Definição de variáveis. %%%
 
 % (*) Substituir os textos abaixo com as informações apropriadas.
-\titulo{Evolução da Arquitetura do Zanshin – um framework para análise de requisitos em tempo de execução}
+\titulo{Evolução da Arquitetura do Zanshin – um framework para análise de requisitos em tempo de execução e desenvolvimento da ferramenta CASE Unagi}
 \autor{César Henrique Bernabé}
 \local{Vitória, ES}
 \data{2017}
@@ -214,6 +214,7 @@
 \newcommand{\zanshin}{\textit{Zanshin}\xspace}
 \newcommand{\unagi}{\textit{Unagi}\xspace}
 \newcommand{\sirius}{Sirius\texttrademark\xspace}
+\newcommand{\acceleo}{Acceleo\texttrademark\xspace}
 \newcommand{\eclipse}{Eclipse\texttrademark\xspace}
 \newcommand{\xml}{XML\xspace}
 \newcommand{\emf}{EMF\xspace}
@@ -224,7 +225,7 @@
 \newcommand{\uml}{UML\xspace}
 \newcommand{\ecore}{\textit{Ecore}\xspace}
 \newcommand{\codigoZanshin}{\url{https://github.com/sefms-disi-unitn/Zanshin}}
-\newcommand{\codigoZanshin2}{\url{https://github.com/hbcesar/zanshin}}
+\newcommand{\novocodigoZanshin}{\url{https://github.com/hbcesar/zanshin}}
 \newcommand{\codigoUnagi}{\url{https://github.com/hbcesar/unagi}}
 
 %%% Configurações finais de aparência. %%%
@@ -372,7 +373,7 @@ Primeiramente agradeço a toda minha família pelo apoio que me deram desde quan
 
 Agradeço aos meus amigos de curso e agora amigos para o resto da vida, que sempre ajudaram a segurar a barra nos momentos difíceis e sempre remaram junto a mim nesse barco - Lucas, Luiz Mai, Celso, Luana, João, Luiz Couto e Silas, muito obrigado. Assim como também não posso esquecer meus amigos de fora da faculdade, mas que sempre estiveram comigo nos momentos bons e ruins e sei que vou poder contar com vocês para todos os outros momentos que vierem - Euge, Shu, Fellipe, Gabriela, Ramon, Gustavo e Nikolas, amo vocês.
 
-Um obrigado mais que especial ao meu orientador, Vítor. Você me trouxe lições e conhecimento que eu nunca imaginei adquirir, agradeço também pela paciência, disposição e boa vontade, foi um prazer ter um mestre como você. Assim também agradeço aos meus professores, que com muita competência e profissionalismo, me ensinaram o máximo que podiam da melhor forma possível, sou muito grato a vocês. Também não posso esquecer dos integrantes do grupo de pesquisa em Engenharia de Requisitos e aos colegas do NEMO, obrigado por todas as experiências trocadas.
+Um obrigado mais que especial ao meu orientador, Vítor. Você me trouxe lições e conhecimento que eu nunca imaginei adquirir, agradeço também pela paciência, disposição e boa vontade, foi um prazer ter um mestre como você. Assim também agradeço aos meus professores, que com muita competência e profissionalismo, me ensinaram o máximo que podiam da melhor forma possível, sou muito grato a vocês. Também não posso esquecer de agradecer aos integrantes do grupo de pesquisa em Engenharia de Requisitos e aos colegas do NEMO, em especial ao Pedro, obrigado por todas as experiências trocadas.
 
 E por fim, quero agradecer a Deus por sempre ouvir minhas preces, por permitir que eu conseguisse ter essas oportunidades e por ter colocado todas essas pessoas maravilhosas na minha vida.
 
@@ -443,8 +444,6 @@ Além disso, para apoiar o processo de modelagem dos requisitos dentro desta abo
 \begin{siglas}
   
   \item[ABNT] Associação Brasileira de Normas Técnicas
-  
-  \item[HTML] HyperText Markup Language
 
   \item[UML] Unified Modeling Language 
 
@@ -454,11 +453,11 @@ Além disso, para apoiar o processo de modelagem dos requisitos dentro desta abo
   
   \item[GORE] Goal-Oriented Requirements Engineering
   
+  \item[GORO] Goal-Oriented Requirements Ontology
+  
   \item[EMF] Eclipse Modeling Framework
   
-  \item[API] Application Programming Interface
-  
-  \item[MDD] \mdd
+  \item[MDD] Model-Driven Development
   
   
 \end{siglas}

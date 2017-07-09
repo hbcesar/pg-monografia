@@ -6,7 +6,7 @@
 \chapter{Validação}
 \label{sec-validacao}
 
-Nesse capítulo são discutidas as etapas de verificação e validação de ambas as realizações no contexto desse trabalho: a adaptação do \zanshin a nova proposta de metamodelo e a criação da ferramenta \unagi.
+Nesse capítulo são discutidas as etapas de verificação e validação de ambas as realizações no contexto desse trabalho: a adaptação do \zanshin à nova proposta de metamodelo e a criação da ferramenta \unagi.
 
 \section{Zanshin}
 \label{sec-validacao-zanshin}
@@ -38,7 +38,7 @@ Nessa fase, os arquivos \ecore e \xml de especificação dos metamodelos dos sis
 	...
 \end{lstlisting}
 
-Além da substituição do nome para referenciar os refinamentos, pode-se identificar que agora os \awreqs são definidos dentro do escopo do componente ao qual se referem. No processo anterior os \awreqs deviam ser especificados separadamente e conter um campo de referência para o elemento ao qual apontavem, como mostrado na listagem~\ref{xml-awreq-antigo}. A principal vantagem dessa modificação foi o aumento do nível de legibilidade do código do arquivo de especificação já que, como pode ser percebido em~\ref{xml-awreq-antigo}, o alvo do \awreq, definido pela variável ``target'', referenciava a linha a qual o elemento estava descrito. Assim como os refinamentos que deixaram de ser referenciados por ``children'', os \awreqs também passaram a receber uma nova forma de referenciamento: ``awreqs''.
+Além da substituição do nome para referenciar os refinamentos, pode-se identificar que agora os \awreqs são definidos dentro do escopo do componente ao qual se referem. No processo anterior, os \awreqs deviam ser especificados separadamente e conter um campo de referência para o elemento ao qual apontavam, como mostrado na listagem~\ref{xml-awreq-antigo}. A principal vantagem dessa modificação foi o aumento do nível de legibilidade do código do arquivo de especificação já que, como pode ser percebido em~\ref{xml-awreq-antigo}, o alvo do \awreq, definido pela variável ``target'', referenciava a linha na qual o elemento estava descrito. Assim como os refinamentos que deixaram de ser referenciados por ``children'', os \awreqs também passaram a receber uma nova forma de referenciamento: ``awreqs''.
  
 \begin{lstlisting}[caption={Trecho de XML representando o ACAD no metamodelo original},label={xml-awreq-antigo}]
 	<children xsi:type="scheduler:AR1" target="//@rootGoal/@children.0">
@@ -49,7 +49,7 @@ Além da substituição do nome para referenciar os refinamentos, pode-se identi
 	</children>
 \end{lstlisting}
 
-Seguindo a mesma motivação dos elementos anteriores, a referência para \textit{Domain Assumptions} passou de ``children'' para ``assumptions'', caracterizando assim uma separação dos diferentes tipos de refinamentos do modelo, facilitanto então tanto o processo de implementação quanto o de leitura dos arquivos de especificação. 
+Seguindo a mesma motivação dos elementos anteriores, a referência para \textit{Domain Assumptions} passou de ``children'' para ``assumptions'', caracterizando assim uma separação dos diferentes tipos de refinamentos do modelo facilitando, então, tanto o processo de implementação quanto o de leitura dos arquivos de especificação. 
 
 Ao final do processo de reescrita dos arquivos dos modelos dos sistemas \textit{Meeting Scheduler} e \textit{A-CAD}, ambos foram importados para dentro do \eclipse, onde o \zanshin é executado, e pôde-se verificar que o processo de simulação, que não teve nenhuma parte do código modificada, rodou perfeitamente com a nova versão do \zanshin e produziu as saídas esperadas para todos os casos.
 
@@ -57,7 +57,7 @@ Os arquivos completos dos modelos antigos podem ser encontrados no repositório 
 
 \section{Unagi}
 
-Para o processo de validação do \unagi foi usada metodologia similar ao processo de validação da nova versão do \zanshin: após validação das alterações do \framework, ambos sistemas \textit{Meeting Scheduler} e \textit{A-CAD} foram graficamente modelados no editor da ferramenta. Ao fim do processo, foi usado o conversor para criar os arquivos \xml de especificação dos modelos de cada um dos sistemas. 
+Para o processo de validação do \unagi foi usado método similar ao processo de validação da nova versão do \zanshin: após validação das alterações do \framework, ambos sistemas \textit{Meeting Scheduler} e \textit{A-CAD} foram graficamente modelados no editor da ferramenta. Ao fim do processo, foi usado o conversor para criar os arquivos \xml de especificação dos modelos de cada um dos sistemas. 
 
 Os arquivos gerados pelo \unagi foram então copiados para o sistema de simulação do \zanshin e foi executada simulação para cada um dos sistemas, comparando a saída gerada com a saída original. Verificou-se então a validade dos modelos gerados pela ferramenta ao garantir que ambas as saídas eram compatíveis.
 
