@@ -5,7 +5,7 @@
 \chapter{Referencial Teórico}
 \label{sec-referencial}
 
-Este capítulo apresenta os principais conceitos teóricos que alicerçaram a evolução do metamodelo de requisitos do \zanshin e de conceitos que fundamentaram o desenvolvimento da ferramenta \unagi. A Seção~\ref{sec-referencial-engenharia-objetivos} fala sobre Engenharia de Requisitos Orientada a Objetivos, destacando os principais conceitos dessa área que foram utilizados ao longo deste trabalho. A Seção~\ref{sec-referencial-zanshin} apresenta o sistema \zanshin e os detalhes do metamodelo original do \framework. A Seção~\ref{referencial-mdd} apresenta um breve resumo sobre Desenvolvimento Dirigido por Modelos (\mdd ou MDD) assim como  as principais ferramentas que foram utilizadas durante o desenvolvimento do \unagi, como as funcionalidades \emf de modelagem do \eclipse, o plugin \sirius, dentre outros.
+Este capítulo apresenta os principais conceitos teóricos que alicerçaram a evolução do metamodelo de requisitos do \zanshin e de conceitos que fundamentaram o desenvolvimento da ferramenta \unagi. A Seção~\ref{referencial-mdd} apresenta um breve resumo sobre Desenvolvimento Dirigido por Modelos (\mdd ou MDD) assim como  as principais ferramentas que foram utilizadas durante o desenvolvimento do \unagi, como as funcionalidades \emf de modelagem do \eclipse, o plugin \sirius, dentre outros. A Seção~\ref{sec-referencial-engenharia-objetivos} fala sobre Engenharia de Requisitos Orientada a Objetivos, destacando os principais conceitos dessa área que foram utilizados ao longo deste trabalho. A Seção~\ref{sec-referencial-zanshin} apresenta o sistema \zanshin e os detalhes do metamodelo original do \framework. 
 
 % ======================================================================================================
 % SUBSEÇÃO: Desenvolvimento Dirigido por Modelos
@@ -78,7 +78,8 @@ Em suma, o \framework de modelagem do \eclipse permite que usuários criem model
 
 O \sirius é um plugin que simplifica o \framework de Modelagem Gráfica (\textit{Graphical Modeling Framework} ou \textit{GMF}) do \eclipse, reduzindo a complexidade de uso do mesmo e permitindo a produção de editores gráficos de modelos personalizados~\cite{viyovic2014sirius}. O \sirius é construído em cima das utilidades para (des)serialização de modelos, checagem de condições e geração de editores baseados em \ecore providas pelo \eclipse~\cite{budinsky2004eclipse}. Representações criadas com \sirius podem ser apresentadas em diagramas, tabelas e árvores~\cite{viyovic2014sirius}. Em síntese, \sirius provê ferramentas que permitem a especificação de um modelo de um domínio qualquer em diferentes perspectivas gráficas~\cite{vujovic2014comparative}.
 
-Por meio de modelos de especificação (\textit{Viewpoint Specification Model} ou VSM), o \textit{plugin} permite especificar a estrutura, aparência e comportamento do metamodelo do editor a ser criado~\cite{viyovic2014sirius}. Os VSMs são especificados em arquivos \textit{.odesign}~\cite{viyovic2014sirius}, e baseam-se no metamodelo de domínio descrito em \ecore. Um exemplo de caracterização de representação de modelos é mostrado na Figura~\ref{exemplo-sirius}.
+Por meio de modelos de especificação (\textit{Viewpoint Specification Model} ou VSM), o \textit{plugin} permite definir a estrutura, aparência e comportamento do metamodelo do editor a ser criado~\cite{viyovic2014sirius}. Os VSMs são especificados em arquivos \textit{.odesign}~\cite{viyovic2014sirius}, e baseam-se no metamodelo de domínio descrito em \ecore. Um exemplo de caracterização de representação é mostrado na Figura~\ref{exemplo-sirius}, que retrata a descrição visual do exemplo do sistema de compras já citado anteriormente. Da mesma forma, um modelo criado usando essa descricão é mostrado na Figura~\ref{exemplo-sistemacobrancas-sirius}. Nesse caso, pode-se ver que o \textit{container} de fundo branco, representado como um quadrado no modelo, contém vários outros \textit{containers} de fundo amarelo, que representam os itens de uma ordem de compra. Essas definições de cor e contenimento estão definidas na Figura~\ref{exemplo-sirius}, onde vê-se que o \textit{container} OrdemCompra possui ``\textit{Gradient White to White}'' como estilo, por exemplo, assim como é possível perceber que OrdemCompra possui Item como um de seus ``filhos''.
+
 
 \begin{figure}
 	\centering
@@ -87,15 +88,30 @@ Por meio de modelos de especificação (\textit{Viewpoint Specification Model} o
 	\label{exemplo-sirius}
 \end{figure}
 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\textwidth]{figuras/exemplos-emf/exemplo-sistemacompras-modelo.png}
+	\caption{Exemplo de Modelo do Sistema de Compras criado usando Sirius.}
+	\label{exemplo-sistemacobrancas-sirius}
+\end{figure}
+
 \sirius provê vários mecanismos que auxiliam no gerenciamento da complexidade de modelos~\cite{madiot2015eclipse}:
 
 \begin{itemize}
 	\item \textbf{Camadas}: é possível separar elementos em camadas diferentes, e ativá-las ou desativá-las.
 	\item \textbf{Filtros}: exibir ou esconder elementos dependendo de determinada condição.
 	\item \textbf{Personalização de Estilos}: permite modificar propriedades gráficas de elementos do diagrama.
-	\item \textbf{Regras de Validação}: permite que a qualidade do modelo seja avaliada.
+	\item \textbf{Regras de Validação}: permite que verificar se o modelo está sintaticamente correto.
 \end{itemize}
 
+% ======================================================================================================
+% SUBSEÇÃO Acceleo
+% ======================================================================================================
+\subsection{Acceleo}
+
+Acceleo é usada para processos de Transformação de Modelo para Texto (\textit{Model to Text Transformation} ou \textit{M2T})~\cite{acceleouserguide} e, apesar de ser uma linguagem de script, permite integração com linguagens de alto-nível, como por exemplo \java~\cite{mtsweni2012exploiting}. Assim também, Acceleo permite a criação de geradores automáticos de código, usando padrões e \textit{templates}. Em adição, a linguagem é compatível com o ambiente \eclipse e possui um editor próprio dentro do \framework, contando com funcionalidades como destaque de sintaxe, detecção de erros e refatoramento~\cite{WikiAcceleo}. 
+
+Criada em 2005, a linguagem é definida pelos autores do projeto como uma implementação pragmática do modelo \textit{MOF Model to Text Transformation Language}, que é uma especificação para linguagens de transformação de modelos para textos criado pelo \textit{Object Management Group} (\textit{OMG})~\cite{SiteAcceleo}.
 
 % ======================================================================================================
 % SEÇÃO Engenharia de Requisitos Orientada a Objetivos
@@ -118,7 +134,7 @@ Em uma descrição geral e resumida do processo de identificação de objetivos,
 Além de apoiar no processo de modelagem de requisitos, objetivos são usados para apoiar outros propósitos, como gerenciamento de conflitos e o processo de verificação~\cite{lapouchnian2005goal}. De acordo com~\citeonline{van2001goal}, eles podem ser reformulados em diferentes níveis de abstração dependendo do tipo de necessidade que o sistema alvo deve atender, abrangendo desde interesses referentes a estratégias de negócios até conceitos técnicos de atividades.
 
 % Importancia Objetivos
-A necessidade de uso de objetivos no processo de modelagem de sistemas de software vem se tornando cada vez mais clara a medida que analistas percebem que:
+A necessidade de uso de objetivos no processo de modelagem de sistemas de software vem se tornando cada vez mais clara à medida que analistas percebem que:
 \begin{itemize}
 	\item Objetivos provêm critérios claros de completude dos requisitos do sistema, permitindo também que requisitos desnecessários sejam identificados e descartados~\cite{van2001goal};
 	
@@ -132,7 +148,7 @@ A necessidade de uso de objetivos no processo de modelagem de sistemas de softwa
 % Hardgoal, Softgoal, Quality Constraint e Domain Assumption
 Diferentemente dos requisitos, objetivos podem precisar da cooperação entre diferentes tipos de refinamentos para que sejam atendidos de forma suficiente~\cite{dardenne1993goal}. Em outras palavras, um objetivo diretamente relacionado ao sistema a ser criado torna-se um requisito, enquanto um objetivo sob responsabilidade de um agente  do ambiente (pode ser um usuário ou outro sistema) em que o software será executado torna-se uma Pressuposição de Domínio (ou \textit{Domain Assumption}) e, nesse caso, são satisfeitos devido a uma regra de negócio~\cite{van2001goal, van1998managing}.
 
-Objetivos funcionais podem ser classificados como objetivos rígidos (\textit{Hard Goals}), cujo critério de satisfação pode ser atendido de forma técnica~\cite{dardenne1993goal} (ou seja, podem ter seu estado definido (sucesso ou falha) de acordo com certas condições) e objetivos fracos (\textit{Soft Goals}), que não possuem critérios claros de satisfação, entretanto são úteis quando deseja-se comparar os melhores refinamentos ao objetivo estudado. Para que \textit{Soft Goals} tenham um parâmetro claro de satisfabilidade, são adicionados a eles os Critérios de Qualidade (\textit{Quality Constraints}). Por exemplo, um \textit{Soft Goal} ``Baixo Custo'' pode ser operacionalizado pelo critério de qualidade ``Custo deve ser menor que R\$ 1 mil''.
+Objetivos funcionais podem ser classificados como objetivos rígidos (\textit{Hard Goals}), cujo critério de satisfação pode ser atendido de forma técnica~\cite{dardenne1993goal} (ou seja, podem ter seu estado definido, sucesso ou falha, de acordo com certas condições) e objetivos maleáveis (\textit{Soft Goals}), que não possuem critérios claros de satisfação, entretanto são úteis quando deseja-se comparar os melhores refinamentos ao objetivo estudado. Para que \textit{Soft Goals} tenham um parâmetro claro de satisfabilidade, são associados a eles os Critérios de Qualidade (\textit{Quality Constraints}). Por exemplo, um \textit{Soft Goal} ``Baixo Custo'' pode ser operacionalizado pelo critério de qualidade ``Custo deve ser menor que R\$ 1 mil''.
 
 Por fim,~\citeonline{jureta2008revisiting} definem outro tipo de refinamento para especificar a satisfação de um objetivo: as tarefas (\textit{Taks}), que são os passos a serem tomados para que um determinado objetivo seja cumprido. Em outras palavras, tarefas são definidas por funcionalidades do sistemas que, se executadas com sucesso, são consideradas satisfeitas~\cite{souza2012requirement}.
 
@@ -140,7 +156,7 @@ Por fim,~\citeonline{jureta2008revisiting} definem outro tipo de refinamento par
 Objetivos relacionam-se uns com os outros por meio de refinamentos. Segundo~\citeonline{dardenne1991goal}, também em~\cite{dardenne1993goal}, objetivos podem ser refinados usando grafos E/OU (\textit{AND/OR}). O critério de satisfabilidade de objetivos refinados em ``E'' ou ``OU'' segue os conceitos da lógica booleana: refinamentos do tipo ``E'' implicam que, para que um objetivo seja considerado satisfeito, todos os sub-objetivos refinados a partir dele devem estar em estado de sucesso, enquanto refinamentos do tipo ``OU'' relacionam o objetivo principal com um conjunto de alternativas, ou seja, basta que um de seus refinamentos seja atendido para que ele também seja considerado alcançado. Objetivos são refinados até atingirem um nível de granularidade em que são refinados apenas em tarefas, que podem ser completadas com sucesso por um ator (humano ou outro sistema)~\cite{souza2013awareness}. No contexto do \zanshin, refinamentos podem acontecer entre Objetivos e outros Objetivos, \sofgoals, Tarefas e Pressuposições de Domínio e por Tarefas em outras Tarefas.
 
 %Representação Gráfica
-Em questões de representação gráfica, os modelos de objetivos discutidos nesse texto são grafos ordenados que exibem as exigências das partes interessadas no topo do modelo e, abaixo, objetivos e tarefas mais refinados, adotando uma topologia do tipo árvore. A simbologia utilizada é baseada na sintaxe de \istar~\cite{yu20111}. Um exemplo de modelo de objetivos representando um sistema de despacho de ambulâncias é mostrado na Figura~\ref{figura-acad-simples}.
+Em questões de representação gráfica, os modelos de objetivos discutidos nesse texto são grafos ordenados que exibem as exigências das partes interessadas no topo do modelo e, abaixo, objetivos e tarefas mais refinados, adotando uma topologia do tipo árvore. A simbologia utilizada é baseada na sintaxe de \istar~\cite{yu20111}, mais recentemente renomeado iStar~\cite{dalpiaz2016istar}. Um exemplo de modelo de objetivos representando um sistema de despacho de ambulâncias é mostrado na Figura~\ref{figura-acad-simples}.
 
 \begin{figure}
 	\centering
@@ -154,16 +170,16 @@ Em questões de representação gráfica, os modelos de objetivos discutidos nes
 % ======================================================================================================
 \subsection{GORO}
 \label{sec-referencia-engenharia-objetivos-goro}
-\goro (\textit{Goal-Oriented Requirements Ontology}) é uma ontologia de referência baseada no domínio de \gore e fundamentada em UFO (\textit{Unified Formal Ontology})~\cite{guizzardi2005ontological}. Uma ontologia pode ser definida como um modelo de dados que representa um conjunto de conceitos relacionados a um domínio específico e também define o relacionamento entre esses conjuntos˜\cite{gruber2009ontology}. Em outras palavras, uma ontologia é uma forma de representação do conhecimento sobre um assunto da realidade. 
+\goro (\textit{Goal-Oriented Requirements Ontology})~\cite{pedrogoro} é uma ontologia de referência baseada no domínio de \gore e fundamentada em UFO (\textit{Unified Formal Ontology})~\cite{guizzardi2005ontological}. Uma ontologia pode ser definida como um modelo de dados que representa um conjunto de conceitos relacionados a um domínio específico e também define o relacionamento entre esses conjuntos~\cite{gruber2009ontology}. Em outras palavras, uma ontologia é uma forma de representação do conhecimento sobre um assunto da realidade. 
 
-\goro foca principalmente no conceito de objetivos, tendo como principal objetivo o esclarecer e explorar a natureza dos conceitos envolvidos, buscando assim aumentar a eficiência da comunicação entre os \textit{stakeholders} de um projeto. 
+\goro foca principalmente no conceito de objetivos, tendo como principal meta esclarecer e explorar a natureza dos conceitos envolvidos, buscando assim aumentar a eficiência da comunicação entre os \textit{stakeholders} de um projeto. 
 
-Essa ontologia foi construída por meio da extração de conceitos de diferentes ontologias, como \istar~\cite{dalpiaz2016istar}, KAOS~\cite{dardenne1993goal}, Techne~\cite{borgida2009techne} e UFO. Assim, os principais elementos de \goro são:
+Essa ontologia foi construída por meio da extração de conceitos de diferentes propostas GORE, como iStar~\cite{dalpiaz2016istar}, KAOS~\cite{dardenne1993goal} e Techne~\cite{borgida2009techne}. Assim, os principais elementos de \goro são~\cite{pedrogoro}:
 
 \begin{itemize}
-	\item \textbf{Intentions e Desires}: concentram-se na modelagem dos objetivos dos agentes, que são definidos em UFO como algo que existe na realidade e possui uma identidade particular, não tendo partes temporais mas existindo no tempo e existencialmente independente. Agentes possuem propriedades relacionadas a intenção, como Desejos (\textit{Desires}), Crenças (\textit{Beliefs}) e Intenções (\textit{Intentions}). Assim, um objetivo é um conteúdo proposicional relacionado ou à intenção ou ao desejo do agente~\cite{pedrogoro}.
-	\item \textbf{Goals e Requirements}: Um requisito é um comportamento desejado, portanto, um requisito é também um objetivo "que descreve as condições ambientais a serem alcançadas por meio de uma solução desejada, resultando na satisfação dos objetivos estratégicos subjacentes"~\cite{pedrogoro}.
-	\item \textbf{Hardgoals, Softgoals, Requisitos Funcionais e Não-Funcionais}: Adotando a conceituação de~\cite{guizzardi2014ontological}, \textit{Hardgoals} são definidos em \goro como requisitos que são satisfeitos mediante um dado conjunto de situações, enquanto \textit{Softgoals} referem-se a uma definição vaga de qualidade que só podem ser consideradas satisfeitas mediante julgamento do \textit{stakeholder}. Por fim, Requisitos Funcionais referem-se a funções que podem manifestar determinado comportamento por meio de determinadas situações, enquanto Requisitos Não-funcionais referem-se a qualidades~\cite{pedrogoro}.
+	\item \textbf{Intentions e Desires}: concentram-se na modelagem dos objetivos dos agentes, que são definidos em UFO como algo que existe na realidade e possui uma identidade particular, não tendo partes temporais mas existindo no tempo e existencialmente independente. Agentes possuem propriedades relacionadas a intenção, como Desejos (\textit{Desires}), Crenças (\textit{Beliefs}) e Intenções (\textit{Intentions}). Assim, um objetivo é um conteúdo proposicional relacionado ou à intenção ou ao desejo do agente.
+	\item \textbf{Goals e Requirements}: Um requisito é um comportamento desejado, portanto, um requisito é também um objetivo ``que descreve as condições ambientais a serem alcançadas por meio de uma solução desejada, resultando na satisfação dos objetivos estratégicos subjacentes''.
+	\item \textbf{Hardgoals, Softgoals, Requisitos Funcionais e Não-Funcionais}: Adotando a conceituação de~\cite{guizzardi2014ontological}, \textit{Hardgoals} são definidos em \goro como requisitos que são satisfeitos mediante um dado conjunto de situações, enquanto \textit{Softgoals} referem-se a uma definição vaga de qualidade que só podem ser consideradas satisfeitas mediante julgamento do \textit{stakeholder}. Por fim, Requisitos Funcionais referem-se a funções que podem manifestar determinado comportamento por meio de determinadas situações, enquanto Requisitos Não-funcionais referem-se a qualidades.
 	\item \textbf{Assumptions}: referem-se a pressuposições de domínio das quais as partes interessadas acreditam ser uma verdade no domínio do problema.
 	\item \textbf{Decomposition, Alternatives, Operationalization e Plans}: \textit{Decomposition} é, como o próprio nome diz, uma decomposição de um Objetivos em Sub-objetivos, assim, diz que um objetivo é satisfeito quando todos os seus sub-objetivos são satisfeitos. Da mesma forma, diz que um objetivo pode ser atingido de diferentes maneiras, sendo essas as alternativas (\textit{Alternatives}) de satisfação daquele. \textit{Operationalization} é um link que conecta um Objetivo a uma Tarefa, e especifica como aquele objetivo deve ser satisfeito por meio da tarefa. Por fim, \textit{Plans} são descritos como uma forma de fazer alguma coisa ou tarefa.	
 \end{itemize}
@@ -175,15 +191,13 @@ Essa ontologia foi construída por meio da extração de conceitos de diferentes
 \section{Zanshin}
 \label{sec-referencial-zanshin}
 
-Apresentado por~\citeonline{tesevitor}, \zanshin é um \framework que utiliza de ciclos de retro-alimentação para monitorar sistemas e enviar estratégias de adaptação com base em informações de modelos de requisitos orientados a objetivos enriquecidos com elementos construído especialmente para guiar o processo de adaptação. O nome \zanshin vem do japonês e significa ``estado de completa consciência''.
+Apresentado por~\citeonline{tesevitor}, \zanshin é um \framework que utiliza de ciclos de retro-alimentação (\textit{feedback loops}) para monitorar sistemas e enviar estratégias de adaptação com base em informações de modelos de requisitos orientados a objetivos enriquecidos com elementos construído especialmente para guiar o processo de adaptação. O nome \zanshin vem do japonês e significa ``estado de completa consciência''.
 
 Em tempo de execução, os elementos do modelo de objetivos são representados por classes e instanciados cada vez que o usuário (ou sistema) busca atingir um objetivo, e então o sistema passa a enviar mensagens a essas instâncias quando há mudança de estado. Percebe-se, assim, que objetivos e pressuposições de domínio não são tratadas como invariantes que devem sempre ser atingidas, já que o sistema pode falhar ao tentar atingir seus objetivos iniciais e, então, o componente de adaptação lidará com essas falhas e tomará medidas para que os objetivos voltem a ser satisfeitos~\cite{souza2013requirements}.
 
 Assim como o monitoramento de objetivos por meio do \textit{Feedback Loop}, o \zanshin também monitora Parâmetros (\textit{Parameters}) que podem ser definidos em dois tipos. Primeiro, os Pontos de Variação (ou \textit{Variation Points}), que representam refinamentos do tipo ``OU'' (\textit{OR}). Segundo, as Variáveis de Controle (ou \textit{Control Variables}), que são abstrações referentes a pontos de variação repetitivos ou usados em grande escala. A especificação do comportamento dessas estratégias é discutido em seções posteriores.
 
-O metamodelo dos modelos de objetivos usados no \zanshin é representado na Figura~\ref{figura-metamodelo-antigo} e especificado no código do \textit{framework} por meio	 de uma tecnologia \ecore para descrição e suporte a modelos em tempo de execução. Nessa caso, o modelo representa os tipos de requisitos em nível de classe~\cite{souza2013requirements}. 
-
-%\vitor{É estranho falar de todas as tecnologias específicas do Eclipse aqui sem ter explicado elas antes. Talvez seja o caso de retomar isto quando você falar de EMF, mais à frente.}
+O metamodelo dos modelos de objetivos usados no \zanshin é representado na Figura~\ref{figura-metamodelo-antigo} e especificado no código do \textit{framework} por meio	 de uma tecnologia \ecore para descrição e suporte a modelos em tempo de execução. Nessa caso, o modelo representa os tipos de requisitos em nível de classe~\cite{souza2013requirements}.
 
 \begin{figure}
 	\centering
@@ -206,7 +220,7 @@ Muitas vezes os requisitos de um \textit{software} precisam ser modificados dura
 
 O sistema de monitoramento é construído fundamentado na premissa de que todo \textit{software} possui um ciclo de retroalimentação (\textit{feedback loop})~\cite{brun2009engineering} e, assim, o processo de adaptação é realizado com base nesse ciclo, aplicando controladores de resposta que monitoram o comportamento do sistema e enviam estratégias de adaptação~\cite{souza2013awareness}. O módulo adaptador verifica, de acordo com as saídas do sistema alvo, se os objetivos internos a esse estão sendo atendidos e, para isso, necessita importar o modelo de objetivos~\cite{souza2013awareness} enriquecido de elementos que indicam os requisitos a serem observados e as estratégias de adaptação relativas, que serão discutidos adiante.
 
-Modelos de sistemas adaptativos incluem requisitos autoconscientes, ou seja, definidos em relação ao sucesso, falha ou qualidade de serviço de outros requisitos~\cite{souza2013awareness}. Assim, esses são considerados requisitos ``especiais'', já que sua operacionalização está relacionada à mudança de outros requisitos~\cite{souza2012requirement}. Ademais, o comportamento do sistema é caracterizado por eventos que ocorrem em tempo de execução e que estão diretamente ligados a instâncias de objetivos~\cite{dalpiaz2013runtime}. Além disso, é importante observar que essa abordagem é considerada orientada a objetivos já que os requisitos mencionados são derivados do refinamento de objetivos elicitados para o sistema.
+Modelos de sistemas adaptativos incluem requisitos autoconscientes, ou seja, definidos em relação ao sucesso, falha ou qualidade de serviço de outros requisitos~\cite{souza2013awareness}. Assim, esses são considerados requisitos ``especiais'', já que sua operacionalização está relacionada à mudança de outros requisitos~\cite{souza2012requirement}. Ademais, o comportamento do sistema é caracterizado por eventos que ocorrem em tempo de execução e que estão diretamente ligados a instâncias de objetivos~\cite{dalpiaz2013runtime}. Finalmente, é importante observar que essa abordagem é considerada orientada a objetivos já que os requisitos mencionados são derivados do refinamento de objetivos elicitados para o sistema.
 
 %Awreqs
 Requisitos autoconscientes são divididos por~\citeonline{souza2012requirement} em dois tipos principais: Requisitos de Percepção (\textit{Awareness Requirements} ou \awreqs)~\cite{souza2013awareness} e Requisitos de Evolução (\textit{Evolution Requirements} ou \evoreqs). \awreqs são requisitos que referem-se ao estado de outros requisitos em tempo de execução, representando situações onde as partes interessadas desejam que o sistema se adapte~\cite{souza2012requirement}, e podem se referir a qualquer tipo de elemento, sejam objetivos, \sofgoals, tarefas ou pressuposições de domínio. Ainda mais, \awreqs indicam o quão critico um requisito pode ser ao descrever o grau de tolerância a falhas do mesmo~\cite{souza2012requirement}. Antes da execução de um sistema, os requisitos estão em estado ``Não Decidido'' (\textit{Undecided}), e então pode assumir os estados ``Sucesso'' (\textit{Succeeded}), ``Falha'' (\textit{Failed}), e no caso de objetivos e tarefas, ``Cancelado'' (\textit{Canceled})~\cite{souza2013awareness}. É fácil notar que o processo de elicitação de requisitos de percepção só acontece depois que o modelo de objetivos é levantado, e assim como o processo de construção de objetivos, \awreqs são sistematicamente criados.
@@ -216,15 +230,13 @@ Requisitos autoconscientes são divididos por~\citeonline{souza2012requirement} 
 
 Em suma, \awreqs especificam quando um determinado objetivo precisa de mudanças para continuar a ser atendido, enquanto \evoreqs especificam como executar tais mudanças. A seguir, o modelo de exemplo apresentado na seção~\ref{sec-referencial-engenharia-objetivos} é novamente apresentado, porém com novos requisitos de adaptação que são devidamente discutidos na próxima sessão.
 
-%\vitor{Achei que esta seção (acima) fala mais de Zanshin do que Modelos de Objetivos em Tempo de Execução...}
-
 % ======================================================================================================
 % SUBSEÇÃO Exemplo de Caso de Uso
 % ======================================================================================================
-\subsection{Um Exemplo de Modelo \gore}
+\subsection{Um Exemplo de Uso do \zanshin}
 \label{sec-referencial-engenharia-objetivos-exemplo}
 
-Na Figura~\ref{figura-acad-completo} é apresentado o modelo visual completo do sistema de despacho de ambulâncias (\textit{Adaptive Computer-aided Ambulance Dispatch} ou \textit{A-CAD}). Nele, observa-se o objetivo principal ``Gerar Instruções de Despacho Otimizadas'', representado por uma oval, que é imediatamente refinado em outros objetivos e em uma pressuposição de domínio (retângulo, vide legenda na Figura~\ref{figura-acad-simples}). O refinamento entre o objetivo raiz e seus filhos imediatos é do tipo ``E'' e portanto, para que o objetivo principal seja considerado satisfeito, todos as suas decomposições de primeiro grau precisam ser satisfeitas. Então, verifica-se que o primeiro nível de refinamento do objetivo principal é composto dos objetivos ``Gerenciar Chamadas'' (\textit{``Call Talking''}), ``Identificação de Recursos'' (\textit{``Resource Identification''}), ``Mobilização de Recursos'' (\textit{``Resource Mobilization''}), ``Obtenção de Mapas'' (\textit{``Map Retrieval''}), ``Receber atualizações sobre o Incidente'' (\textit{``Incident Update''}) e da pressuposição de domínio ``Dados sobre recursos está sempre atualizado'' (\textit{``Resource data is up-to-date''}).
+Na Figura~\ref{figura-acad-completo} é apresentado o modelo visual completo do sistema de despacho de ambulâncias adaptativo (\textit{Adaptive Computer-aided Ambulance Dispatch} ou \textit{A-CAD}). Nele, observa-se o objetivo principal ``Gerar Instruções de Despacho Otimizadas'', representado por uma oval, que é imediatamente refinado em outros objetivos e em uma pressuposição de domínio (retângulo, vide legenda na Figura~\ref{figura-elementos-gore-eca}). O refinamento entre o objetivo raiz e seus filhos imediatos é do tipo ``E'' e portanto, para que o objetivo principal seja considerado satisfeito, todos as suas decomposições de primeiro grau precisam ser satisfeitas. Então, verifica-se que o primeiro nível de refinamento do objetivo principal é composto dos objetivos ``Gerenciar Chamadas'' (\textit{``Call Talking''}), ``Identificação de Recursos'' (\textit{``Resource Identification''}), ``Mobilização de Recursos'' (\textit{``Resource Mobilization''}), ``Obtenção de Mapas'' (\textit{``Map Retrieval''}), ``Receber atualizações sobre o Incidente'' (\textit{``Incident Update''}) e da pressuposição de domínio ``Dados sobre recursos está sempre atualizado'' (\textit{``Resource data is up-to-date''}).
 
 \begin{figure}
 	\centering
@@ -233,10 +245,6 @@ Na Figura~\ref{figura-acad-completo} é apresentado o modelo visual completo do 
 	\label{figura-acad-completo}
 \end{figure}
 
-O processo de refinamento do modelo então segue até que todos os objetivos sejam completamente decompostos em tarefas ou pressuposições de domínio. \sofgoals são simbolizados por nuvens e refinados em restrições de qualidade representados por retângulos com cantos arredondados. Exemplificando, o \sofgoal ``Chegada Rápida'' (\textit{Fast Arrival}) é operacionalizado por ``Ambulâncias chegam em oito minutos'' (\textit{Ambulances arrive in 8 min}), assim, tem-se um critério claro de satisfação para um objetivo que antes possuía diversos tipos de interpretação, porém, agora, sabe-se que uma ambulância chega rapidamente se consegue estar no local do acidente em menos de oito minutos a partir da chamada.
-
-Os requisitos de percepção são representados por um círculo oco. Por exemplo, o \awreq identificado por ``AR15'', indica que o objetivo ``Registrar Chamados'' deve ``Nunca falhar'' (\texttt{NeverFail}). Os \evoreqs referentes a cada um dos \awreqs não são representados nesse modelo, e devem ser especificados em forma de sequência de operações sobre os elementos do modelo de objetivos (essa escolha de representação visa aprimorar a legibilidade do modelo). Além dos \awreqs, são especificados também os parâmetros de controle (\textit{Control Parameters}), representados por losangos, que indicam parâmetros do sistema que podem ser reconfigurados durante a adaptação. Todas as formas de representação estão resumidas na Figura~\ref{figura-elementos-gore-eca}.
-
 \begin{figure}
 	\centering
 	\includegraphics[width=1\textwidth]{figuras/modelos/Elementos-GORE.png}
@@ -244,7 +252,11 @@ Os requisitos de percepção são representados por um círculo oco. Por exemplo
 	\label{figura-elementos-gore-eca}
 \end{figure}
 
-Sobre os \evoreqs associados ao ``AR15'', podemos definir seus respectivos Requisitos de Evolução. Primeiramente, se o objetivo vir a falhar, define-se a primeira estratégia de adaptação como ``Tentar Novamente em 5 segundos no máximo uma vez'' (\texttt{RetryStrategy(5000)}), caso falhe mais do que uma vez, aplica-se outra estratégia ``Relaxar Condições ao Desabilitar Filho'' (\texttt{RelaxDisableChild(TDetectCaller)}), que desativa o requisito ``Detectar Localização da Ligação'', também aplicado no máximo uma vez. Essas decisões são sumarizadas na Tabela~\ref{tabela-evoreqs-ar15}.
+O processo de refinamento do modelo então segue até que todos os objetivos sejam completamente decompostos em tarefas ou pressuposições de domínio. \sofgoals são simbolizados por nuvens e refinados em restrições de qualidade representados por retângulos com cantos arredondados. Exemplificando, o \sofgoal ``Chegada Rápida'' (\textit{Fast Arrival}) é operacionalizado por ``Ambulâncias chegam em oito minutos'' (\textit{Ambulances arrive in 8 min}), assim, tem-se um critério claro de satisfação para um objetivo que antes possuía diversos tipos de interpretação, porém, agora, sabe-se que uma ambulância chega rapidamente se consegue estar no local do acidente em menos de oito minutos a partir da chamada.
+
+Os requisitos de percepção são representados por um círculo oco. Por exemplo, o \awreq identificado por ``AR15'', indica que o objetivo ``Registrar Chamados'' deve ``Nunca falhar'' (\texttt{NeverFail}). Os \evoreqs referentes a cada um dos \awreqs não são representados nesse modelo, e devem ser especificados em forma de sequência de operações sobre os elementos do modelo de objetivos (essa escolha de representação visa aprimorar a legibilidade do modelo). Além dos \awreqs, são especificados também os parâmetros de controle (\textit{Control Parameters}), representados por losangos, que indicam parâmetros do sistema que podem ser reconfigurados durante a adaptação. Todas as formas de representação estão resumidas na Figura~\ref{figura-elementos-gore-eca}.
+
+Tomando como exemplo o \awreq ``AR15'', podemos definir seus respectivos Requisitos de Evolução. Primeiramente, se o objetivo vier a falhar, define-se a primeira estratégia de adaptação como ``Tentar Novamente em 5 segundos no máximo uma vez'' (\texttt{RetryStrategy(5000)}), caso falhe mais do que uma vez, aplica-se outra estratégia ``Relaxar Condições ao Desabilitar Filho'' (\texttt{RelaxDisableChild(TDetectCaller)}), que desativa o requisito ``Detectar Localização da Ligação'', também aplicado no máximo uma vez. Essas decisões são sumarizadas na Tabela~\ref{tabela-evoreqs-ar15}.
 
 \begin{table}
 	\centering
@@ -252,13 +264,11 @@ Sobre os \evoreqs associados ao ``AR15'', podemos definir seus respectivos Requi
 	\label{tabela-evoreqs-ar15}
 	\begin{tabular}{|l|l|l|}
 		\hline
-		AR15 & NeverFail(G\_RegCall) & \begin{tabular}[c]{@{}l@{}}1. Retry(500)\\ 2. RelaxDisableChild(T\_DetectCaller)\end{tabular} \\ \hline
+		AR15 & NeverFail(G\_RegCall) & \begin{tabular}[c]{@{}l@{}}1. Retry(5000)\\ 2. RelaxDisableChild(T\_DetectCaller)\end{tabular} \\ \hline
 	\end{tabular}
 \end{table}
 
 O processo de especificação de como as estratégias de evolução são realizadas pelo sistema é discutido na próxima seção.
-
-%\vitor{Também achei esta seção muito ligada ao Zanshin... Na próxima reunião, vamos conversar sobre uma possível reestruturação, pois vai exigir uma adaptação bem grande na sequência do texto...}
 
 % ======================================================================================================
 % SUBSEÇÃO Zanshin: Monitoramento
@@ -302,12 +312,6 @@ Em termos de implementação, o algoritmo do módulo de adaptação cria uma ses
 Primeiramente, deve-se verificar o estado de um objetivo apontado por um \awreq, para isso é checada a condição de resolução daquele. Então, caso uma avaliação considere que o objetivo está em estado de falha, o sistema segue (de acordo com uma ordem pré-definida) a lista de estratégias de adaptação disponíveis, procurando alguma que tenha sua condição de aplicabilidade verdadeira. Caso encontre, aplica a estratégia definida por aquela condição de aplicabilidade e então retorna ao estado inicial, onde a checagem da satisfabilidade do objetivo é realizada novamente. Caso o objetivo ainda não tenha sido satisfeito, o processo começa novamente, obedecendo restrições como, por exemplo, o número de tentativas de aplicação de uma estratégia, definido individualmente. Caso não encontre uma condição para aplicar uma estratégia, o sistema ativa o método ``abortar'' (\texttt{abort()})~\cite{souza2013requirements}. 
 
 Ao final, quando uma sessão de adaptação é considerada resolvida, a mesma deve ser terminada e, se for necessário que o processo seja aplicado novamente, uma nova sessão é criada. Entretanto, se uma sessão termina sem ter resolvido o problema, o \textit{framework} continuará trabalhando nela do ponto em que parou assim que receber uma nova requisição para adaptação daquele mesmo \awreq. Porém, algumas estratégias também podem forçar que a sessão seja reiniciada quando executada~\cite{souza2013requirements}. Essa processo é conhecido como Evento-Condição-Ação (\textit{Event-Condition-Action} ou \textit{ECA})~\cite{morin2009models}.
-
-% ======================================================================================================
-% SUBSEÇÃO Zanshin: ECA
-% ======================================================================================================
-\subsubsection{ECA}
-\label{sec-referencial-zanshin-eca}
 
 O código mostrado na Listagem~\ref{codigo-eca} resume o processo \textit{ECA} para realizar a seleção de estratégias de adaptação:
 
@@ -372,14 +376,3 @@ Para exemplificar esse processo, tomemos novamente o \awreq ``AR15'', que garant
 
 %For example, the trivial case is considering the problem solved if the (next) AwReq evaluates to success, but this abstract class can be extended to provide di↵erent kinds of resolution conditions, including, e.g., involving a human-in-the-loop to confirm if the problem has indeed been solved, organizing conditions into AND/OR-refinement trees (like in a goal model), etc.
 
-
-% ======================================================================================================
-% SUBSEÇÃO Acceleo
-% ======================================================================================================
-\subsection{Acceleo}
-
-Acceleo é usada para processos de Transformação de Modelo para Texto (\textit{Model to Text Transformation} ou \textit{M2T})~\cite{acceleouserguide} e, apesar de ser uma linguagem de script, permite integração com linguagens de alto-nível, como por exemplo \java~\cite{mtsweni2012exploiting}. Assim também, Acceleo permite a criação de geradores automáticos de código, usando padrões e \textit{templates}. Em adição, a linguagem é compatível com o ambiente \eclipse e possui um editor próprio dentro do \framework, contando com funcionalidades como destaque de sintaxe, detecção de erros e refatoramento~\cite{WikiAcceleo}. 
-
-Criada em 2005, a linguagem é definida pelos autores do projeto como uma implementação pragmática do modelo \textit{MOF Model to Text Transformation Language}, que é uma especificação para linguagens de transformação de modelos para textos criado pelo \textit{Object Management Group} (\textit{OMG})~\cite{SiteAcceleo}.
-
-%\vitor{Com relação à Seção~\ref{referencial-mdd} como um todo, acho que pode resolver a questão da reestruturação colocada anteriormente se você falar primeiro de MDD, depois de Engenharia de Requisitos.}

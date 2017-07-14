@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.4)  9 JUL 2017 19:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.4)  14 JUL 2017 18:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1740,16 +1740,15 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 ]
 (./pg-bernabe.toc
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 22.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 28.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 27.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 50.
  [10
 
 ]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 51.
-
-Overfull \hbox (13.5617pt too wide) in paragraph at lines 59--59
+Overfull \hbox (13.5617pt too wide) in paragraph at lines 58--58
  [][] [][][]\T1/lmss/bx/n/12 ESPECIFICAÇÃO TEX-TUAL DO \T1/lmss/bx/sl/12 ME-E-T
 ING SCHE- 
  []
@@ -1762,13 +1761,13 @@ ING SCHE-
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 30.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 27.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 30.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 27.
  [13] [14]) [15]
 \openout2 = `capitulos/ch2-referencial.aux'.
 
@@ -1788,7 +1787,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-<figuras/exemplos-emf/exemplo-uml.png, id=322, 304.13625pt x 198.7425pt>
+<figuras/exemplos-emf/exemplo-uml.png, id=320, 304.13625pt x 198.7425pt>
 File: figuras/exemplos-emf/exemplo-uml.png Graphic file (type png)
 
 <use figuras/exemplos-emf/exemplo-uml.png>
@@ -1796,7 +1795,7 @@ Package pdftex.def Info: figuras/exemplos-emf/exemplo-uml.png used on input lin
 e 36.
 (pdftex.def)             Requested size: 295.74722pt x 193.26518pt.
 
-<figuras/exemplos-emf/exemplo-ecore.PNG, id=324, 209.28188pt x 144.54pt>
+<figuras/exemplos-emf/exemplo-ecore.PNG, id=322, 209.28188pt x 144.54pt>
 File: figuras/exemplos-emf/exemplo-ecore.PNG Graphic file (type png)
 
 <use figuras/exemplos-emf/exemplo-ecore.PNG>
@@ -1804,7 +1803,7 @@ Package pdftex.def Info: figuras/exemplos-emf/exemplo-ecore.PNG used on input l
 ine 43.
 (pdftex.def)             Requested size: 273.00278pt x 188.54816pt.
 
-<figuras/exemplos-emf/metamodelo-ecore.png, id=325, 445.665pt x 264.23718pt>
+<figuras/exemplos-emf/metamodelo-ecore.png, id=323, 445.665pt x 264.23718pt>
 File: figuras/exemplos-emf/metamodelo-ecore.png Graphic file (type png)
 
 <use figuras/exemplos-emf/metamodelo-ecore.png>
@@ -1812,7 +1811,7 @@ Package pdftex.def Info: figuras/exemplos-emf/metamodelo-ecore.png used on inpu
 t line 50.
 (pdftex.def)             Requested size: 432.24861pt x 256.28555pt.
  [17]
-<figuras/exemplos-emf/uml-to-ecore.png, id=337, 586.19pt x 286.06876pt>
+<figuras/exemplos-emf/uml-to-ecore.png, id=335, 586.19pt x 286.06876pt>
 File: figuras/exemplos-emf/uml-to-ecore.png Graphic file (type png)
 
 <use figuras/exemplos-emf/uml-to-ecore.png>
@@ -1822,115 +1821,124 @@ ne 65.
  [18 <./figuras/exemplos-emf/exemplo-uml.png> <./figuras/exemplos-emf/exemplo-e
 core.PNG>] [19 <./figuras/exemplos-emf/metamodelo-ecore.png> <./figuras/exemplo
 s-emf/uml-to-ecore.png>]
-<figuras/exemplos-emf/exemplo-sirius-vsm.png, id=366, 478.78876pt x 288.3272pt>
+<figuras/exemplos-emf/exemplo-sirius-vsm.png, id=366, 580.1675pt x 445.665pt>
 File: figuras/exemplos-emf/exemplo-sirius-vsm.png Graphic file (type png)
+
 <use figuras/exemplos-emf/exemplo-sirius-vsm.png>
 Package pdftex.def Info: figuras/exemplos-emf/exemplo-sirius-vsm.png used on in
-put line 85.
-(pdftex.def)             Requested size: 409.49722pt x 246.60149pt.
- [20 <./figuras/exemplos-emf/exemplo-sirius-vsm.png>] [21] [22]
-<figuras/modelos/ACAD-Simples.png, id=442, 886.06032pt x 613.54219pt>
+put line 86.
+(pdftex.def)             Requested size: 409.49722pt x 314.56108pt.
+
+<figuras/exemplos-emf/exemplo-sistemacompras-modelo.png, id=367, 636.3775pt x 4
+47.6725pt>
+File: figuras/exemplos-emf/exemplo-sistemacompras-modelo.png Graphic file (type
+ png)
+ <use figuras/exemplos-emf/exemplo-sistemacompras-modelo.png>
+Package pdftex.def Info: figuras/exemplos-emf/exemplo-sistemacompras-modelo.png
+ used on input line 93.
+(pdftex.def)             Requested size: 364.00139pt x 256.064pt.
+
+[20] [21 <./figuras/exemplos-emf/exemplo-sirius-vsm.png> <./figuras/exemplos-em
+f/exemplo-sistemacompras-modelo.png>] [22] [23]
+<figuras/modelos/ACAD-Simples.png, id=462, 886.06032pt x 613.54219pt>
 File: figuras/modelos/ACAD-Simples.png Graphic file (type png)
 
 <use figuras/modelos/ACAD-Simples.png>
-Package pdftex.def Info: figuras/modelos/ACAD-Simples.png used on input line 14
-7.
+Package pdftex.def Info: figuras/modelos/ACAD-Simples.png used on input line 16
+3.
 (pdftex.def)             Requested size: 455.0pt x 315.06497pt.
-
-
-LaTeX Warning: Citation `gruber2009ontology' on page 23 undefined on input line
- 157.
-
-[23 <./figuras/modelos/ACAD-Simples.png>] [24]
-<figuras/metamodelos/metamodelo-zanshin-antigo.png, id=493, 707.64375pt x 525.9
+ [24] [25 <./figuras/modelos/ACAD-Simples.png>]
+<figuras/metamodelos/metamodelo-zanshin-antigo.png, id=513, 707.64375pt x 525.9
 65pt>
 File: figuras/metamodelos/metamodelo-zanshin-antigo.png Graphic file (type png)
 
  <use figuras/metamodelos/metamodelo-zanshin-antigo.png>
 Package pdftex.def Info: figuras/metamodelos/metamodelo-zanshin-antigo.png used
- on input line 190.
+ on input line 204.
 (pdftex.def)             Requested size: 455.0pt x 338.18945pt.
- [25] [26 <./figuras/metamodelos/metamodelo-zanshin-antigo.png>] [27]
+ [26] [27 <./figuras/metamodelos/metamodelo-zanshin-antigo.png>] [28]
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 224.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 236.
 
-<figuras/modelos/ACAD-Completo.png, id=550, 880.28876pt x 542.025pt>
+<figuras/modelos/ACAD-Completo.png, id=571, 880.28876pt x 542.025pt>
 File: figuras/modelos/ACAD-Completo.png Graphic file (type png)
 
 <use figuras/modelos/ACAD-Completo.png>
 Package pdftex.def Info: figuras/modelos/ACAD-Completo.png used on input line 2
-31.
+43.
 (pdftex.def)             Requested size: 455.0pt x 280.15913pt.
- [28 <./figuras/modelos/ACAD-Completo.png>] <figuras/modelos/Elementos-GORE.png
-, id=562, 1130.2225pt x 427.5975pt>
+
+<figuras/modelos/Elementos-GORE.png, id=576, 1130.2225pt x 427.5975pt>
 File: figuras/modelos/Elementos-GORE.png Graphic file (type png)
 
 <use figuras/modelos/Elementos-GORE.png>
 Package pdftex.def Info: figuras/modelos/Elementos-GORE.png used on input line 
-242.
+250.
 (pdftex.def)             Requested size: 455.0pt x 172.13863pt.
- [29 <./figuras/modelos/Elementos-GORE.png>]
-<figuras/exemplos-emf/exemplo-instanciacao-ecore.PNG, id=571, 476.53032pt x 248
+ [29] [30 <./figuras/modelos/ACAD-Completo.png> <./figuras/modelos/Elementos-GO
+RE.png>]
+<figuras/exemplos-emf/exemplo-instanciacao-ecore.PNG, id=592, 476.53032pt x 248
 .42813pt>
 File: figuras/exemplos-emf/exemplo-instanciacao-ecore.PNG Graphic file (type pn
 g)
  <use figuras/exemplos-emf/exemplo-instanciacao-ecore.PNG>
 Package pdftex.def Info: figuras/exemplos-emf/exemplo-instanciacao-ecore.PNG us
-ed on input line 275.
+ed on input line 285.
 (pdftex.def)             Requested size: 455.0pt x 237.21461pt.
- [30 <./figuras/exemplos-emf/exemplo-instanciacao-ecore.PNG>] [31]
+ [31]
+[32 <./figuras/exemplos-emf/exemplo-instanciacao-ecore.PNG>]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 314.
+nput line 318.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 314--314
+Overfull \hbox (6.0pt too wide) in paragraph at lines 318--318
 [][][][][][][] 
  []
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
-) [32]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 342--342
+) [33]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 346--346
 [][][][][][][] 
  []
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
+[34] (/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
-) [33]) [34]
+)) [35]
 \openout2 = `capitulos/ch3-zanshin.aux'.
 
 
 (./capitulos/ch3-zanshin.tex
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <24.88> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 6.
- [35
+ [36
 
 
 
 ]
-<figuras/metamodelos/metamodelo-zanshin-novo.png, id=674, 444.15938pt x 549.553
+<figuras/metamodelos/metamodelo-zanshin-novo.png, id=683, 444.15938pt x 549.553
 13pt>
 File: figuras/metamodelos/metamodelo-zanshin-novo.png Graphic file (type png)
  <use figuras/metamodelos/metamodelo-zanshin-novo.png>
 Package pdftex.def Info: figuras/metamodelos/metamodelo-zanshin-novo.png used o
-n input line 63.
+n input line 52.
 (pdftex.def)             Requested size: 318.49861pt x 394.07632pt.
- [36] [37 <./figuras/metamodelos/metamodelo-zanshin-novo.png>]
-<figuras/metamodelos/exemplo-or-and.png, id=696, 785.18344pt x 624.83438pt>
+ [37] [38 <./figuras/metamodelos/metamodelo-zanshin-novo.png>]
+<figuras/metamodelos/exemplo-or-and.png, id=704, 785.18344pt x 624.83438pt>
 File: figuras/metamodelos/exemplo-or-and.png Graphic file (type png)
 
 <use figuras/metamodelos/exemplo-or-and.png>
 Package pdftex.def Info: figuras/metamodelos/exemplo-or-and.png used on input l
-ine 87.
+ine 76.
 (pdftex.def)             Requested size: 318.49861pt x 253.45697pt.
-) [38 <./figuras/metamodelos/exemplo-or-and.png>]
+) [39 <./figuras/metamodelos/exemplo-or-and.png>]
 \openout2 = `capitulos/ch4-unagi.aux'.
 
- (./capitulos/ch4-unagi.tex [39
+ (./capitulos/ch4-unagi.tex [40
 
 
 
 ]
-<figuras/unagi/exemplo-gera-codigo.png, id=711, 312.16624pt x 136.51pt>
+<figuras/unagi/exemplo-gera-codigo.png, id=719, 312.16624pt x 136.51pt>
 File: figuras/unagi/exemplo-gera-codigo.png Graphic file (type png)
 
 <use figuras/unagi/exemplo-gera-codigo.png>
@@ -1938,7 +1946,7 @@ Package pdftex.def Info: figuras/unagi/exemplo-gera-codigo.png used on input li
 ne 27.
 (pdftex.def)             Requested size: 227.5pt x 99.48691pt.
 
-<figuras/unagi/exemplo-sirius-vsp.png, id=714, 602.25pt x 363.3575pt>
+<figuras/unagi/exemplo-sirius-vsp.png, id=722, 602.25pt x 363.3575pt>
 File: figuras/unagi/exemplo-sirius-vsp.png Graphic file (type png)
 
 <use figuras/unagi/exemplo-sirius-vsp.png>
@@ -1946,7 +1954,7 @@ Package pdftex.def Info: figuras/unagi/exemplo-sirius-vsp.png used on input lin
 e 40.
 (pdftex.def)             Requested size: 455.0pt x 274.53004pt.
 
-<figuras/unagi/exemplo-propriedades-personalizacao.png, id=715, 665.48625pt x 2
+<figuras/unagi/exemplo-propriedades-personalizacao.png, id=723, 665.48625pt x 2
 23.83624pt>
 File: figuras/unagi/exemplo-propriedades-personalizacao.png Graphic file (type 
 png)
@@ -1955,9 +1963,9 @@ Package pdftex.def Info: figuras/unagi/exemplo-propriedades-personalizacao.png
 used on input line 47.
 (pdftex.def)             Requested size: 455.0pt x 153.04pt.
 
-[40 <./figuras/unagi/exemplo-gera-codigo.png>] [41 <./figuras/unagi/exemplo-sir
+[41 <./figuras/unagi/exemplo-gera-codigo.png>] [42 <./figuras/unagi/exemplo-sir
 ius-vsp.png> <./figuras/unagi/exemplo-propriedades-personalizacao.png>]
-<figuras/unagi/exemplo-criacao-nodes.png, id=734, 411.5375pt x 347.2975pt>
+<figuras/unagi/exemplo-criacao-nodes.png, id=743, 411.5375pt x 347.2975pt>
 File: figuras/unagi/exemplo-criacao-nodes.png Graphic file (type png)
 
 <use figuras/unagi/exemplo-criacao-nodes.png>
@@ -1965,7 +1973,7 @@ Package pdftex.def Info: figuras/unagi/exemplo-criacao-nodes.png used on input
 line 64.
 (pdftex.def)             Requested size: 318.49861pt x 268.78181pt.
 
-<figuras/unagi/exemplo-propriedades-create-instance.png, id=735, 962.59625pt x 
+<figuras/unagi/exemplo-propriedades-create-instance.png, id=744, 962.59625pt x 
 277.035pt>
 File: figuras/unagi/exemplo-propriedades-create-instance.png Graphic file (type
  png)
@@ -1974,9 +1982,9 @@ Package pdftex.def Info: figuras/unagi/exemplo-propriedades-create-instance.png
  used on input line 71.
 (pdftex.def)             Requested size: 455.0pt x 130.94623pt.
 
-[42 <./figuras/unagi/exemplo-criacao-nodes.png> <./figuras/unagi/exemplo-propri
+[43 <./figuras/unagi/exemplo-criacao-nodes.png> <./figuras/unagi/exemplo-propri
 edades-create-instance.png>]
-<figuras/unagi/modeloemunagi.png, id=745, 1059.96pt x 608.2725pt>
+<figuras/unagi/modeloemunagi.png, id=753, 1059.96pt x 608.2725pt>
 File: figuras/unagi/modeloemunagi.png Graphic file (type png)
 
 <use figuras/unagi/modeloemunagi.png>
@@ -1984,22 +1992,22 @@ Package pdftex.def Info: figuras/unagi/modeloemunagi.png used on input line 88.
 
 (pdftex.def)             Requested size: 455.0pt x 261.10657pt.
 
-<figuras/unagi/paletaopcoes.png, id=746, 528.97626pt x 264.99pt>
+<figuras/unagi/paletaopcoes.png, id=754, 528.97626pt x 264.99pt>
 File: figuras/unagi/paletaopcoes.png Graphic file (type png)
 
 <use figuras/unagi/paletaopcoes.png>
 Package pdftex.def Info: figuras/unagi/paletaopcoes.png used on input line 95.
 (pdftex.def)             Requested size: 386.75278pt x 193.74434pt.
 
-<figuras/unagi/unagisubdiagrama.jpg, id=748, 514.92375pt x 339.2675pt>
+<figuras/unagi/unagisubdiagrama.jpg, id=756, 514.92375pt x 339.2675pt>
 File: figuras/unagi/unagisubdiagrama.jpg Graphic file (type jpg)
 
 <use figuras/unagi/unagisubdiagrama.jpg>
 Package pdftex.def Info: figuras/unagi/unagisubdiagrama.jpg used on input line 
 104.
 (pdftex.def)             Requested size: 386.75278pt x 254.82272pt.
-) [43 <./figuras/unagi/modeloemunagi.png>] [44 <./figuras/unagi/paletaopcoes.pn
-g> <./figuras/unagi/unagisubdiagrama.jpg>] [45]
+) [44 <./figuras/unagi/modeloemunagi.png>] [45 <./figuras/unagi/paletaopcoes.pn
+g> <./figuras/unagi/unagisubdiagrama.jpg>] [46]
 \openout2 = `capitulos/ch5-validacao.aux'.
 
  (./capitulos/ch5-validacao.tex
@@ -2016,7 +2024,7 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 27--27
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
-) [46
+) [47
 
 
 
@@ -2027,33 +2035,32 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 43--43
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
-) [47]) [48]
+) [48]) [49]
 \openout2 = `capitulos/ch6-conclusoes.aux'.
 
 
-(./capitulos/ch6-conclusoes.tex) [49
+(./capitulos/ch6-conclusoes.tex) [50
 
 
 
-] (./pg-bernabe.bbl (./pg-bernabe.brf)
+] [51] (./pg-bernabe.bbl (./pg-bernabe.brf)
 \tf@brf=\write6
 \openout6 = `pg-bernabe.brf'.
-
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 3.
 
 bibitemlist
-[50
+[52
 
 
-] [51]) [52]
+] [53]) [54]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 508.
 
-[53
+[55
 
 
 ]
@@ -2069,11 +2076,11 @@ File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 4.
- [54
+ [56
 
 
-] [55])
-[56]
+] [57])
+[58]
 \openout2 = `apendices/meetingscheduler.aux'.
 
  (./apendices/meetingscheduler.tex
@@ -2083,11 +2090,11 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 3--3
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
-) [57
+) [59
 
 
 
-]) [58]
+]) [60]
 No file pg-bernabe.ind.
 
 AED: lastpage setting LastPage
@@ -2110,10 +2117,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 527.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 527.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 527.
 Package rerunfilecheck Info: File `pg-bernabe.brf' has not changed.
-(rerunfilecheck)             Checksum: 1FB1DFC4885E46531C6E1F4FECBD08A4;5753.
-
-
-LaTeX Warning: There were undefined references.
+(rerunfilecheck)             Checksum: 4490A5D7B0291990D05B6D21A1867494;5749.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -2121,11 +2125,11 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 527.
  ) 
 Here is how much of TeX's memory you used:
- 31753 strings out of 493089
- 557996 string characters out of 6134843
+ 31747 strings out of 493089
+ 558137 string characters out of 6134843
  1141028 words of memory out of 5000000
- 33948 multiletter control sequences out of 15000+600000
- 114631 words of font info for 183 fonts, out of 8000000 for 9000
+ 33943 multiletter control sequences out of 15000+600000
+ 111659 words of font info for 180 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,16n,80p,1912b,2511s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exi
@@ -2154,19 +2158,18 @@ l/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2015/texmf-dis
 t/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
 pe1/public/lm/lmri12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
-/lm/lmss10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmss12
-.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmss17.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmssbo10.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2
-015/texmf-dist/fonts/type1/public/lm/lmsso12.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/lm/lmsso17.pfb></usr/local/texlive/2015/texmf-dist/fon
-ts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/p
-ublic/lm/lmsy9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lm
-tt12.pfb>
-Output written on pg-bernabe.pdf (59 pages, 1969886 bytes).
+/lm/lmss12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmss17
+.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmssbo10.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsso12.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/lm/lmsso17.pfb></usr/local/texlive/2015/texm
+f-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2015/texmf-dist/fon
+ts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
+blic/lm/lmtt12.pfb>
+Output written on pg-bernabe.pdf (61 pages, 2036292 bytes).
 PDF statistics:
- 1379 PDF objects out of 1440 (max. 8388607)
- 1241 compressed objects within 13 object streams
- 415 named destinations out of 1000 (max. 500000)
- 36302 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 1389 PDF objects out of 1440 (max. 8388607)
+ 1248 compressed objects within 13 object streams
+ 418 named destinations out of 1000 (max. 500000)
+ 34251 words of extra memory for PDF output out of 35830 (max. 10000000)
 

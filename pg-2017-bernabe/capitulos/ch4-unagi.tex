@@ -7,9 +7,10 @@
 
 O editor gráfico \unagi foi desenvolvido com o principal objetivo de facilitar a criação de arquivos de especificação do modelo de domínio para uso no \zanshin, considerando que até então não havia nenhuma ferramenta que automatizasse esse processo, assim o usuário precisava escrever o arquivo \xml e \ecore manualmente. 
 
-Usando um ferramental disponível na plataforma \eclipse para criação de editores gráficos usando \emf, além da utilização de aspectos de desenvolvimento dirigido por modelos, o processo de desenvolvimento do \unagi pode ser dividido em duas fases: a criação do editor gráfico usando \sirius e o desenvolvimento do conversor de diagramas apoiado em código gerado automaticamente por técnicas MDD (\mdd). As próximas subseções dão detalhes sobre o processo de implementação da ferramenta: a Subseção~\ref{sec-unagi-criacao-editor} explica como o editor gráfico foi elaborado, usando as tecnologias já discutidas nesse texto, e então a Subseção~\ref{sec-unagi-apresentacao-editor} explica as funcionalidades da ferramenta modeladora. Por fim, a Subseção~\ref{sec-unagi-conversor} demonstra como o componente responsável pela conversão do modelo visual para os arquivos nos padrões do \zanshin foi construído.
+Usando um ferramental disponível na plataforma \eclipse para criação de editores gráficos usando \emf, além da utilização de aspectos de desenvolvimento dirigido por modelos, o processo de desenvolvimento do \unagi pode ser dividido em duas fases: a criação do editor gráfico usando \sirius e o desenvolvimento do conversor de diagramas apoiado em código gerado automaticamente por técnicas MDD (\mdd). As próximas seções dão detalhes sobre o processo de implementação da ferramenta: a Seção~\ref{sec-unagi-criacao-editor} explica como o editor gráfico foi elaborado, usando as tecnologias já discutidas nesse texto, e então a Seção~\ref{sec-unagi-apresentacao-editor} explica as funcionalidades da ferramenta modeladora. Por fim, a Seção~\ref{sec-unagi-conversor} demonstra como o componente responsável pela conversão do modelo visual para os arquivos nos padrões do \zanshin foi construído.
 
 O código fonte do plugin, bem como o arquivo de instalação da ferramenta podem ser encontrados em \codigoUnagi.
+
 % ======================================================================================================
 % SEÇÃO criação do Editor Gráfico
 % ======================================================================================================
@@ -20,7 +21,6 @@ A primeira parte do desenvolvimento da ferramenta consistiu  na criação do edi
 
 Inicialmente, o mesmo modelo \ecore usado para operacionalização dos requisitos no \zanshin foi usado para geração automática de código dentro do \eclipse \emf. É importante salientar que junto com as classes específicas de domínio, o \emf também gera código automático que serve como base para criação de editores e para criação de processos de teste e validação (Figura~\ref{figura-gera-codigo}). Em outras palavras, o \emf gera classes relativas ao metamodelo que podem ser instanciadas em tempo de execução da ferramenta gráfica.  Assim, após completa especificação do \ecore, foi gerado código automático que serviu como base para o processo inicial de implantação do editor. O código gerado pode então ser executado como uma aplicação \eclipse e a partir daí pode-se criar um editor de modelos personalizado usando o \sirius.
 
-%\vitor{Não fica claro no parágrafo acima que o editor que é gerado automaticamente não permite a criação do modelo de forma diagramática. Fica parecendo que o EMF gerou o Unagi com apenas um clique...}
 
 \begin{figure}
 	\centering
@@ -78,7 +78,7 @@ Por fim, foi modelada uma perspectiva diferente para especificação das estrat�
 % ======================================================================================================
 % SUBSEÇÃO O Editor Gráfico
 % ======================================================================================================
-\subsection{O Editor Gráfico}
+\section{O Editor Gráfico}
 \label{sec-unagi-apresentacao-editor}
 
 Após todo o processo de detalhamento da representação dos elementos do editor, é possivel então criar um modelo de especificação de perspectiva (\textit{Viewpoint Specification Model}) que permite a criação do diagrama usando recursos de arrastar e soltar, considerados intuitivos por estarem presentes na maioria dos editores gráficos atuais. A Figura~\ref{figura-paleta-unagi} mostra o editor em execução, onde pode ser vista a área de modelagem, bem como a paleta de elementos que podem ser criados e também a paleta com tipos de refinamentos disponíveis para modelagem. Esses refinamentos podem ser selecionados e então desenhados apenas clicando no elemento de origem e destino, nesta ordem. As propriedades relativas a cada elemento do modelo podem ser modificadas por meio da paleta de opções que aparece na área inferior do editor (Figura~\ref{unagi-paleta-opcoes}).

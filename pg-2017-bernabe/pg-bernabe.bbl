@@ -80,6 +80,11 @@ Acesso: 07/07/2017.}
   Dispon{\'\i}vel em:
   \url{http://www.inf.ufes.br/~falbo/files/ER/Notas\_Aula\_Engenharia\_Requisitos.pdf}.}
 
+\bibitem[Gruber 2009]{gruber2009ontology}
+\abntrefinfo{Gruber}{GRUBER}{2009}
+{GRUBER, T. Ontology.
+\emph{Encyclopedia of database systems}, Springer, p. 1963--1965, 2009.}
+
 \bibitem[Guizzardi 2005]{guizzardi2005ontological}
 \abntrefinfo{Guizzardi}{GUIZZARDI}{2005}
 {GUIZZARDI, G. \emph{Ontological foundations for structural conceptual models}.
@@ -159,10 +164,10 @@ Acesso: 07/07/2017.}
 \emph{See also http://acceleo. org/doc/obeo/en/acceleo-2.6-user-guide. pdf},
   v.~2, 2006.}
 
-\bibitem[Negri et al. 2007]{pedrogoro}
-\abntrefinfo{Negri et al.}{NEGRI et al.}{2007}
-{NEGRI, P. et al. Towards an ontology of goal-oriented requirements.
-\emph{Congresso Ibero Americano de Engenharia de Software}, 2007.}
+\bibitem[Negri et al. 2017]{pedrogoro}
+\abntrefinfo{Negri et al.}{NEGRI et al.}{2017}
+{NEGRI, P.~P. et al. Towards an ontology of goal-oriented requirements.
+2017.}
 
 \bibitem[Pfleeger 2004]{pfleeger2004engenharia}
 \abntrefinfo{Pfleeger}{PFLEEGER}{2004}
