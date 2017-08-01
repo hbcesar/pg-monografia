@@ -4,8 +4,12 @@
 % ==============================================================================
 \chapter{Unagi}
 \label{sec-unagi}
+\banca{Sugestões para este capítulo:
+	- adicionar o modelo convertido do metamodelo para o Ecore.
+	- adicionar o modelo da arquitetura do Unagi que você usou na apresentação }
 
 O editor gráfico \unagi foi desenvolvido com o principal objetivo de facilitar a criação de arquivos de especificação do modelo de domínio para uso no \zanshin, considerando que até então não havia nenhuma ferramenta que automatizasse esse processo, assim o usuário precisava escrever o arquivo \xml e \ecore manualmente. 
+\banca{Aqui, quando traz a motivação do Unagi, vale explicar melhor que esse arquivo de especificação do modelo de domínio para uso no Zanshin deve ser no formato XML/Ecore e, tratando-se de modelos, e como já dito anteriormente, modelos gráficos, a proposta é um editor de modelos gráficos (isso já é uma contribuição) que transforma automaticamente o modelo gráfico em arquivos texto legíveis pelo Zanshin.}
 
 Usando um ferramental disponível na plataforma \eclipse para criação de editores gráficos usando \emf, além da utilização de aspectos de desenvolvimento dirigido por modelos, o processo de desenvolvimento do \unagi pode ser dividido em duas fases: a criação do editor gráfico usando \sirius e o desenvolvimento do conversor de diagramas apoiado em código gerado automaticamente por técnicas MDD (\mdd). As próximas seções dão detalhes sobre o processo de implementação da ferramenta: a Seção~\ref{sec-unagi-criacao-editor} explica como o editor gráfico foi elaborado, usando as tecnologias já discutidas nesse texto, e então a Seção~\ref{sec-unagi-apresentacao-editor} explica as funcionalidades da ferramenta modeladora. Por fim, a Seção~\ref{sec-unagi-conversor} demonstra como o componente responsável pela conversão do modelo visual para os arquivos nos padrões do \zanshin foi construído.
 
@@ -113,3 +117,4 @@ Para acessar a perspectiva que permite o detalhamento dos \evoreqs referentes a 
 \label{sec-unagi-conversor}
 
 O conversor do Unagi foi desenvolvido usando linguagem Acceleo. O processo de transformação consiste em percorrer a árvore de elementos do editor gráfico e, baseando-se no \textit{template} implementado usando a linguagem, os objetos são transformados um a um em linhas do texto dos arquivos \xml formatadas aos padrões do \zanshin. De uma forma mais detalhada, o editor procura inicialmente pelo elemento raiz, gera sua linha com as características específicas, checa pela existência de refinamentos e: se houver, percorre a lista de elementos e a lista de refinamentos deles recursivamente, até que sejam atingidas as folhas da árvore. Ao fim, os arquivos que podem ser importados no \zanshin são armazenados na pasta ``zanshin-src'' criada dentro da pasta do projeto de modelagem. Caso o conversor encontre algum erro no processo, um arquivo de nome ``ERROR.txt'' é gerado com informações sobre o ocorrido e, se disponível, um link para página de ajuda.
+\banca{seria legal uma ilustração de como isso é feito}

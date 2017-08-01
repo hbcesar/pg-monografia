@@ -22,6 +22,7 @@ A partir da análise de cada elemento do metamodelo antigo, foram encontradas as
 \begin{enumerate}
 	%1
 	\item \textbf{Requirement}: o fato desse elemento estar no topo da hierarquia e todos os outros elementos serem especializações dele faz com que suas características sejam herdadas por todos os outros componentes do modelo. Porém, nota-se que algumas características na verdade são inerentes a apenas alguns elementos. Por exemplo: \textit{Requirement} possui a relação de agregação \textit{Parent} para \textit{Children}, permitindo que cada elemento tenha zero ou um ``Pai'' e um ou vários ``Filhos''. Entretanto, a agregação pai/filho é indesejada nos elementos \awreq, \textit{DomainAssumption} e \textit{QualityConstraint}, visto que esses não são refinados, apenas possuem ``alvos''. \label{p1}
+	\banca{Pelo modelo da Figura 8, AwReq, Domain assumption e quality constraint não são Requirements}
 	
 	%2
 	\item \textbf{DeinableRequirement} e \textbf{Softgoal}: \sofgoal possui o mesmo tipo de comportamento de um \textit{DefinableRequirement} e, portanto, seria esperado que aquele também fosse uma especialização deste. Assim, com essa modificação seria desnecessário a utilização de duas classes (\textit{Requirement} e \textit{DefinableRequirement}) na composição do modelo, que poderiam perfeitamente ser reduzidas a apenas uma. \label{p2}
@@ -34,6 +35,7 @@ A partir da análise de cada elemento do metamodelo antigo, foram encontradas as
 	
 	%5
 	\item \textbf{Goal} e \textbf{Task}: \textit{Tasks} são refinamentos de \textit{Goal} e por isso seria importante que houvesse algum tipo de relacão direta entre os dois elementos, onde fosse possível identificar que quando um objetivo fosse operacionalizado por tarefas e quais seriam essas tarefas. Além disso, identificou-se uma oportunidade de melhoria da nomenclatura de ``\textit{Goal}'' para ``\textit{HardGoal}'', refletindo uma melhor impressão sobre o papel do elemento e as diferenças entre ambos. \label{p5}
+	\banca{Interessante. Apesar de poder existir essa relação pelo agregation parent/children, ela não representa bem essa relação entre goal/task.}
 	
 	%6
 	\item \textbf{DomainAssumption}: a forma como \textit{DomainAssumptions} se relacionam com os outros elementos poderia ser refinada, o objetivo aqui é que qualquer tipo de elemento que for passível de ser operacionalizado (\textit{PerformativeRequirement}) pudesse conter uma lista de referências a pressuposições de domínio. \label{p6}
@@ -50,16 +52,20 @@ Após levantamento das melhorias possíveis, foi elaborado o metamodelo apresent
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\textwidth]{figuras/metamodelos/metamodelo-zanshin-novo.png}
-	\caption{Proposta de evolução do metamodelo do \framework \zanshin.}
+	\caption{Proposta de evolução do metamodelo do \framework \zanshin. \banca{Sobre o refinamento alternative e decompose: questão ontológica:	registrar no texto as escolhas }}
 	\label{figura-metamodelo-novo}
 \end{figure}
 
+\vitor{Um softgoal pode ser refinado (alternative/decompose) e não precisa de estar associado a um Quality Constraint.}
+
 \begin{itemize}
 	\item A partir de agora, todos os elementos são especializações de \textit{GOREElement}, que passa a englobar características das antigas classes \textit{Requirement} e \textit{DefinableRequirement}, resolvendo então o problema~\ref{p2}. 
+	\banca{GOREElement é um elemento necessário por conta da sintaxe da linguagem. Conceitualmente ele não é importante. Já requirement é um elemento conceitual. }
 
 	\item A agregação pai/filho agora ocorre em dois tipos e acontece em um elemento mais específico: um requisito pode ser decomposto (\textit{decompose}) em outros, referindo-se assim a refinamentos do tipo ``E'', ou refinado por meio da agregação denominada ``alternative'', que trata de alternativas a um requisito, ou seja, refinamentos do tipo ``OU''. Dessa forma, o metamodelo pode retratar melhor os tipos de refinamentos admitidos e quais são, exatamente, os componentes que  os aceitam. Além do mais, a partir desta melhoria os refinamentos acontecem somente nos elementos que especializam \textit{GoalOrientedRequirement}, ou seja, somente \textit{Hardgoals}, \textit{Softgoals} e \textit{Tasks}. Essa modificação soluciona o problema~\ref{p1}.
 	
 	\item \textit{Softgoal} e \textit{QualityConstraint} passam a se relacionar por meio de relação de decomposição e, portanto, também fica mais evidente que todo \textit{Softgoal} deve ser operacionalizado por pelo menos um \textit{QualityConstraint}, dando fim, assim, ao problema~\ref{p3}.
+	\banca{explicitar que essa relação não é a "decompose" e sim  a própria do metamodelo Ecore e UML}
 	
 	\item Nessa proposta, \awreqs têm uma relação direta de composição com o \textit{GOREElement} logo, define-se que qualquer tipo de requisito no modelo pode conter elementos de adaptação, assim resolve-se o problema~\ref{p4}.
 	

@@ -17,10 +17,13 @@ Pesquisadores vêm tentando ao longo dos anos criar abstrações que ajudem prog
 Em outras palavras, MDD parte da premissa que um sistema é um modelo consistente com seu metamodelo~\cite{vujovic2014comparative} e, assim, em vez de exigir que programadores escrevam cada simples detalhe da implementação de um sistema, permite que uma funcionalidade necessária para um software possa ser visualmente modelada~\cite{atkinson2003model}. Portanto, essa técnica viabiliza que muitas atividades complexas (porém rotineiras) da área de programação de software sejam automatizadas como por exemplo, o suporte a persistência, interoperabilidade e distribuição~\cite{atkinson2003model}.
 
 A modelagem usa da percepção visual humana para melhorar o processo de compreensão sobre o domínio de um software, já que modelos nos auxiliam a entender problemas complexos e suas possíveis soluções por meio da abstração. Assim, MDD baseia-se na premissa de que o desenvolvimento de software deve focar principalmente na produção de modelos e não na criação de código~\cite{selic2003pragmatics}.
+\banca{Muito interessante este parágrafo. Só no final, última linha, quando fala "principalmente na produção de modelos". Essa palavra 'modelos' ficou solta. Que modelos, quaisquer modelos? Pode encadear melhor essa aparição da palavra modelos com o que foi dito na oração anterior (modelos que auxiliam a entender...). Talvez só usar uma palavra para referenciar como "principalmente na produção de tais modelos".}
 
 A primeira vantagem dessa abordagem é que podemos usar conceitos mais ligados ao domínio do problema que o software vai resolver, ao invés de focar em conceitos técnicos ligados a linguagem de programação, por exemplo. Essa vantagem acarreta em alguns outros benefícios: modelos são mais compreensíveis do que códigos e portanto, tornam-se também mais fáceis de especificar e manter~\cite{selic2003pragmatics}. Além disso, modelos são menos sensíveis a alterações de tecnologias, ou seja, são independentes de plataforma~\cite{selic2003pragmatics}. 
 
 Esse trabalho usa MDD em vários processos: primeiramente podemos considerar que \zanshin usa das ferramentas desse método para instanciação, validação e outras atividades relacionadas ao modelo do sistema que é fornecido pelo usuário. Segundo, \unagi usa a produção automática de código por meio da interpretação de modelos visuais~\cite{selic2003pragmatics, viyovic2014sirius}, além do que  o processo de modelagem de sistemas e a geração automática dos arquivos \xml para \zanshin também pode ser vista como um processo de \mdd.
+\banca{achei pouco 'formal' esse "além do que".
+	se quiser, pode utilizar somente "além, o processo de modelagem..." ou então "ainda, o processo de modelagem..."}
 
 
 % ======================================================================================================
@@ -29,7 +32,10 @@ Esse trabalho usa MDD em vários processos: primeiramente podemos considerar que
 \subsection{Eclipse Modeling Framework}
 O \eclipse é um projeto de código aberto com o objetivo de prover uma plataforma de desenvolvimento altamente integrada. O processo de criação de sistemas no \eclipse pode ser dividido em alguns projetos, entre eles o Projeto de Modelagem (\textit{Modeling Project}), que concentra-se em tecnologias baseadas no desenvolvimento orientado a modelos~\cite{steinberg2008emf}. Esse ambiente é chamado de \textit{Eclipse Modeling Framework} ou \textit{EMF}, e provê funcionalidades como transformação de modelos, integração de bases de dados e geração de editores gráficos~\cite{steinberg2008emf}. Modelos especificados dentro do contexto \emf relacionam abstrações de modelagem diretamente a seus conceitos de implementação, sendo a união das tecnologias \uml, \xml e \java, permitindo a conversão automática entre todas essas~\cite{steinberg2008emf}. 
 
+\banca{enfatizar neste primeiro parágrafo que o Eclipse é uma plataforma de desenvolvimento orientado a modelos}
+
 A tecnologia \emf pode ser melhor explicada com um exemplo: um sistema de gerenciamento de ordem de compras de uma loja, que necessita incluir casos como ``cobrar'' e ``entregar'' em um endereço e uma coleção de itens (nesse caso, compras). A Figura~\ref{exemplo-uml} mostra o diagrama do sistema em \uml. Esse modelo pode também ser descrito dentro do \emf usando modelos \ecore, como na Figura~\ref{exemplo-ecore}. Modelos \ecore são basedos no metamodelo para especificação exibido na Figura~\ref{metamodelo-ecore}, onde classes são representadas por \texttt{EClass}, atributos por \texttt{EAttribute}, relações por \texttt{EReference} e tipos de dados por \texttt{EDataType}. Assim, a ``conversão'' do modelo \uml para \ecore é dada ao se instanciar classes de \ecore de acordo com a especificidade do domínio do problema~\cite{steinberg2008emf}, como pode ser visto na Figura~\ref{exemplo-uml-to-ecore}. 
+\banca{acho que pode ficar mais claro que a EMF trabalha somente com modelos Ecore (ou pelo menos de forma nativa). "por meio de modelos Ecore"}
 
 \begin{figure}
 	\centering
@@ -69,6 +75,8 @@ Assim que o modelo é detalhado em \ecore, o \emf está pronto para gerar códig
 
 Em suma, o \framework de modelagem do \eclipse permite que usuários criem modelos apoiados em metamodelos, e baseando-se no modelo criado, gera partes de código de sistema~\cite{vujovic2014comparative}.
 
+\banca{A exemplificação que você deu na apresentação transformação em Java seria uma bela adição neste texto complementando a ilustração de como o Eclipse apoia todo o processo de MDD, desde o modelo conceitual até o código.}
+
 %https://books.google.com.br/books?id=sA0zOZuDXhgC&lpg=PT23&ots=2IQIWZWqNm&dq=eclipse&lr&hl=pt-BR&pg=PT45#v=onepage&q=eclipse&f=false
 
 % ======================================================================================================
@@ -79,6 +87,9 @@ Em suma, o \framework de modelagem do \eclipse permite que usuários criem model
 O \sirius é um plugin que simplifica o \framework de Modelagem Gráfica (\textit{Graphical Modeling Framework} ou \textit{GMF}) do \eclipse, reduzindo a complexidade de uso do mesmo e permitindo a produção de editores gráficos de modelos personalizados~\cite{viyovic2014sirius}. O \sirius é construído em cima das utilidades para (des)serialização de modelos, checagem de condições e geração de editores baseados em \ecore providas pelo \eclipse~\cite{budinsky2004eclipse}. Representações criadas com \sirius podem ser apresentadas em diagramas, tabelas e árvores~\cite{viyovic2014sirius}. Em síntese, \sirius provê ferramentas que permitem a especificação de um modelo de um domínio qualquer em diferentes perspectivas gráficas~\cite{vujovic2014comparative}.
 
 Por meio de modelos de especificação (\textit{Viewpoint Specification Model} ou VSM), o \textit{plugin} permite definir a estrutura, aparência e comportamento do metamodelo do editor a ser criado~\cite{viyovic2014sirius}. Os VSMs são especificados em arquivos \textit{.odesign}~\cite{viyovic2014sirius}, e baseam-se no metamodelo de domínio descrito em \ecore. Um exemplo de caracterização de representação é mostrado na Figura~\ref{exemplo-sirius}, que retrata a descrição visual do exemplo do sistema de compras já citado anteriormente. Da mesma forma, um modelo criado usando essa descricão é mostrado na Figura~\ref{exemplo-sistemacobrancas-sirius}. Nesse caso, pode-se ver que o \textit{container} de fundo branco, representado como um quadrado no modelo, contém vários outros \textit{containers} de fundo amarelo, que representam os itens de uma ordem de compra. Essas definições de cor e contenimento estão definidas na Figura~\ref{exemplo-sirius}, onde vê-se que o \textit{container} OrdemCompra possui ``\textit{Gradient White to White}'' como estilo, por exemplo, assim como é possível perceber que OrdemCompra possui Item como um de seus ``filhos''.
+\banca{Muitas citações indiretas ao mesmo trabalho. Como não são citações diretas, com a transcrição completa do conteúdo, acho que não precisa fazer a citação indireta tantas vezes. Neste primeiro parágrafo sobre o Sirius, por exemplo, talvez possa ser citado indiretamente o trabalho Viyovic, Maksimovic, Perisic apenas uma vez no final.}
+\banca{"arquivos formato .odesign" ou "arquivos do tipo .odesign"}
+\banca{parece que se fala de dois metamodelos neste parágrafo: metamodelo do editor e metamodelo do domínio de interesse. se tiver como deixar essa diferença, esses dois metamodelos mais claro é bom.}
 
 
 \begin{figure}
@@ -101,7 +112,7 @@ Por meio de modelos de especificação (\textit{Viewpoint Specification Model} o
 	\item \textbf{Camadas}: é possível separar elementos em camadas diferentes, e ativá-las ou desativá-las.
 	\item \textbf{Filtros}: exibir ou esconder elementos dependendo de determinada condição.
 	\item \textbf{Personalização de Estilos}: permite modificar propriedades gráficas de elementos do diagrama.
-	\item \textbf{Regras de Validação}: permite que verificar se o modelo está sintaticamente correto.
+	\item \textbf{Regras de Validação}: permite verificar se o modelo está sintaticamente correto.
 \end{itemize}
 
 % ======================================================================================================
@@ -111,7 +122,7 @@ Por meio de modelos de especificação (\textit{Viewpoint Specification Model} o
 
 Acceleo é usada para processos de Transformação de Modelo para Texto (\textit{Model to Text Transformation} ou \textit{M2T})~\cite{acceleouserguide} e, apesar de ser uma linguagem de script, permite integração com linguagens de alto-nível, como por exemplo \java~\cite{mtsweni2012exploiting}. Assim também, Acceleo permite a criação de geradores automáticos de código, usando padrões e \textit{templates}. Em adição, a linguagem é compatível com o ambiente \eclipse e possui um editor próprio dentro do \framework, contando com funcionalidades como destaque de sintaxe, detecção de erros e refatoramento~\cite{WikiAcceleo}. 
 
-Criada em 2005, a linguagem é definida pelos autores do projeto como uma implementação pragmática do modelo \textit{MOF Model to Text Transformation Language}, que é uma especificação para linguagens de transformação de modelos para textos criado pelo \textit{Object Management Group} (\textit{OMG})~\cite{SiteAcceleo}.
+Criada em 2005, a linguagem é definida pelos autores do projeto como uma implementação pragmática do modelo \textit{MOF Model to Text Transformation Language}, que é uma especificação para linguagens de transformação de modelos para textos criados pelo \textit{Object Management Group} (\textit{OMG})~\cite{SiteAcceleo}.
 
 % ======================================================================================================
 % SEÇÃO Engenharia de Requisitos Orientada a Objetivos
@@ -125,11 +136,14 @@ A Egenharia de Software é uma área da Ciência da Computação voltada ao estu
 
 % Engenharia de Requisitos
 Dentro da área de Engenharia de Software, destaca-se uma importante subárea, a área de Egenharia de Requisitos de Software, focada no processo de elicitação de requisitos, considerados fatores determinantes no sucesso do desenvolvimento de um software~\cite{falboEngReq}. Requisitos podem ser entendidos como a definição do que o sistema pode prover, ou também entendidos como o que o sistema é capaz de fazer para atingir um determinado objetivo~\cite{pfleeger2004engenharia}.
+\banca{Achei estranha a definição. O que o sistema pode prover? O que o sistema é capaz de fazer? Como os requisitos são elicitados antes, no início do processo de engenharia de software, eles são na verdade uma descrição do que o sistema "deverá prover" quando estiver pronto.}
 
 % Objetivos
 Requisitos estão diretamente ligados aos objetivos do sistema, portanto destaca-se também a Engenharia de Requisitos Orientada a Objetivos, uma subárea da Engenharia de Requisitos. Objetivos são parte importante do processo de elicitação de requisitos, seu propósito é indicar as principais necessidades que justificam a criação de um determinado sistema, demonstrando os casos em que as funcionalidades do mesmo satisfarão as necessidades elicitadas, além de dizer como o sistema deve ser construído para satisfazê-las~\cite{ross1977structured}. 
 
 Em uma descrição geral e resumida do processo de identificação de objetivos, pode-se dizer que o potencial software é analisado nos ambientes organizacional, operacional e técnico, onde são identificados os problemas de contexto e as oportunidades de solução desses conflitos. Então, são elaborados com foco na resolução dos pontos identificados e são devidamente refinados. Por fim, requisitos são criados e refinados com o propósito de atenderem a esses objetivos levantados para o sistema. 
+
+\banca{Dar um exemplo de como esse processo é realizado.}
 
 Além de apoiar no processo de modelagem de requisitos, objetivos são usados para apoiar outros propósitos, como gerenciamento de conflitos e o processo de verificação~\cite{lapouchnian2005goal}. De acordo com~\citeonline{van2001goal}, eles podem ser reformulados em diferentes níveis de abstração dependendo do tipo de necessidade que o sistema alvo deve atender, abrangendo desde interesses referentes a estratégias de negócios até conceitos técnicos de atividades.
 
@@ -148,7 +162,8 @@ A necessidade de uso de objetivos no processo de modelagem de sistemas de softwa
 % Hardgoal, Softgoal, Quality Constraint e Domain Assumption
 Diferentemente dos requisitos, objetivos podem precisar da cooperação entre diferentes tipos de refinamentos para que sejam atendidos de forma suficiente~\cite{dardenne1993goal}. Em outras palavras, um objetivo diretamente relacionado ao sistema a ser criado torna-se um requisito, enquanto um objetivo sob responsabilidade de um agente  do ambiente (pode ser um usuário ou outro sistema) em que o software será executado torna-se uma Pressuposição de Domínio (ou \textit{Domain Assumption}) e, nesse caso, são satisfeitos devido a uma regra de negócio~\cite{van2001goal, van1998managing}.
 
-Objetivos funcionais podem ser classificados como objetivos rígidos (\textit{Hard Goals}), cujo critério de satisfação pode ser atendido de forma técnica~\cite{dardenne1993goal} (ou seja, podem ter seu estado definido, sucesso ou falha, de acordo com certas condições) e objetivos maleáveis (\textit{Soft Goals}), que não possuem critérios claros de satisfação, entretanto são úteis quando deseja-se comparar os melhores refinamentos ao objetivo estudado. Para que \textit{Soft Goals} tenham um parâmetro claro de satisfabilidade, são associados a eles os Critérios de Qualidade (\textit{Quality Constraints}). Por exemplo, um \textit{Soft Goal} ``Baixo Custo'' pode ser operacionalizado pelo critério de qualidade ``Custo deve ser menor que R\$ 1 mil''.
+Objetivos funcionais podem ser classificados como objetivos rígidos (\textit{Hardgoals}), cujo critério de satisfação pode ser atendido de forma técnica~\cite{dardenne1993goal} (ou seja, podem ter seu estado definido, sucesso ou falha, de acordo com certas condições) e objetivos maleáveis (\textit{Softgoals}), que não possuem critérios claros de satisfação, entretanto são úteis quando deseja-se comparar os melhores refinamentos ao objetivo estudado. Para que \textit{Soft Goals} tenham um parâmetro claro de satisfabilidade, são associados a eles os Critérios de Qualidade (\textit{Quality Constraints}). Por exemplo, um \textit{Soft Goal} ``Baixo Custo'' pode ser operacionalizado pelo critério de qualidade ``Custo deve ser menor que R\$ 1 mil''.
+\banca{Em um trabalho bem importante, Renata, Gian et al, fazem uma importante conceitualização sobre esses termos. Talvez seja legal dar uma olhada: An Ontological Interpretation of Non-Functional Requirements, Renata Guizzardi a,1, Feng-Lin Lib, Alexander Borgidac, Giancarlo Guizzardia, Jennifer Horkoffb, and John Mylopoulos}
 
 Por fim,~\citeonline{jureta2008revisiting} definem outro tipo de refinamento para especificar a satisfação de um objetivo: as tarefas (\textit{Taks}), que são os passos a serem tomados para que um determinado objetivo seja cumprido. Em outras palavras, tarefas são definidas por funcionalidades do sistemas que, se executadas com sucesso, são consideradas satisfeitas~\cite{souza2012requirement}.
 
@@ -157,6 +172,7 @@ Objetivos relacionam-se uns com os outros por meio de refinamentos. Segundo~\cit
 
 %Representação Gráfica
 Em questões de representação gráfica, os modelos de objetivos discutidos nesse texto são grafos ordenados que exibem as exigências das partes interessadas no topo do modelo e, abaixo, objetivos e tarefas mais refinados, adotando uma topologia do tipo árvore. A simbologia utilizada é baseada na sintaxe de \istar~\cite{yu20111}, mais recentemente renomeado iStar~\cite{dalpiaz2016istar}. Um exemplo de modelo de objetivos representando um sistema de despacho de ambulâncias é mostrado na Figura~\ref{figura-acad-simples}.
+\banca{Qual versão do istar que vc está usando? A versão original não tem quality constraints, nem domain assumptions.}
 
 \begin{figure}
 	\centering
@@ -169,6 +185,7 @@ Em questões de representação gráfica, os modelos de objetivos discutidos nes
 % SUBSEÇÃO GORO
 % ======================================================================================================
 \subsection{GORO}
+\banca{Onde está o modelo conceitual da ontologia?}
 \label{sec-referencia-engenharia-objetivos-goro}
 \goro (\textit{Goal-Oriented Requirements Ontology})~\cite{pedrogoro} é uma ontologia de referência baseada no domínio de \gore e fundamentada em UFO (\textit{Unified Formal Ontology})~\cite{guizzardi2005ontological}. Uma ontologia pode ser definida como um modelo de dados que representa um conjunto de conceitos relacionados a um domínio específico e também define o relacionamento entre esses conjuntos~\cite{gruber2009ontology}. Em outras palavras, uma ontologia é uma forma de representação do conhecimento sobre um assunto da realidade. 
 
@@ -194,6 +211,7 @@ Essa ontologia foi construída por meio da extração de conceitos de diferentes
 Apresentado por~\citeonline{tesevitor}, \zanshin é um \framework que utiliza de ciclos de retro-alimentação (\textit{feedback loops}) para monitorar sistemas e enviar estratégias de adaptação com base em informações de modelos de requisitos orientados a objetivos enriquecidos com elementos construído especialmente para guiar o processo de adaptação. O nome \zanshin vem do japonês e significa ``estado de completa consciência''.
 
 Em tempo de execução, os elementos do modelo de objetivos são representados por classes e instanciados cada vez que o usuário (ou sistema) busca atingir um objetivo, e então o sistema passa a enviar mensagens a essas instâncias quando há mudança de estado. Percebe-se, assim, que objetivos e pressuposições de domínio não são tratadas como invariantes que devem sempre ser atingidas, já que o sistema pode falhar ao tentar atingir seus objetivos iniciais e, então, o componente de adaptação lidará com essas falhas e tomará medidas para que os objetivos voltem a ser satisfeitos~\cite{souza2013requirements}.
+\banca{Como assim enviar mensagens? Que mensagens? Talvez dizer algo mais genérico(para que servem essas mensagens)? "o sistema passa a monitorar/interagir com essas instâncias ..."}
 
 Assim como o monitoramento de objetivos por meio do \textit{Feedback Loop}, o \zanshin também monitora Parâmetros (\textit{Parameters}) que podem ser definidos em dois tipos. Primeiro, os Pontos de Variação (ou \textit{Variation Points}), que representam refinamentos do tipo ``OU'' (\textit{OR}). Segundo, as Variáveis de Controle (ou \textit{Control Variables}), que são abstrações referentes a pontos de variação repetitivos ou usados em grande escala. A especificação do comportamento dessas estratégias é discutido em seções posteriores.
 
@@ -202,11 +220,12 @@ O metamodelo dos modelos de objetivos usados no \zanshin é representado na Figu
 \begin{figure}
 	\centering
 	\includegraphics[width=1\textwidth]{figuras/metamodelos/metamodelo-zanshin-antigo.png}
-	\caption{Metamodelo que define a sintaxe abstrata para o \zanshin.}
+	\caption{Metamodelo que define a sintaxe abstrata para o \zanshin. \cesar{modificar figura}}
 	\label{figura-metamodelo-antigo}
 \end{figure}
 
 O \zanshin pode ser dividido em quatro componentes principais, entretanto essa seção foca na discussão de dois desses: o componente de monitoramento e o componente de adaptação.
+\banca{acho importante citar os quatro componentes, mesmo os que não serão tratados neste trabalho. ajuda a dar uma visão geral do framework.}
 
 % ======================================================================================================
 % SUBSEÇÃO Modelos de Objetivos em Tempo de Execução
@@ -223,7 +242,7 @@ O sistema de monitoramento é construído fundamentado na premissa de que todo \
 Modelos de sistemas adaptativos incluem requisitos autoconscientes, ou seja, definidos em relação ao sucesso, falha ou qualidade de serviço de outros requisitos~\cite{souza2013awareness}. Assim, esses são considerados requisitos ``especiais'', já que sua operacionalização está relacionada à mudança de outros requisitos~\cite{souza2012requirement}. Ademais, o comportamento do sistema é caracterizado por eventos que ocorrem em tempo de execução e que estão diretamente ligados a instâncias de objetivos~\cite{dalpiaz2013runtime}. Finalmente, é importante observar que essa abordagem é considerada orientada a objetivos já que os requisitos mencionados são derivados do refinamento de objetivos elicitados para o sistema.
 
 %Awreqs
-Requisitos autoconscientes são divididos por~\citeonline{souza2012requirement} em dois tipos principais: Requisitos de Percepção (\textit{Awareness Requirements} ou \awreqs)~\cite{souza2013awareness} e Requisitos de Evolução (\textit{Evolution Requirements} ou \evoreqs). \awreqs são requisitos que referem-se ao estado de outros requisitos em tempo de execução, representando situações onde as partes interessadas desejam que o sistema se adapte~\cite{souza2012requirement}, e podem se referir a qualquer tipo de elemento, sejam objetivos, \sofgoals, tarefas ou pressuposições de domínio. Ainda mais, \awreqs indicam o quão critico um requisito pode ser ao descrever o grau de tolerância a falhas do mesmo~\cite{souza2012requirement}. Antes da execução de um sistema, os requisitos estão em estado ``Não Decidido'' (\textit{Undecided}), e então pode assumir os estados ``Sucesso'' (\textit{Succeeded}), ``Falha'' (\textit{Failed}), e no caso de objetivos e tarefas, ``Cancelado'' (\textit{Canceled})~\cite{souza2013awareness}. É fácil notar que o processo de elicitação de requisitos de percepção só acontece depois que o modelo de objetivos é levantado, e assim como o processo de construção de objetivos, \awreqs são sistematicamente criados.
+Requisitos autoconscientes são divididos por~\citeonline{souza2012requirement} em dois tipos principais: Requisitos de Percepção (\textit{Awareness Requirements} ou \awreqs)~\cite{souza2013awareness} e Requisitos de Evolução (\textit{Evolution Requirements} ou \evoreqs). \awreqs são requisitos que referem-se ao estado de outros requisitos em tempo de execução, representando situações onde as partes interessadas desejam que o sistema se adapte~\cite{souza2012requirement}, e podem se referir a qualquer tipo de elemento, sejam objetivos, \sofgoals, tarefas ou pressuposições de domínio. Ainda mais, \awreqs indicam o quão crítico um requisito pode ser ao descrever o grau de tolerância a falhas do mesmo~\cite{souza2012requirement}. Antes da execução de um sistema, os requisitos estão em estado ``Não Decidido'' (\textit{Undecided}), e então pode assumir os estados ``Sucesso'' (\textit{Succeeded}), ``Falha'' (\textit{Failed}), e no caso de objetivos e tarefas, ``Cancelado'' (\textit{Canceled})~\cite{souza2013awareness}. É fácil notar que o processo de elicitação de requisitos de percepção só acontece depois que o modelo de objetivos é levantado, e assim como o processo de construção de objetivos, \awreqs são sistematicamente criados.
 
 %Evoreqs
 \evoreqs são requisitos que modificam o espaço de comportamento do sistema, permitindo que novas alternativas de requisitos sejam usadas, baseando-se em um conjunto pré-definido de etapas de evolução para os requisitos monitorados~\cite{souza2012requirement}. Isto é, \evoreqs são requisitos que especificam uma série de operações primárias em relação a outros requisitos diante de determinadas situações, dizendo ao sistema como adaptar-se~\cite{souza2012requirement}. Instruções para adicionar, remover ou modificar o estado de um objetivo (em nível de instância), desfazer as ações de uma execução que resultou em falha são exemplos de diretivas de adaptação~\cite{souza2013requirements}.

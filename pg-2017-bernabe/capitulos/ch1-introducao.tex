@@ -10,9 +10,13 @@ O avanço da tecnologia nas ultimas décadas permitiu que a complexidade das ati
 
 Entretanto, para garantir a estabilidade dos sistemas, fazia-se uso majoritariamente da intervenção humana, o que rapidamente tornou-se inviável à medida que os sistemas cresciam para atender o aumento da demanda de novos usuários~\cite{andersson2009modeling}. Assim, a utilização de sistemas adaptativos vem tornando-se a solução mais viável e prática para a atual conjuntura do desenvolvimento de softwares. Além disso, o aumento do número de diferentes dispositivos e situações em que esses softwares podem ser executados faz com que eles passem a enfrentar uma grande diversidade de contextos (muitas vezes imprevisíveis) de execução, fundamentando ainda mais a pesquisa na área de softwares adaptativos~\cite{kephart2003vision}.
 
-Sistemas adaptativos são dotados da capacidade de tomar decisões para se ajustar e se reconfigurar mediante mudanças de contexto, permitindo assim que os requisitos elicitados continuem a ser atendidos de forma satisfatória~\cite{souza2012requirement}. Entretanto, poucas soluções desse tipo consideram a modelagem das características adaptativas no sistema desde a fase de modelagem do mesmo. \zanshin~\cite{tesevitor} aparece como uma abordagem que baseia-se em modelos para projetar características adaptativas em sistemas por meio de novos tipos de requisitos, que definem o chamado ``ciclo de retroalimentação'', que operacionaliza a adaptação. Seguindo uma abordagem de Desenvolvimento Dirigido por Modelos, \zanshin apresenta um metamodelo que permite que modelos de sistemas sejam especificados de acordo com os requisitos do \framework.
+Sistemas adaptativos são dotados da capacidade de tomar decisões para se ajustar e se reconfigurar mediante mudanças de contexto, permitindo assim que os requisitos elicitados continuem a ser atendidos de forma satisfatória~\cite{souza2012requirement}. Entretanto, poucas soluções desse tipo consideram a modelagem das características adaptativas no sistema desde a fase de modelagem do mesmo. \zanshin~\cite{tesevitor} aparece como uma abordagem que se baseia em modelos para prover características adaptativas em sistemas por meio de novos tipos de requisitos, que definem o chamado ``ciclo de retroalimentação'', que operacionaliza a adaptação. Seguindo uma abordagem de Desenvolvimento Dirigido por Modelos, \zanshin apresenta um metamodelo que permite que modelos de sistemas sejam especificados de acordo com os requisitos do \framework.
 
 Este trabalho encontra-se no contexto da pesquisa em torno da abordagem \zanshin, mais especificamente lidando com duas de suas limitações: (1) seu metamodelo atual não representa fielmente o conjunto de modelos desejados; e (2) não há uma ferramenta CASE que auxilie engenheiros de requisitos no uso da abordagem.
+\banca{Interessante a forma como explicitou essas duas limitações.
+	Essas limitações são, na verdade, a motivação do trabalho, né? Talvez seja legal já indicar que essas limitações são a base da motivação. 
+	Algo como "Este trabalho encontra-se no contexto da pesquisa em torno da abordagem Zanshin buscando melhorias/aperfeiçoamento/avançar em duas de suas limitações: [...]"}
+\banca{Essas duas limitações são, inclusive, muito importantes de serem trabalhadas. Talvez seja legal aprofundar um pouquinho nelas. Por exemplo, que conjunto de modeos desejados são esses? Modelos do universo GORE? E também, dizer falar sobre uma ferramenta de fácil uso pode ajudar/incentivar o uso do Zansing pelos eng. requisitos.}
 
 
 
@@ -20,7 +24,7 @@ Este trabalho encontra-se no contexto da pesquisa em torno da abordagem \zanshin
 \label{sec-intro-objetivos}
 
 Este trabalho possui dois objetivos principais: a reconstrução do metamodelo operacional do \zanshin e a criação de uma ferramenta gráfica usada para modelar sistemas adaptativos usando Engenharia de Requisitos Orientada a Objetivos (\textit{Goal-Oriented Requirements Engineering} ou \gore). O primeiro refere-se ao metamodelo de objetivos que é baseado em \textit{CORE} (\textit{Core Ontology for Requirements Engineering})~\cite{jureta2007core}, usado pelo framework para casar os requisitos do modelo de domínio específico com as instâncias dos elementos do metamodelo de \gore, e assim garantir que os objetivos do sistema estão sendo atendidos satisfatoriamente. Já a segunda atividade refere-se à ferramenta de modelagem de sistemas baseada nesse metamodelo operacional do \zanshin, usando sintaxe baseada em uma linguagem de especificação de modelos ontológicos conceituais conhecida como iStar~\cite{dalpiaz2016istar}. Para ambos os casos, foram utilizados os conceitos aprendidos ao longo do curso de Ciência da Computação. Dessa forma são objetivos específicos deste projeto:
-
+\banca{o que é metamodelo operacional do zanshin? É dito somente "baseada nesse metamodelo do Zanshin". Senti falta de dizer que é para ser utilizado pelo zanshin, que o modelo de sistemas criado pela ferramenta é para ser utilizado, importado, pelo Zanshin. É isso, né? }
 
 \begin{itemize}
 	
@@ -31,6 +35,7 @@ Este trabalho possui dois objetivos principais: a reconstrução do metamodelo o
 	\item Modificar o código fonte do \textit{framework} para que o mesmo possa utilizar o novo metamodelo desenvolvido e executar o mecanismo de adaptações considerando esse novo metamodelo;
 	
 	\item Desenvolver uma ferramenta que permita ao usuário criar uma representação gráfica do modelo do sistema alvo e implementar, dentro dessa ferramenta, um módulo para converter o modelo gráfico representado para arquivos \xml que possam ser importados diretamente para o \zanshin;
+	\banca{A ferramenta é o Unagi, certo? Acho válido dizer isto aqui.}
 	
 	\item Apresentar os trabalhos desenvolvidos, juntamente com as perspectivas futuras de otimização de ambos os sistemas apresentados.
 
@@ -59,6 +64,8 @@ O trabalho realizado compreendeu as seguintes atividades:
 	
 \end{enumerate}
 
+\vitor{Comentar a publicação do artigo CBSoft e citá-lo. Te falo depois como citar algo que está aceito mas não publicado ainda.}
+
 
 %%% Início de seção. %%%
 \section{Organização do Texto}
@@ -69,7 +76,7 @@ Este texto está dividido em quatro partes principais além desta introdução, 
 \begin{itemize}
 	\item \textbf{Capítulo \ref{sec-referencial} --} Referencial Teórico: apresenta discussão acerca de \gore e \mdd, focando na relação desses tópicos com sistemas adaptativos e com o processo de desenvolvimento da ferramenta \unagi. Ademais, é discutida a arquitetura do sistema \zanshin e suas características;
 	
-	\item \textbf{Capítulo \ref{sec-zanshin} --} Zanshin: nesse capitulo são apresentados os processos e decisões que levaram à elaboração do novo metamodelo do \zanshin, bem como as modificações decorrentes dessas modificações na arquitetura da plataforma;
+	\item \textbf{Capítulo \ref{sec-zanshin} --} Zanshin: nesse capítulo são apresentados os processos e decisões que levaram à elaboração do novo metamodelo do \zanshin, bem como as modificações decorrentes dessas modificações na arquitetura da plataforma;
 	
 	\item \textbf{Capítulo \ref{sec-unagi} --} Unagi: Nesse capítulo é abordado o processo de desenvolvimento da ferramenta \unagi e os pormenores da implementação de todos os módulos da mesma;
 	

@@ -52,13 +52,17 @@ Além da substituição do nome para referenciar os refinamentos, pode-se identi
 Seguindo a mesma motivação dos elementos anteriores, a referência para \textit{Domain Assumptions} passou de ``children'' para ``assumptions'', caracterizando assim uma separação dos diferentes tipos de refinamentos do modelo facilitando, então, tanto o processo de implementação quanto o de leitura dos arquivos de especificação. 
 
 Ao final do processo de reescrita dos arquivos dos modelos dos sistemas \textit{Meeting Scheduler} e \textit{A-CAD}, ambos foram importados para dentro do \eclipse, onde o \zanshin é executado, e pôde-se verificar que o processo de simulação, que não teve nenhuma parte do código modificada, rodou perfeitamente com a nova versão do \zanshin e produziu as saídas esperadas para todos os casos.
+\banca{como dar mais destaque para as informações nesse parágrafo? mostrando algum resultado da simulação, por exemplo? parágrafo muito importante}
 
 Os arquivos completos dos modelos antigos podem ser encontrados no repositório original do \framework,~\footnote{https://goo.gl/vthgOk} enquanto as novas versões dos mesmos encontram-se em apêndice a esse texto.
 
 \section{Unagi}
 
 Para o processo de validação do \unagi foi usado método similar ao processo de validação da nova versão do \zanshin: após validação das alterações do \framework, ambos sistemas \textit{Meeting Scheduler} e \textit{A-CAD} foram graficamente modelados no editor da ferramenta. Ao fim do processo, foi usado o conversor para criar os arquivos \xml de especificação dos modelos de cada um dos sistemas. 
+\banca{pode mostrar o modelo feito no Unagi e a figura do modelo original da tese do Vitor}
 
 Os arquivos gerados pelo \unagi foram então copiados para o sistema de simulação do \zanshin e foi executada simulação para cada um dos sistemas, comparando a saída gerada com a saída original. Verificou-se então a validade dos modelos gerados pela ferramenta ao garantir que ambas as saídas eram compatíveis.
 
 Para fins de verificação e distribuição, os arquivos gerados pelo \unagi estão disponíveis como exemplos na página do respositório git da ferramenta.~\footnote{https://github.com/hbcesar/unagi2}
+
+\banca{Senti falta de ilustrações neste capítulo. Basta um ou dois exemplos	retirados dos casos para verificar}
